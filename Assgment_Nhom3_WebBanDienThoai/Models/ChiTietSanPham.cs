@@ -64,10 +64,6 @@
 
         public virtual Sim Sims { get; set; }
 
-        public List<ListAnh> ListAnhs { get; set; }
-
-        public List<Imei> Imeis { get; set; }
-
-        public List<HoaDonChiTiet> HoaDonChiTiets { get; set; }
+      
     }
 }
