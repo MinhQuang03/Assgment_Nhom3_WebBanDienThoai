@@ -12,6 +12,6 @@
 
         public Guid IdHsx { get; set; }
 
-       
+        public virtual NhaSanXuat NhaSanXuats { get; set; }
     }
 }

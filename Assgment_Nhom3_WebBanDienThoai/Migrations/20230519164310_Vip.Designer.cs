@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
-    [Migration("20230519155715_AnLuon")]
-    partial class AnLuon
+    [Migration("20230519164310_Vip")]
+    partial class Vip
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -61,9 +61,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("BoNhoTrongId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("CameraSau")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -72,29 +69,11 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("ChatLieuId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("ChipCPUId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("ChipGPUId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("CongSacId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<int>("DoPhanGiaiManHinh")
                         .HasColumnType("int");
 
                     b.Property<decimal>("DonGia")
                         .HasColumnType("decimal(18,2)");
-
-                    b.Property<Guid?>("GiamGiaId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("HeDieuHanhId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("IdBoNhoTrong")
                         .HasColumnType("uniqueidentifier");
@@ -136,18 +115,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("MauSacId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("PinId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("RamId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("SimId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
 
@@ -155,20 +122,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BoNhoTrongId");
-
-                    b.HasIndex("ChatLieuId");
-
-                    b.HasIndex("ChipCPUId");
-
-                    b.HasIndex("ChipGPUId");
-
-                    b.HasIndex("CongSacId");
-
-                    b.HasIndex("GiamGiaId");
-
-                    b.HasIndex("HeDieuHanhId");
 
                     b.HasIndex("IdBoNhoTrong");
 
@@ -193,14 +146,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                     b.HasIndex("IdSanPham");
 
                     b.HasIndex("IdSim");
-
-                    b.HasIndex("MauSacId");
-
-                    b.HasIndex("PinId");
-
-                    b.HasIndex("RamId");
-
-                    b.HasIndex("SimId");
 
                     b.ToTable("ChiTietSanPhams");
                 });
@@ -374,9 +319,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("ThanhToanId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<decimal?>("TongTien")
                         .HasColumnType("decimal(18,2)");
 
@@ -388,8 +330,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                     b.HasIndex("IdHd");
 
                     b.HasIndex("IdThanhToan");
-
-                    b.HasIndex("ThanhToanId");
 
                     b.ToTable("HinhThucThanhToans");
                 });
@@ -440,14 +380,8 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("ChiTietSanPhamId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<long>("Gia")
                         .HasColumnType("bigint");
-
-                    b.Property<Guid?>("HoaDonId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("IdChiTietSp")
                         .HasColumnType("uniqueidentifier");
@@ -463,10 +397,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ChiTietSanPhamId");
-
-                    b.HasIndex("HoaDonId");
-
                     b.HasIndex("IdChiTietSp");
 
                     b.HasIndex("IdHoaDon");
@@ -480,9 +410,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("ChiTietSanPhamId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("IdCtsp")
                         .HasColumnType("uniqueidentifier");
 
@@ -494,8 +421,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ChiTietSanPhamId");
 
                     b.HasIndex("IdCtsp");
 
@@ -512,15 +437,10 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("ChiTietSanPhamId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("IdCtsp")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ChiTietSanPhamId");
 
                     b.HasIndex("IdCtsp");
 
@@ -622,9 +542,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("NhaSanXuatId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("TenSp")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -632,8 +549,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdHsx");
-
-                    b.HasIndex("NhaSanXuatId");
 
                     b.ToTable("SanPhams");
                 });
@@ -683,9 +598,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("PhanQuyenId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("SDT")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -702,8 +614,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                     b.HasIndex("GioHangsIdTaiKhoan");
 
                     b.HasIndex("IdCv");
-
-                    b.HasIndex("PhanQuyenId");
 
                     b.ToTable("TaiKhoans");
                 });
@@ -760,34 +670,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.ChiTietSanPham", b =>
                 {
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.BoNhoTrong", null)
-                        .WithMany("ChiTietSanPhams")
-                        .HasForeignKey("BoNhoTrongId");
-
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.ChatLieu", null)
-                        .WithMany("ChiTietSanPhams")
-                        .HasForeignKey("ChatLieuId");
-
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.ChipCPU", null)
-                        .WithMany("ChiTietSanPhams")
-                        .HasForeignKey("ChipCPUId");
-
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.ChipGPU", null)
-                        .WithMany("ChiTietSanPhams")
-                        .HasForeignKey("ChipGPUId");
-
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.CongSac", null)
-                        .WithMany("ChiTietSanPhams")
-                        .HasForeignKey("CongSacId");
-
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.GiamGia", null)
-                        .WithMany("ChiTietSanPhams")
-                        .HasForeignKey("GiamGiaId");
-
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.HeDieuHanh", null)
-                        .WithMany("ChiTietSanPhams")
-                        .HasForeignKey("HeDieuHanhId");
-
                     b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.BoNhoTrong", "BoNhoTrongs")
                         .WithMany()
                         .HasForeignKey("IdBoNhoTrong")
@@ -859,22 +741,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .HasForeignKey("IdSim")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.MauSac", null)
-                        .WithMany("ChiTietSanPhams")
-                        .HasForeignKey("MauSacId");
-
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.Pin", null)
-                        .WithMany("ChiTietSanPhams")
-                        .HasForeignKey("PinId");
-
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.Ram", null)
-                        .WithMany("ChiTietSanPhams")
-                        .HasForeignKey("RamId");
-
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.Sim", null)
-                        .WithMany("ChiTietSanPhams")
-                        .HasForeignKey("SimId");
 
                     b.Navigation("BoNhoTrongs");
 
@@ -953,10 +819,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.ThanhToan", null)
-                        .WithMany("HinhThucThanhToans")
-                        .HasForeignKey("ThanhToanId");
-
                     b.Navigation("HoaDons");
 
                     b.Navigation("ThanhToans");
@@ -975,14 +837,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.HoaDonChiTiet", b =>
                 {
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.ChiTietSanPham", null)
-                        .WithMany("HoaDonChiTiets")
-                        .HasForeignKey("ChiTietSanPhamId");
-
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.HoaDon", null)
-                        .WithMany("HoaDonChiTiets")
-                        .HasForeignKey("HoaDonId");
-
                     b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.ChiTietSanPham", "ChiTietSanPhams")
                         .WithMany()
                         .HasForeignKey("IdChiTietSp")
@@ -1002,10 +856,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.Imei", b =>
                 {
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.ChiTietSanPham", null)
-                        .WithMany("Imeis")
-                        .HasForeignKey("ChiTietSanPhamId");
-
                     b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.ChiTietSanPham", "ChiTietSanPhams")
                         .WithMany()
                         .HasForeignKey("IdCtsp")
@@ -1017,10 +867,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.ListAnh", b =>
                 {
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.ChiTietSanPham", null)
-                        .WithMany("ListAnhs")
-                        .HasForeignKey("ChiTietSanPhamId");
-
                     b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.ChiTietSanPham", "ChiTietSanPhams")
                         .WithMany()
                         .HasForeignKey("IdCtsp")
@@ -1037,10 +883,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .HasForeignKey("IdHsx")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.NhaSanXuat", null)
-                        .WithMany("SanPhams")
-                        .HasForeignKey("NhaSanXuatId");
 
                     b.Navigation("NhaSanXuats");
                 });
@@ -1059,97 +901,9 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.PhanQuyen", null)
-                        .WithMany("TaiKhoans")
-                        .HasForeignKey("PhanQuyenId");
-
                     b.Navigation("GioHangs");
 
                     b.Navigation("PhanQuyens");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.BoNhoTrong", b =>
-                {
-                    b.Navigation("ChiTietSanPhams");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.ChatLieu", b =>
-                {
-                    b.Navigation("ChiTietSanPhams");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.ChiTietSanPham", b =>
-                {
-                    b.Navigation("HoaDonChiTiets");
-
-                    b.Navigation("Imeis");
-
-                    b.Navigation("ListAnhs");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.ChipCPU", b =>
-                {
-                    b.Navigation("ChiTietSanPhams");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.ChipGPU", b =>
-                {
-                    b.Navigation("ChiTietSanPhams");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.CongSac", b =>
-                {
-                    b.Navigation("ChiTietSanPhams");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.GiamGia", b =>
-                {
-                    b.Navigation("ChiTietSanPhams");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.HeDieuHanh", b =>
-                {
-                    b.Navigation("ChiTietSanPhams");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.HoaDon", b =>
-                {
-                    b.Navigation("HoaDonChiTiets");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.MauSac", b =>
-                {
-                    b.Navigation("ChiTietSanPhams");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.NhaSanXuat", b =>
-                {
-                    b.Navigation("SanPhams");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.PhanQuyen", b =>
-                {
-                    b.Navigation("TaiKhoans");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.Pin", b =>
-                {
-                    b.Navigation("ChiTietSanPhams");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.Ram", b =>
-                {
-                    b.Navigation("ChiTietSanPhams");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.Sim", b =>
-                {
-                    b.Navigation("ChiTietSanPhams");
-                });
-
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.ThanhToan", b =>
-                {
-                    b.Navigation("HinhThucThanhToans");
                 });
 #pragma warning restore 612, 618
         }
