@@ -17,6 +17,27 @@ namespace Assgment_Nhom3_WebBanDienThoai.Configurations
             builder.HasOne(p => p.ChipCPUs).WithMany().HasForeignKey(p => p.IdChipCPU);
 
             builder.HasOne(p => p.ChipGPUs ).WithMany().HasForeignKey(p => p.IdChipGPU);
+
+            builder.HasOne(p => p.CongSacs).WithMany().HasForeignKey(p => p.IdCongSac);
+
+            builder.HasOne(p => p.GiamGias).WithMany().HasForeignKey(p => p.IdGiamGia);
+
+            builder.HasOne(p => p.HeDieuHanhs).WithMany().HasForeignKey(p => p.IdHeDieuHanh);
+
+            builder.HasOne(p => p.MauSacs).WithMany().HasForeignKey(p => p.IdMauSac);
+
+            builder.HasOne(p => p.Pins).WithMany().HasForeignKey(p => p.IdPin);
+
+            builder.HasOne(p => p.Rams).WithMany().HasForeignKey(p => p.IdRam);
+
+            builder.HasOne(p => p.Sims).WithMany().HasForeignKey(p => p.IdSim);
+
+            builder.HasOne(p => p.SanPhams).WithMany().HasForeignKey(p => p.IdSanPham);
+
+
+
+
+
         }
     }
 }

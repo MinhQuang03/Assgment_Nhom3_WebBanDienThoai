@@ -14,6 +14,7 @@
 
         public Guid IdHeDieuHanh { get; set; }
 
+        public Guid IdCongSac { get; set; }
         public Guid IdPin { get; set; }
 
         public Guid IdSim { get; set; }
@@ -49,7 +50,7 @@
         public virtual ChipCPU ChipCPUs { get; set; }
 
         public virtual ChipGPU ChipGPUs { get; set;}
-        public virtual CongSac CongSac { get; set; }
+        public virtual CongSac CongSacs { get; set; }
 
         public virtual HeDieuHanh HeDieuHanhs { get; set; }
 
