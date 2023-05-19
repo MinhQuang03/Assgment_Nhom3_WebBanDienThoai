@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Assgment_Nhom3_WebBanDienThoai/1.0.0": {
+        "runtime": {
+          "Assgment_Nhom3_WebBanDienThoai.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Assgment_Nhom3_WebBanDienThoai/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
