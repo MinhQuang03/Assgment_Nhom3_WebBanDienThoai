@@ -41,28 +41,7 @@
 
         public int TrangThai { get; set; }
 
-        public virtual SanPham SanPhams { get; set; }
-
-        public virtual BoNhoTrong BoNhoTrongs { get; set; }
-
-        public virtual ChatLieu ChatLieus { get; set; }
-
-        public virtual ChipCPU ChipCPUs { get; set; }
-
-        public virtual ChipGPU ChipGPUs { get; set;}
-        public virtual CongSac CongSacs { get; set; }
-
-        public virtual HeDieuHanh HeDieuHanhs { get; set; }
-
-        public virtual MauSac MauSacs { get; set; }
-
-        public virtual GiamGia GiamGias { get; set; }
-
-        public virtual Pin Pins { get; set; }
-
-        public virtual Ram Rams { get; set; }
-
-        public virtual Sim Sims { get; set; }
+        
 
       
     }
