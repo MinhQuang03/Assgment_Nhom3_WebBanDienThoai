@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     /// <inheritdoc />
-    public partial class Vip : Migration
+    public partial class quang : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -76,6 +76,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SoPhanTramGiam = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     NgayBatDau = table.Column<DateTime>(type: "datetime2", nullable: true),
                     NgayKetThuc = table.Column<DateTime>(type: "datetime2", nullable: true),
                     GhiChu = table.Column<string>(type: "nvarchar(max)", nullable: false),

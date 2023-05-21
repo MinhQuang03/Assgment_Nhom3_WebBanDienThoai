@@ -4,6 +4,8 @@
     {
         public Guid Id { get; set; }
 
+        public decimal SoPhanTramGiam { get; set; }
+
         public DateTime? NgayBatDau { get; set; }
 
         public DateTime? NgayKetThuc { get; set; }

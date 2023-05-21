@@ -1,40 +1,42 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Assgment_Nhom3_WebBanDienThoai.Services
 {
     public class SimServices : ISimServices
     {
-        ShoppingDbContext _dbContext;
+        private ShoppingDbContext _context;
 
-        public SimServices(ShoppingDbContext dbContext)
+        public SimServices()
         {
-            _dbContext = dbContext;
+            _context = new ShoppingDbContext();
         }
 
-        public bool Create(Sim sim)
+        public bool Create(Sim obj)
         {
             try
             {
-                _dbContext.Sims.Add(sim);
-                _dbContext.SaveChanges();
+                _context.Sims.Add(obj);
+                _context.SaveChanges();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return false;
             }
         }
 
-        public bool Delete(Sim sim)
+        public bool Delete(Guid id)
         {
             try
             {
-                _dbContext.Sims.Remove(sim);
-                _dbContext.SaveChanges();
+                var obj = _context.Sims.FirstOrDefault(x => x.Id == id);
+                _context.Sims.Remove(obj);
+                _context.SaveChanges();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return false;
             }
@@ -42,18 +44,20 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
 
         public List<Sim> GetAll()
         {
-            return _dbContext.Sims.ToList();
+            return _context.Sims.ToList();
         }
 
-        public bool Update(Sim sim)
+        public bool Update(Sim obj)
         {
             try
             {
-                _dbContext.Sims.Update(sim);
-                _dbContext.SaveChanges();
+                var sim = _context.Sims.Find(obj.Id);
+                sim.Ten = obj.Ten;
+                _context.Sims.Update(sim);
+                _context.SaveChanges();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return false;
             }

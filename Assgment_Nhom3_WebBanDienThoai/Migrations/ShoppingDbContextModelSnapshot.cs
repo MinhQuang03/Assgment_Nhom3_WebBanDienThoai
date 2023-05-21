@@ -236,6 +236,9 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                     b.Property<DateTime?>("NgayKetThuc")
                         .HasColumnType("datetime2");
 
+                    b.Property<decimal>("SoPhanTramGiam")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
 

@@ -5,34 +5,36 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
 {
     public class GiamGiaServices : IGiamGiaServices
     {
-        ShoppingDbContext _dbContext;
+        private ShoppingDbContext _context;
         public GiamGiaServices()
         {
-            this._dbContext = new ShoppingDbContext();    
+            _context = new ShoppingDbContext();
         }
-        public bool Create(GiamGia gh)
+
+        public bool Create(GiamGia obj)
         {
             try
             {
-                _dbContext.GiamGias.Add(gh);
-                _dbContext.SaveChanges();
+                _context.GiamGias.Add(obj);
+                _context.SaveChanges();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return false;
             }
         }
 
-        public bool Delete(GiamGia gh)
+        public bool Delete(Guid id)
         {
             try
             {
-                _dbContext.GiamGias.Remove(gh);
-                _dbContext.SaveChanges();
+                var obj = _context.GiamGias.FirstOrDefault(x => x.Id == id);
+                _context.GiamGias.Remove(obj);
+                _context.SaveChanges();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return false;
             }
@@ -40,18 +42,24 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
 
         public List<GiamGia> GetAll()
         {
-            return _dbContext.GiamGias.ToList();
+            return _context.GiamGias.ToList();
         }
 
-        public bool Update(GiamGia gh)
+        public bool Update(GiamGia obj)
         {
             try
             {
-                _dbContext.GiamGias.Update(gh);
-                _dbContext.SaveChanges();
+                var x = _context.GiamGias.Find(obj.Id);
+                x.SoPhanTramGiam = obj.SoPhanTramGiam;
+                x.NgayBatDau = obj.NgayBatDau;
+                x.NgayKetThuc = obj.NgayKetThuc;
+                x.GhiChu = obj.GhiChu;
+                x.TrangThai = obj.TrangThai;
+                _context.GiamGias.Update(x);
+                _context.SaveChanges();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return false;
             }

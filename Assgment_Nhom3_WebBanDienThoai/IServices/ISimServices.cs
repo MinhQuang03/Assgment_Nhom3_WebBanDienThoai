@@ -4,12 +4,10 @@ namespace Assgment_Nhom3_WebBanDienThoai.IServices
 {
     public interface ISimServices
     {
-        List<Sim> GetAll();
+        public bool Create(Sim obj);
+        public bool Delete(Guid id);
+        public bool Update(Sim obj);
+        public List<Sim> GetAll();
 
-        bool Create(Sim sim);
-
-        bool Update(Sim sim);
-
-        bool Delete(Sim sim);
     }
 }
