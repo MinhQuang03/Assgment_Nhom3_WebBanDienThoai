@@ -1,15 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Data;
 using System.Reflection;
-
+using Assgment_Nhom3_WebBanDienThoai.Models;
 namespace Assgment_Nhom3_WebBanDienThoai.Models
 {
     public class ShoppingDbContext : DbContext
     {
         public ShoppingDbContext() { }
-        public ShoppingDbContext(DbContextOptions options) : base(options)
+        public ShoppingDbContext(DbContextOptions<ShoppingDbContext> options) : base(options)
         {
-
         }
+
         public DbSet<BoNhoTrong> BoNhoTrongs { get; set; }
 
         public DbSet<ChatLieu> ChatLieus { get; set; }
@@ -59,13 +60,12 @@ namespace Assgment_Nhom3_WebBanDienThoai.Models
         public DbSet<TaiKhoan> TaiKhoans { get; set; }
 
         public DbSet<ThanhToan> ThanhToans { get; set; }
-        
-        public DbSet<TinTuc> TinTucs { get; set; }
 
+        public DbSet<TinTuc> TinTucs { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=MSI\SQLEXPRESS;Initial Catalog=BanDienThoai_Nhom2;User ID=QuangBm36;Password=123;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-H6TL71T\MINGG;Initial Catalog=IT17301_Shopping;User ID=minh160801;Password=minhanh321  ;TrustServerCertificate=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
