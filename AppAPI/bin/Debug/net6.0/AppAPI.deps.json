@@ -9,6 +9,7 @@
       "AppAPI/1.0.0": {
         "dependencies": {
           "Assgment_Nhom3_WebBanDienThoai": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
