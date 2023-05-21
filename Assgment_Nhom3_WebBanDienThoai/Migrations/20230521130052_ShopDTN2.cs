@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     /// <inheritdoc />
-    public partial class quang : Migration
+    public partial class ShopDTN2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
