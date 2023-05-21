@@ -9,6 +9,9 @@ namespace Assgment_Nhom3_WebBanDienThoai.Configurations
         public void Configure(EntityTypeBuilder<Imei> builder)
         {
             builder.HasKey(p => p.Id);
+
+            builder.HasOne(p => p.ChiTietSanPhams).WithMany().HasForeignKey(p => p.IdCtsp);
+
         }
     }
 }

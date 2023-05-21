@@ -6,6 +6,6 @@
 
         public string Ten { get; set; }
 
-        public virtual List<ChiTietSanPham> ChiTietSanPhams { get; set; }
+       
     }
 }

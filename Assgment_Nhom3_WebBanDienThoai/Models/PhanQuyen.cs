@@ -7,6 +7,6 @@
 
         public int TrangThai { get; set; }
 
-        public List<TaiKhoan> TaiKhoans { get; set; }
+        
     }
 }

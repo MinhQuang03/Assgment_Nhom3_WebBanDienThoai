@@ -24,6 +24,5 @@
 
         public virtual TaiKhoan TaiKhoans { get; set; }
 
-        public List<HoaDonChiTiet> HoaDonChiTiets { get; set; }
     }
 }

@@ -8,7 +8,10 @@ namespace Assgment_Nhom3_WebBanDienThoai.Configurations
     {
         public void Configure(EntityTypeBuilder<HoaDon> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(p => p.Id);
+
+            builder.HasOne(p => p.TaiKhoans).WithMany().HasForeignKey(p => p.IdTaiKhoan);
+
         }
     }
 }

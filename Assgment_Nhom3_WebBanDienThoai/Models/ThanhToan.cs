@@ -12,6 +12,6 @@
 
         public int? MaCvv { get; set; }
 
-        public List<HinhThucThanhToan> HinhThucThanhToans { get; set; }
+       
     }
 }
