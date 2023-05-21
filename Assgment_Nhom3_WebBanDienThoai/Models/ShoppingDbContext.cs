@@ -11,14 +11,58 @@ namespace Assgment_Nhom3_WebBanDienThoai.Models
         {
         }
 
-        public DbSet<Ram> Rams { get; set; }
+        public DbSet<BoNhoTrong> BoNhoTrongs { get; set; }
+
         public DbSet<ChatLieu> ChatLieus { get; set; }
 
-        public DbSet<BoNhoTrong> BoNhoTrong { get; set; }
-        //public DbSet<Cart> Carts { get; set; }
-        //public DbSet<BillDetail> billDetails { get; set; }
-        //public DbSet<CartDetail> cartDetails { get; set; }
-        //public DbSet<User> Users { get; set; }
+        public DbSet<ChipCPU> ChipCPUs { get; set; }
+
+        public DbSet<ChipGPU> ChipGPUs { get; set; }
+
+        public DbSet<ChiTietSanPham> ChiTietSanPhams { get; set; }
+
+        public DbSet<CongSac> CongSacs { get; set; }
+
+        public DbSet<DanhGia> DanhGias { get; set; }
+
+        public DbSet<GiamGia> GiamGias { get; set; }
+
+        public DbSet<GioHang> GioHangs { get; set; }
+
+        public DbSet<GioHangChiTiet> GioHangChiTiets { get; set; }
+
+        public DbSet<HeDieuHanh> HeDieuHanhs { get; set; }
+
+        public DbSet<HinhThucThanhToan> HinhThucThanhToans { get; set; }
+
+        public DbSet<HoaDon> HoaDons { get; set; }
+
+        public DbSet<HoaDonChiTiet> HoaDonChiTiets { get; set; }
+
+        public DbSet<Imei> Imeis { get; set; }
+
+        public DbSet<ListAnh> ListAnhs { get; set; }
+
+        public DbSet<MauSac> MauSacs { get; set; }
+
+        public DbSet<NhaSanXuat> NhaSanXuats { get; set; }
+
+        public DbSet<PhanQuyen> PhanQuyens { get; set; }
+
+        public DbSet<Pin> Pins { get; set; }
+
+        public DbSet<Ram> Rams { get; set; }
+
+        public DbSet<SanPham> SanPhams { get; set; }
+
+        public DbSet<Sim> Sims { get; set; }
+
+        public DbSet<TaiKhoan> TaiKhoans { get; set; }
+
+        public DbSet<ThanhToan> ThanhToans { get; set; }
+
+        public DbSet<TinTuc> TinTucs { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-H6TL71T\MINGG;Initial Catalog=IT17301_Shopping;User ID=minh160801;Password=minhanh321  ;TrustServerCertificate=True");
