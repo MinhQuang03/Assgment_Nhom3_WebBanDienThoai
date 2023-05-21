@@ -3454,6 +3454,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Assgment_Nhom3_WebBanDienThoai >= 1.0.0",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -3505,6 +3506,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "[7.0.5, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.2.3, )"
@@ -3532,5 +3537,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file E:\\FPT Polytechnic\\C#5\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
