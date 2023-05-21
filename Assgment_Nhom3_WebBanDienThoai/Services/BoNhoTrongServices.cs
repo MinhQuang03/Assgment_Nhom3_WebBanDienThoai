@@ -15,7 +15,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
         {
             try
             {
-                _dbContext.BoNhoTrong.Add(p);
+                _dbContext.BoNhoTrongs.Add(p);
                 _dbContext.SaveChanges();
                 return true;
             }
@@ -30,8 +30,8 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
         {
             try
             {
-                var p = _dbContext.BoNhoTrong.Find(id);
-                _dbContext.BoNhoTrong.Remove(p);
+                var p = _dbContext.BoNhoTrongs.Find(id);
+                _dbContext.BoNhoTrongs.Remove(p);
                 _dbContext.SaveChanges();
                 return true;
             }
@@ -44,26 +44,26 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
 
         public List<BoNhoTrong> GetAllBoNhoTrongs()
         {
-            return _dbContext.BoNhoTrong.ToList();
+            return _dbContext.BoNhoTrongs.ToList();
         }
 
         public BoNhoTrong GetBoNhoTrongsById(Guid id)
         {
-            return _dbContext.BoNhoTrong.FirstOrDefault(p => p.Id == id);
+            return _dbContext.BoNhoTrongs.FirstOrDefault(p => p.Id == id);
         }
 
         public List<BoNhoTrong> GetBoNhoTrongsByName(string name)
         {
-            return _dbContext.BoNhoTrong.Where(p => p.Ten.Contains(name)).ToList();
+            return _dbContext.BoNhoTrongs.Where(p => p.Ten.Contains(name)).ToList();
         }
 
         public bool UpdateChatLieu(BoNhoTrong p)
         {
             try
             {
-                var a = _dbContext.BoNhoTrong.Find(p.Id);
+                var a = _dbContext.BoNhoTrongs.Find(p.Id);
                 a.Ten = p.Ten;
-                _dbContext.BoNhoTrong.Update(a);
+                _dbContext.BoNhoTrongs.Update(a);
                 _dbContext.SaveChanges();
                 return true;
             }
