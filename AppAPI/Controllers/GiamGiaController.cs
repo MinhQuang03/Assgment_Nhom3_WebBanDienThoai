@@ -1,4 +1,5 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
+using Assgment_Nhom3_WebBanDienThoai.Models;
 using Assgment_Nhom3_WebBanDienThoai.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,42 +11,63 @@ namespace AppAPI.Controllers
     [ApiController]
     public class GiamGiaController : ControllerBase
     {
-        public readonly ISimServices simServices;
+        public readonly IGiamGiaServices giamGiaServices;
         public GiamGiaController()
         {
-            simServices = new SimServices();
+            giamGiaServices = new GiamGiaServices();
         }
 
         // GET: api/<GiamGiaController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        [HttpGet("get-all-MaGiamGia")]
+        public List<GiamGia> Get()
         {
-            return new string[] { "value1", "value2" };
+            return giamGiaServices.GetAll();
         }
 
         // GET api/<GiamGiaController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //[HttpGet("{id}")]
+        //public string Get(int id)
+        //{
+        //    return "value";
+        //}
 
         // POST api/<GiamGiaController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("create-MaGiamGia")]
+        public bool Create(decimal SoPhanTram, DateTime NgayBatDau, DateTime NgayKetThuc, string GhiChu, int TrangThai)
         {
+            GiamGia a = new GiamGia()
+            {
+                Id = Guid.NewGuid(),
+                SoPhanTramGiam = SoPhanTram,
+                NgayBatDau = NgayBatDau,
+                NgayKetThuc = NgayKetThuc,
+                GhiChu = GhiChu,
+                TrangThai = TrangThai
+            };
+            return giamGiaServices.Create(a);
         }
 
         // PUT api/<GiamGiaController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut("update-MaGiamGia-{id}")]
+        public bool update(Guid id, [FromBody] decimal SoPhanTram, DateTime NgayBatDau, DateTime NgayKetThuc, string GhiChu, int TrangThai)
         {
+            GiamGia a = new GiamGia()
+            {
+                Id = id,
+                SoPhanTramGiam = SoPhanTram,
+                NgayBatDau = NgayBatDau,
+                NgayKetThuc = NgayKetThuc,
+                GhiChu = GhiChu,
+                TrangThai = TrangThai
+            };
+            return giamGiaServices.Update(a);
         }
 
         // DELETE api/<GiamGiaController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("delete-MaGiamGia-{id}")]
+        public bool Delete(Guid id)
         {
+            return giamGiaServices.Delete(id);
         }
     }
 }

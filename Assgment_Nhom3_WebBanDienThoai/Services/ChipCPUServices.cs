@@ -1,23 +1,21 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace Assgment_Nhom3_WebBanDienThoai.Services
 {
-    public class SimServices : ISimServices
+    public class ChipCPUServices : IChipCPUServices
     {
         private ShoppingDbContext _context;
-
-        public SimServices()
+        public ChipCPUServices()
         {
             _context = new ShoppingDbContext();
         }
 
-        public bool Create(Sim obj)
+        public bool Create(ChipCPU obj)
         {
             try
             {
-                _context.Sims.Add(obj);
+                _context.ChipCPUs.Add(obj);
                 _context.SaveChanges();
                 return true;
             }
@@ -31,8 +29,8 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
         {
             try
             {
-                var obj = _context.Sims.FirstOrDefault(x => x.Id == id);
-                _context.Sims.Remove(obj);
+                var obj = _context.ChipCPUs.FirstOrDefault(x => x.Id == id);
+                _context.ChipCPUs.Remove(obj);
                 _context.SaveChanges();
                 return true;
             }
@@ -42,18 +40,18 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
             }
         }
 
-        public List<Sim> GetAll()
+        public List<ChipCPU> GetAll()
         {
-            return _context.Sims.ToList();
+            return _context.ChipCPUs.ToList();
         }
 
-        public bool Update(Sim obj)
+        public bool Update(ChipCPU obj)
         {
             try
             {
-                var sim = _context.Sims.Find(obj.Id);
-                sim.Ten = obj.Ten;
-                _context.Sims.Update(sim);
+                var x = _context.ChipCPUs.Find(obj.Id);
+                x.Ten = obj.Ten;
+                _context.ChipCPUs.Update(x);
                 _context.SaveChanges();
                 return true;
             }
