@@ -7,6 +7,10 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
     {
         ShoppingDbContext _dbContext;
 
+        public SimServices()
+        {
+        }
+
         public SimServices(ShoppingDbContext dbContext)
         {
             _dbContext = dbContext;
