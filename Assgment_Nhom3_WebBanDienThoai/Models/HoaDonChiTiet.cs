@@ -18,6 +18,6 @@
 
         public virtual ChiTietSanPham ChiTietSanPhams { get; set; }
 
-       
+
     }
 }

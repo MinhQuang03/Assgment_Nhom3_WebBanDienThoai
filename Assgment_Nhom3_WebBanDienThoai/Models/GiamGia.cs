@@ -12,6 +12,6 @@
 
         public int TrangThai { get; set; }
 
-        public List<ChiTietSanPham> ChiTietSanPhams { get; set; }
+      
     }
 }

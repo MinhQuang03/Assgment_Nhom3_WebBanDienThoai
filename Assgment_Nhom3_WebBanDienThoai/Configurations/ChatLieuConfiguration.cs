@@ -8,7 +8,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Configurations
     {
         public void Configure(EntityTypeBuilder<ChatLieu> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(p => p.Id);
         }
     }
 }

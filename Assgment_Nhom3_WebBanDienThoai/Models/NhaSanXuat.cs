@@ -6,7 +6,7 @@
 
         public string Ten { get; set; }
 
-        public List<SanPham> SanPhams { get; set; }
+       
 
     }
 }

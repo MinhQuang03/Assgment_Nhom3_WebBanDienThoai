@@ -8,7 +8,13 @@ namespace Assgment_Nhom3_WebBanDienThoai.Configurations
     {
         public void Configure(EntityTypeBuilder<DanhGia> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(p => p.Id);
+
+            builder.HasOne(p => p.ChiTietSanPhams).WithMany().HasForeignKey(p => p.IdSpct);
+
+            builder.HasOne(p => p.TaiKhoans).WithMany().HasForeignKey(p => p.IdTaiKhoan);
+
+
         }
     }
 }

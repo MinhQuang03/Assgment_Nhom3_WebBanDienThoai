@@ -9,6 +9,8 @@ namespace Assgment_Nhom3_WebBanDienThoai.Configurations
         public void Configure(EntityTypeBuilder<TaiKhoan> builder)
         {
             builder.HasKey(p => p.Id);
+
+            builder.HasOne(p => p.PhanQuyens).WithMany().HasForeignKey(p => p.IdCv);
         }
     }
 }

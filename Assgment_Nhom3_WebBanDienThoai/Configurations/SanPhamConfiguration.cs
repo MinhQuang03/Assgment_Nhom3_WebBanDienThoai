@@ -9,6 +9,9 @@ namespace Assgment_Nhom3_WebBanDienThoai.Configurations
         public void Configure(EntityTypeBuilder<SanPham> builder)
         {
             builder.HasKey(p => p.Id);
+
+            builder.HasOne(p => p.NhaSanXuats).WithMany().HasForeignKey(p => p.IdHsx);
+
         }
     }
 }

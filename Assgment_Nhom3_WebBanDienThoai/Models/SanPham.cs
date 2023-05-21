@@ -2,7 +2,7 @@
 {
     public class SanPham
     {
-        public Guid Idsp { get; set; }
+        public Guid Id { get; set; }
 
         public string TenSp { get; set; }
 
@@ -11,5 +11,7 @@
         public string Anh { get; set; }
 
         public Guid IdHsx { get; set; }
+
+        public virtual NhaSanXuat NhaSanXuats { get; set; }
     }
 }

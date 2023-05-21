@@ -7,6 +7,6 @@
         public string? Mota { get; set; }
 
 
-        public TaiKhoan TaiKhoans { get; set; }
+        //public TaiKhoan TaiKhoans { get; set; }
     }
 }
