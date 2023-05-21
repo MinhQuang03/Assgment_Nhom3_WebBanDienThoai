@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
-    [Migration("20230519164310_Vip")]
-    partial class Vip
+    [Migration("20230521095947_quang")]
+    partial class quang
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -238,6 +238,9 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 
                     b.Property<DateTime?>("NgayKetThuc")
                         .HasColumnType("datetime2");
+
+                    b.Property<decimal>("SoPhanTramGiam")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
