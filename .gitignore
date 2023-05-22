@@ -51,3 +51,7 @@ AppAPI/bin/Debug/net6.0/AppAPI.exe
 AppAPI/bin/Debug/net6.0/AppAPI.dll
 .vs/Assgment_Nhom3_WebBanDienThoai/v17/.suo
 .vs/Assgment_Nhom3_WebBanDienThoai/DesignTimeBuild/.dtbcache.v2
+AppAPI/obj/staticwebassets.pack.sentinel
+AppAPI/obj/Debug/net6.0/AppAPI.csproj.AssemblyReference.cache
+AppAPI/bin/Debug/net6.0/Assgment_Nhom3_WebBanDienThoai.exe
+.vs/Assgment_Nhom3_WebBanDienThoai/v17/.suo
