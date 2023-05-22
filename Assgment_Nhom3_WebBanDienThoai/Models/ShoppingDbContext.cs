@@ -65,14 +65,8 @@ namespace Assgment_Nhom3_WebBanDienThoai.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-<<<<<<< Updated upstream
+
             optionsBuilder.UseSqlServer(@"Data Source=MSI;Initial Catalog=BanDienThoai_Nhom2;User ID=thanhnxph20424;Password=05012003  ;TrustServerCertificate=True");
-=======
-
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-C378UQD\SQLEXPRESS;Initial Catalog=BanDienThoai_Nhom2;User ID=tainq27;Password=123456  ;TrustServerCertificate=True");
-            
-
->>>>>>> Stashed changes
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
