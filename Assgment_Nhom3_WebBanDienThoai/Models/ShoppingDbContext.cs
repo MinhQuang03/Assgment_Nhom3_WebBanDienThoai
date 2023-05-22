@@ -66,8 +66,8 @@ namespace Assgment_Nhom3_WebBanDienThoai.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-BVU45J8\HIEU;Initial Catalog=BanDienThoai_Nhom2;Integrated Security=True");
-            
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-C378UQD\SQLEXPRESS;Initial Catalog=BanDienThoai_Nhom2;User ID=tainq27;Password=123456;TrustServerCertificate=True;Integrated Security=True");
+
 
         }
 

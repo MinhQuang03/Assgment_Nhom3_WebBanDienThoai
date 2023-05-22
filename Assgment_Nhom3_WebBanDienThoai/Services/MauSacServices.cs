@@ -1,5 +1,6 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Assgment_Nhom3_WebBanDienThoai.Services
 {
@@ -28,7 +29,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
         {
             try
             {
-                var obj = _context.MauSacs.FirstOrDefault(x => x.Id == id);
+                var obj = _context.MauSacs.Find(id);
                 _context.MauSacs.Remove(obj);
                 _context.SaveChanges();
                 return true;
@@ -58,7 +59,8 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
         {
             try
             {
-                _context.MauSacs.Update(ms);
+                var obj = _context.MauSacs.Find(ms.Id);
+                _context.MauSacs.Update(obj);
                 _context.SaveChanges();
                 return true;
             }
