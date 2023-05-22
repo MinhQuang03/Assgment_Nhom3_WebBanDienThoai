@@ -9,19 +9,19 @@ namespace AppAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GiamGiaController : ControllerBase
+    public class BoNhoTrongController : ControllerBase
     {
-        public readonly IGiamGiaServices giamGiaServices;
-        public GiamGiaController()
+        public readonly IBoNhoTrongServices BoNhoTrongServices;
+        public BoNhoTrongController()
         {
-            giamGiaServices = new GiamGiaServices();
+            BoNhoTrongServices = new BoNhoTrongServices();
         }
 
         // GET: api/<GiamGiaController>
-        [HttpGet("get-all-MaGiamGia")]
-        public List<GiamGia> Get()
+        [HttpGet("get-all-BoNhoTrong")]
+        public List<BoNhoTrong> Get()
         {
-            return giamGiaServices.GetAll();
+            return BoNhoTrongServices.GetAllBoNhoTrongs();
         }
 
         // GET api/<GiamGiaController>/5
@@ -32,42 +32,34 @@ namespace AppAPI.Controllers
         //}
 
         // POST api/<GiamGiaController>
-        [HttpPost("create-MaGiamGia")]
-        public bool Create(decimal SoPhanTram, DateTime NgayBatDau, DateTime NgayKetThuc, string GhiChu, int TrangThai)
+        [HttpPost("create-BoNhoTrong")]
+        public bool Create(string ten)
         {
-            GiamGia a = new GiamGia()
+            BoNhoTrong a = new BoNhoTrong()
             {
                 Id = Guid.NewGuid(),
-                SoPhanTramGiam = SoPhanTram,
-                NgayBatDau = NgayBatDau,
-                NgayKetThuc = NgayKetThuc,
-                GhiChu = GhiChu,
-                TrangThai = TrangThai
+                Ten= ten,
             };
-            return giamGiaServices.Create(a);
+            return BoNhoTrongServices.CreateBoNhoTrong(a);
         }
 
         // PUT api/<GiamGiaController>/5
-        [HttpPut("update-MaGiamGia-{id}")]
-        public bool update(Guid id, [FromBody] decimal SoPhanTram, DateTime NgayBatDau, DateTime NgayKetThuc, string GhiChu, int TrangThai)
+        [HttpPut("update-BoNhoTrong-{id}")]
+        public bool update(Guid id,string ten)
         {
-            GiamGia a = new GiamGia()
+            BoNhoTrong a = new BoNhoTrong()
             {
                 Id = id,
-                SoPhanTramGiam = SoPhanTram,
-                NgayBatDau = NgayBatDau,
-                NgayKetThuc = NgayKetThuc,
-                GhiChu = GhiChu,
-                TrangThai = TrangThai
+               Ten= ten,
             };
-            return giamGiaServices.Update(a);
+            return BoNhoTrongServices.UpdateChatLieu(a);
         }
 
         // DELETE api/<GiamGiaController>/5
-        [HttpDelete("delete-MaGiamGia-{id}")]
+        [HttpDelete("delete-BoNhoTrong-{id}")]
         public bool Delete(Guid id)
         {
-            return giamGiaServices.Delete(id);
+            return BoNhoTrongServices.DeleteChatLieu(id);
         }
     }
 }
