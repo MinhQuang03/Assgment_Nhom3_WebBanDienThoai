@@ -9,65 +9,51 @@ namespace AppAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GiamGiaController : ControllerBase
+    public class ChatLieuController : ControllerBase
     {
-        public readonly IGiamGiaServices giamGiaServices;
-        public GiamGiaController()
+        public readonly IChatLieuServices ChatLieuServices;
+        public ChatLieuController()
         {
-            giamGiaServices = new GiamGiaServices();
+            ChatLieuServices = new ChatLieuServices();
         }
 
         // GET: api/<GiamGiaController>
         [HttpGet("get-all-MaGiamGia")]
-        public List<GiamGia> Get()
+        public List<ChatLieu> Get()
         {
-            return giamGiaServices.GetAll();
+            return ChatLieuServices.GetAllChatLieus();
         }
 
-        // GET api/<GiamGiaController>/5
-        //[HttpGet("{id}")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
-
-        // POST api/<GiamGiaController>
-        [HttpPost("create-MaGiamGia")]
-        public bool Create(decimal SoPhanTram, DateTime NgayBatDau, DateTime NgayKetThuc, string GhiChu, int TrangThai)
+       
+        [HttpPost("create-ChatLieu")]
+        public bool Create(string ten)
         {
-            GiamGia a = new GiamGia()
+            ChatLieu a = new ChatLieu()
             {
                 Id = Guid.NewGuid(),
-                SoPhanTramGiam = SoPhanTram,
-                NgayBatDau = NgayBatDau,
-                NgayKetThuc = NgayKetThuc,
-                GhiChu = GhiChu,
-                TrangThai = TrangThai
+                Ten= ten,
+                
             };
-            return giamGiaServices.Create(a);
+            return ChatLieuServices.CreateChatLieu(a);
         }
 
-        // PUT api/<GiamGiaController>/5
-        [HttpPut("update-MaGiamGia-{id}")]
-        public bool update(Guid id, [FromBody] decimal SoPhanTram, DateTime NgayBatDau, DateTime NgayKetThuc, string GhiChu, int TrangThai)
+        
+        [HttpPut("update-ChatLieu-{id}")]
+        public bool update(Guid id,string ten)
         {
-            GiamGia a = new GiamGia()
+            ChatLieu a = new ChatLieu()
             {
                 Id = id,
-                SoPhanTramGiam = SoPhanTram,
-                NgayBatDau = NgayBatDau,
-                NgayKetThuc = NgayKetThuc,
-                GhiChu = GhiChu,
-                TrangThai = TrangThai
+                Ten= ten,
             };
-            return giamGiaServices.Update(a);
+            return ChatLieuServices.UpdateChatLieu(a);
         }
 
         // DELETE api/<GiamGiaController>/5
-        [HttpDelete("delete-MaGiamGia-{id}")]
+        [HttpDelete("delete-ChatLieu-{id}")]
         public bool Delete(Guid id)
         {
-            return giamGiaServices.Delete(id);
+            return ChatLieuServices.DeleteChatLieu(id);
         }
     }
 }
