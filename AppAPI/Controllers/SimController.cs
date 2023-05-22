@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
+using Assgment_Nhom3_WebBanDienThoai.Models;
+using Assgment_Nhom3_WebBanDienThoai.Services;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,36 +11,55 @@ namespace AppAPI.Controllers
     [ApiController]
     public class SimController : ControllerBase
     {
-        // GET: api/<SimController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        public ISimServices simServices;
+
+        public SimController()
         {
-            return new string[] { "value1", "value2" };
+            simServices = new SimServices();
+        }
+        // GET: api/<SimController>
+        [HttpGet("get-all-sim")]
+        public List<Sim> Get()
+        {
+            return simServices.GetAll();
         }
 
         // GET api/<SimController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //[HttpGet("{id}")]
+        //public string Get(int id)
+        //{
+        //    return "value";
+        //}
 
         // POST api/<SimController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("create-sim")]
+        public bool Create(string ten)
         {
+            Sim a = new Sim()
+            {
+                Id = Guid.NewGuid(),
+                Ten = ten,
+            };
+            return simServices.Create(a);
         }
 
         // PUT api/<SimController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut("update-sim-{id}")]
+        public bool update(Guid id, [FromBody] string ten)
         {
+            Sim a = new Sim()
+            {
+                Id = id,
+                Ten = ten,
+            };
+            return simServices.Update(a);
         }
 
         // DELETE api/<SimController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("delete-sim-{id}")]
+        public bool Delete(Guid id)
         {
+            return simServices.Delete(id);
         }
     }
 }

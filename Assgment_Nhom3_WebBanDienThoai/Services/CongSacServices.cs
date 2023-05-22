@@ -1,23 +1,22 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace Assgment_Nhom3_WebBanDienThoai.Services
 {
-    public class SimServices : ISimServices
+    public class CongSacServices : ICongSacServices
     {
+
         private ShoppingDbContext _context;
 
-        public SimServices()
+        public CongSacServices()
         {
             _context = new ShoppingDbContext();
         }
-
-        public bool Create(Sim obj)
+        public bool CreateCongSac(CongSac cs)
         {
             try
             {
-                _context.Sims.Add(obj);
+                _context.CongSacs.Add(cs);
                 _context.SaveChanges();
                 return true;
             }
@@ -27,12 +26,12 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
             }
         }
 
-        public bool Delete(Guid id)
+        public bool DeleteCongSac(Guid id)
         {
             try
             {
-                var obj = _context.Sims.FirstOrDefault(x => x.Id == id);
-                _context.Sims.Remove(obj);
+                var obj = _context.CongSacs.FirstOrDefault(x => x.Id == id);
+                _context.CongSacs.Remove(obj);
                 _context.SaveChanges();
                 return true;
             }
@@ -42,18 +41,26 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
             }
         }
 
-        public List<Sim> GetAll()
+        public List<CongSac> GetAllCongSacs()
         {
-            return _context.Sims.ToList();
+            return _context.CongSacs.ToList();
         }
 
-        public bool Update(Sim obj)
+        public CongSac GetCongSacsById(Guid id)
+        {
+            return _context.CongSacs.FirstOrDefault(c => c.Id == id);
+        }
+
+        public List<CongSac> GetCongSacsByName(string name)
+        {
+            return _context.CongSacs.Where(c => c.Ten == name).ToList();
+        }
+
+        public bool UpdateCongSac(CongSac cs)
         {
             try
             {
-                var sim = _context.Sims.Find(obj.Id);
-                sim.Ten = obj.Ten;
-                _context.Sims.Update(sim);
+                _context.CongSacs.Update(cs);
                 _context.SaveChanges();
                 return true;
             }

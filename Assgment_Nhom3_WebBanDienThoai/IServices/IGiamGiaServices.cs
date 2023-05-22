@@ -4,12 +4,9 @@ namespace Assgment_Nhom3_WebBanDienThoai.IServices
 {
     public interface IGiamGiaServices
     {
-        List<GiamGia> GetAll();
-
-        bool Create(GiamGia gh);
-
-        bool Update(GiamGia gh);
-
-        bool Delete(GiamGia gh);
+        public bool Create(GiamGia obj);
+        public bool Delete(Guid id);
+        public bool Update(GiamGia obj);
+        public List<GiamGia> GetAll();
     }
 }
