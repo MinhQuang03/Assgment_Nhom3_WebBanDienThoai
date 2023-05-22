@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
-    [Migration("20230521095947_quang")]
-    partial class quang
+    [Migration("20230521130052_ShopDTN2")]
+    partial class ShopDTN2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
