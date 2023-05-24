@@ -1,5 +1,6 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Assgment_Nhom3_WebBanDienThoai.Services
 {
@@ -60,6 +61,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
         {
             try
             {
+                var x = _context.CongSacs.Find(cs.Id);
                 _context.CongSacs.Update(cs);
                 _context.SaveChanges();
                 return true;
