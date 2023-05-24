@@ -20,3 +20,7 @@ Assgment_Nhom3_WebBanDienThoai/obj/Debug/net6.0/Assgment_Nhom3_WebBanDienThoai.c
 Assgment_Nhom3_WebBanDienThoai/obj/Debug/net6.0/Assgment_Nhom3_WebBanDienThoai.GeneratedMSBuildEditorConfig.editorconfig
 Assgment_Nhom3_WebBanDienThoai/obj/project.assets.json
 Assgment_Nhom3_WebBanDienThoai/obj/project.nuget.cache
+Assgment_Nhom3_WebBanDienThoai/obj/staticwebassets.pack.sentinel
+AppAPI/obj/staticwebassets.pack.sentinel
+AppAPI/obj/Debug/net6.0/AppAPI.csproj.AssemblyReference.cache
+.vs/Assgment_Nhom3_WebBanDienThoai/v17/.suo
