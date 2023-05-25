@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     /// <inheritdoc />
-    public partial class ShopDTN2 : Migration
+    public partial class shoppingDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -248,15 +248,14 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                     DiaChi = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LinkAnh = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TrangThai = table.Column<int>(type: "int", nullable: false),
-                    IdCv = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    GioHangsIdTaiKhoan = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    IdCv = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TaiKhoans", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TaiKhoans_GioHangs_GioHangsIdTaiKhoan",
-                        column: x => x.GioHangsIdTaiKhoan,
+                        name: "FK_TaiKhoans_GioHangs_Id",
+                        column: x => x.Id,
                         principalTable: "GioHangs",
                         principalColumn: "IdTaiKhoan",
                         onDelete: ReferentialAction.Cascade);
@@ -664,11 +663,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                 name: "IX_SanPhams_IdHsx",
                 table: "SanPhams",
                 column: "IdHsx");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TaiKhoans_GioHangsIdTaiKhoan",
-                table: "TaiKhoans",
-                column: "GioHangsIdTaiKhoan");
 
             migrationBuilder.CreateIndex(
                 name: "IX_TaiKhoans_IdCv",

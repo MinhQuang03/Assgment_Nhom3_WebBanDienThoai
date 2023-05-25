@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
-    [Migration("20230521130052_ShopDTN2")]
-    partial class ShopDTN2
+    [Migration("20230525092058_shoppingDB")]
+    partial class shoppingDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -574,7 +574,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.TaiKhoan", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("DiaChi")
@@ -583,9 +582,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("GioHangsIdTaiKhoan")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("HoVaTen")
                         .IsRequired()
@@ -613,8 +609,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("GioHangsIdTaiKhoan");
 
                     b.HasIndex("IdCv");
 
@@ -893,8 +887,8 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.TaiKhoan", b =>
                 {
                     b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.GioHang", "GioHangs")
-                        .WithMany()
-                        .HasForeignKey("GioHangsIdTaiKhoan")
+                        .WithOne("TaiKhoans")
+                        .HasForeignKey("Assgment_Nhom3_WebBanDienThoai.Models.TaiKhoan", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -907,6 +901,12 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                     b.Navigation("GioHangs");
 
                     b.Navigation("PhanQuyens");
+                });
+
+            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.GioHang", b =>
+                {
+                    b.Navigation("TaiKhoans")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
