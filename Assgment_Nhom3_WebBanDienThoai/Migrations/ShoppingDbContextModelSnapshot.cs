@@ -250,7 +250,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.GioHang", b =>
                 {
                     b.Property<Guid>("IdTaiKhoan")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Mota")
@@ -571,6 +570,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.TaiKhoan", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("DiaChi")
@@ -780,6 +780,17 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                     b.Navigation("TaiKhoans");
                 });
 
+            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.GioHang", b =>
+                {
+                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.TaiKhoan", "TaiKhoans")
+                        .WithOne("GioHangs")
+                        .HasForeignKey("Assgment_Nhom3_WebBanDienThoai.Models.GioHang", "IdTaiKhoan")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TaiKhoans");
+                });
+
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.GioHangChiTiet", b =>
                 {
                     b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.ChiTietSanPham", "ChiTietSanPhams")
@@ -883,26 +894,18 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.TaiKhoan", b =>
                 {
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.GioHang", "GioHangs")
-                        .WithOne("TaiKhoans")
-                        .HasForeignKey("Assgment_Nhom3_WebBanDienThoai.Models.TaiKhoan", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.PhanQuyen", "PhanQuyens")
                         .WithMany()
                         .HasForeignKey("IdCv")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("GioHangs");
-
                     b.Navigation("PhanQuyens");
                 });
 
-            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.GioHang", b =>
+            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.TaiKhoan", b =>
                 {
-                    b.Navigation("TaiKhoans")
+                    b.Navigation("GioHangs")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

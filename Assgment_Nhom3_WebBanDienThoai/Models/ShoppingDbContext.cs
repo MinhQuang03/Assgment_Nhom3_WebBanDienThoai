@@ -73,7 +73,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TaiKhoan>().HasOne(c => c.GioHangs).WithOne(p =>p.TaiKhoans).HasForeignKey<TaiKhoan>();
+            modelBuilder.Entity<GioHang>().HasOne(c => c.TaiKhoans).WithOne(p =>p.GioHangs).HasForeignKey<GioHang>();
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
     }

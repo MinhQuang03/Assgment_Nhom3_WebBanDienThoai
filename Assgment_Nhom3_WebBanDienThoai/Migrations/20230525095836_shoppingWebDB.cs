@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     /// <inheritdoc />
-    public partial class shoppingDB : Migration
+    public partial class shoppingWebDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -85,18 +85,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_GiamGias", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "GioHangs",
-                columns: table => new
-                {
-                    IdTaiKhoan = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Mota = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_GioHangs", x => x.IdTaiKhoan);
                 });
 
             migrationBuilder.CreateTable(
@@ -254,12 +242,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                 {
                     table.PrimaryKey("PK_TaiKhoans", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TaiKhoans_GioHangs_Id",
-                        column: x => x.Id,
-                        principalTable: "GioHangs",
-                        principalColumn: "IdTaiKhoan",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_TaiKhoans_PhanQuyens_IdCv",
                         column: x => x.IdCv,
                         principalTable: "PhanQuyens",
@@ -370,6 +352,24 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "GioHangs",
+                columns: table => new
+                {
+                    IdTaiKhoan = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Mota = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_GioHangs", x => x.IdTaiKhoan);
+                    table.ForeignKey(
+                        name: "FK_GioHangs_TaiKhoans_IdTaiKhoan",
+                        column: x => x.IdTaiKhoan,
+                        principalTable: "TaiKhoans",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "HoaDons",
                 columns: table => new
                 {
@@ -423,33 +423,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "GioHangChiTiets",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IdTaiKhoan = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IdChiTietSp = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    SoLuong = table.Column<int>(type: "int", nullable: false),
-                    TrangThai = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_GioHangChiTiets", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_GioHangChiTiets_ChiTietSanPhams_IdChiTietSp",
-                        column: x => x.IdChiTietSp,
-                        principalTable: "ChiTietSanPhams",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_GioHangChiTiets_GioHangs_IdTaiKhoan",
-                        column: x => x.IdTaiKhoan,
-                        principalTable: "GioHangs",
-                        principalColumn: "IdTaiKhoan",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Imeis",
                 columns: table => new
                 {
@@ -485,6 +458,33 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         column: x => x.IdCtsp,
                         principalTable: "ChiTietSanPhams",
                         principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "GioHangChiTiets",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IdTaiKhoan = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IdChiTietSp = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SoLuong = table.Column<int>(type: "int", nullable: false),
+                    TrangThai = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_GioHangChiTiets", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_GioHangChiTiets_ChiTietSanPhams_IdChiTietSp",
+                        column: x => x.IdChiTietSp,
+                        principalTable: "ChiTietSanPhams",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_GioHangChiTiets_GioHangs_IdTaiKhoan",
+                        column: x => x.IdTaiKhoan,
+                        principalTable: "GioHangs",
+                        principalColumn: "IdTaiKhoan",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -695,6 +695,9 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                 name: "TinTucs");
 
             migrationBuilder.DropTable(
+                name: "GioHangs");
+
+            migrationBuilder.DropTable(
                 name: "ThanhToans");
 
             migrationBuilder.DropTable(
@@ -741,9 +744,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 
             migrationBuilder.DropTable(
                 name: "Sims");
-
-            migrationBuilder.DropTable(
-                name: "GioHangs");
 
             migrationBuilder.DropTable(
                 name: "PhanQuyens");
