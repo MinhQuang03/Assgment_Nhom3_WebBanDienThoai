@@ -1,10 +1,9 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace Assgment_Nhom3_WebBanDienThoai.Services
 {
-    public class TaiKhoanServices :ITaiKhoanServices
+    public class TaiKhoanServices : ITaiKhoanServices
     {
         private ShoppingDbContext _context;
 
@@ -12,7 +11,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
         {
             _context = new ShoppingDbContext();
         }
-
         public bool CreateTaiKhoan(TaiKhoan tk)
         {
             try
@@ -39,6 +37,16 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
         public List<TaiKhoan> GetAll()
         {
             return _context.TaiKhoans.ToList();
+        }
+
+        public TaiKhoan GetSanPhamById(Guid id)
+        {
+            return _context.TaiKhoans.FirstOrDefault(c => c.Id == id);
+        }
+
+        public List<TaiKhoan> GetTaiKhoanByName(string name)
+        {
+            return _context.TaiKhoans.Where(c => c.TenDN == name).ToList();
         }
 
         public bool UpdateTaiKhoan(TaiKhoan tk)
