@@ -11,7 +11,7 @@ namespace AppAPI.Controllers
     [ApiController]
     public class ChiTietSanPhamController : ControllerBase
     {
-        public IChiTietSanPhamServices chiTietSanPhamServices { get; set; }
+        public IChiTietSanPhamServices chiTietSanPhamServices ;
 
         public ChiTietSanPhamController()
         {
@@ -25,16 +25,12 @@ namespace AppAPI.Controllers
         }
 
         // GET api/<ChiTietSanPhamController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+
 
         // POST api/<ChiTietSanPhamController>
         [HttpPost("create-ThongTin-SanPham")]
         public bool Create(Guid IdSp, Guid IdGiamGia, Guid IdChatLieu, Guid IdBoNhoTrong, Guid IdHeDieuHanh, Guid IdCongSac, Guid IdPin, Guid IdSim,
-            Guid IdRam, Guid IdChipCPU, Guid IdChipGPU, Guid IdMauSac, double TrongLuong, string CameraTruoc, string CameraSau, decimal DonGia, int TrangThai)
+            Guid IdRam, Guid IdChipCPU, Guid IdChipGPU, Guid IdMauSac, double TrongLuong, string CameraTruoc, string CameraSau,int dophangiai,string kichthuoc, decimal DonGia, int TrangThai)
         {
             ChiTietSanPham a = new ChiTietSanPham()
             {
@@ -54,6 +50,8 @@ namespace AppAPI.Controllers
                 TrongLuong = TrongLuong,
                 CameraTruoc = CameraTruoc,
                 CameraSau = CameraSau,
+                DoPhanGiaiManHinh = dophangiai,
+                KichThuoc = kichthuoc,
                 DonGia = DonGia,
                 TrangThai = TrangThai
             };
