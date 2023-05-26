@@ -29,16 +29,27 @@ namespace AppAPI.Controllers
         [HttpPost("create-GioHangChiTiet")]
         public bool Create(Guid idTaiKhoan, Guid Idctsp ,int soluong ,int trangthai )
         {
-            GioHangChiTiet a = new GioHangChiTiet()
+            var car = gioHangServices.GetAll().FirstOrDefault(a => a.IdChiTietSp == Idctsp);
+            if ( car == null ) {
+                GioHangChiTiet a = new GioHangChiTiet()
+                {
+
+                    Id = Guid.NewGuid(),
+                    IdTaiKhoan = idTaiKhoan,
+                    IdChiTietSp = Idctsp,
+                    SoLuong = soluong,
+                    TrangThai = trangthai
+                };
+                return gioHangServices.Create(a);
+            }
+            else
             {
-                Id = Guid.NewGuid(),
-                IdTaiKhoan = idTaiKhoan,
-                IdChiTietSp = Idctsp,
-                SoLuong = soluong,
-               
-                TrangThai = trangthai
-            };
-            return gioHangServices.Create(a);
+                var cars = gioHangServices.GetAll().FirstOrDefault(a => a.IdChiTietSp == Idctsp);
+                cars.SoLuong += soluong;
+                return gioHangServices.Update(cars);
+            }
+
+            
         }
 
         // PUT api/<GioHangChiTietController>/5
