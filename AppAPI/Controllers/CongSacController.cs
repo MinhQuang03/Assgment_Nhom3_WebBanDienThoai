@@ -24,15 +24,8 @@ namespace AppAPI.Controllers
             return congSacServices.GetAllCongSacs();
         }
 
-        // GET api/<CongSacController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<CongSacController>
-        [HttpPost("create-congsac")]
+      
+        [HttpPost("create-CongSac")]
         public bool CreateCongSac(string ten)
         {
             CongSac cs = new CongSac()
