@@ -56,6 +56,7 @@ namespace AppAPI.Controllers
             hoaDonChiTiet.IdChiTietSp = IdChiTietSp;
             hoaDonChiTiet.SoLuong = SoLuong;
             hoaDonChiTiet.TrangThai = TrangThai;
+            hoaDonChiTiet.Gia = Gia;
             return _hoaDonChiTiet.UpdateHoaDonChiTiet(hoaDonChiTiet);
         }
 
