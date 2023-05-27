@@ -29,7 +29,7 @@ namespace AppAPI.Controllers
         [HttpPost("create-GioHangChiTiet")]
         public bool Create(Guid idTaiKhoan, Guid Idctsp ,int soluong ,int trangthai )
         {
-            var car = gioHangServices.GetAll().FirstOrDefault(a => a.IdChiTietSp == Idctsp);
+            var car = gioHangServices.GetAll().FirstOrDefault(a => a.IdChiTietSp == Idctsp && a.IdTaiKhoan == idTaiKhoan);
             if ( car == null ) {
                 GioHangChiTiet a = new GioHangChiTiet()
                 {
@@ -44,7 +44,7 @@ namespace AppAPI.Controllers
             }
             else
             {
-                var cars = gioHangServices.GetAll().FirstOrDefault(a => a.IdChiTietSp == Idctsp);
+                var cars = gioHangServices.GetAll().FirstOrDefault(a => a.IdChiTietSp == Idctsp && a.IdTaiKhoan == idTaiKhoan);
                 cars.SoLuong += soluong;
                 return gioHangServices.Update(cars);
             }
