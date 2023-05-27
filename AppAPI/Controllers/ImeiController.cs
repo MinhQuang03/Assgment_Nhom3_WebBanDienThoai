@@ -25,13 +25,7 @@ namespace AppAPI.Controllers
             return imeiServices.GetAll();
         }
 
-        // GET api/<ImeiController>/5
-        //[HttpGet("{id}")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
-
+       
         // POST api/<ImeiController>
         [HttpPost("create-imei")]
         public bool Create(string ten, int TrangThai, Guid IdCtsp)
@@ -48,14 +42,14 @@ namespace AppAPI.Controllers
 
         // PUT api/<ImeiController>/5
         [HttpPut("update-imei-{id}")]
-        public bool update(Guid id, [FromBody] string ten, int TrangThai, Guid IdCtsp)
+        public bool update(Guid id, string ten, int TrangThai)
         {
             Imei a = new Imei()
             {
                 Id = id,
                 imei = ten,
                 TrangThai = TrangThai,
-                IdCtsp = IdCtsp
+              
             };
             return imeiServices.Update(a);
         }

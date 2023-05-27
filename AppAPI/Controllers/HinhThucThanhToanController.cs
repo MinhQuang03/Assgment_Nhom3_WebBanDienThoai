@@ -53,7 +53,7 @@ namespace AppAPI.Controllers
         {
             HinhThucThanhToan a = new HinhThucThanhToan()
                 {
-                    Id = Guid.NewGuid(),
+                   
                     TenPhuongThuc = tenpt,
                     TongTien = tongtien,
                     TrangThai = trangthai,
