@@ -52,7 +52,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
                 var a = _dbContext.Imeis.Find(obj.Id);
                 a.imei = obj.imei;
                 a.TrangThai = obj.TrangThai;
-              
+                a.IdCtsp = obj.IdCtsp;
                 _dbContext.Imeis.Update(a);
                 _dbContext.SaveChanges();
                 return true;

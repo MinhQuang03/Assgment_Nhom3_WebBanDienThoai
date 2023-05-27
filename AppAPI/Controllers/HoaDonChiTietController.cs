@@ -34,7 +34,13 @@ namespace AppAPI.Controllers
             hoaDonChiTiet.IdChiTietSp = IdChiTietSp;
             hoaDonChiTiet.SoLuong = SoLuong;
             hoaDonChiTiet.TrangThai = TrangThai;
+<<<<<<< HEAD
+<<<<<<< HEAD
             hoaDonChiTiet.Gia = Gia;
+=======
+>>>>>>> parent of af7471f (add hdct)
+=======
+>>>>>>> parent of af7471f (add hdct)
             return _hoaDonChiTiet.CreateHoaDonChiTiet(hoaDonChiTiet);
 
 
