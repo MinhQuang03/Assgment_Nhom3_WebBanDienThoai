@@ -45,7 +45,7 @@ namespace AppAPI.Controllers
 
         // PUT api/<SimController>/5
         [HttpPut("update-sim-{id}")]
-        public bool update(Guid id, [FromBody] string ten)
+        public bool Update(Guid id, [FromBody] string ten)
         {
             Sim a = new Sim()
             {
