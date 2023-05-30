@@ -10,7 +10,7 @@
 
         public int SoLuong { get; set; }
 
-        public long Gia { get; set; }
+        public decimal Gia { get; set; }
 
         public int TrangThai { get; set; }
 

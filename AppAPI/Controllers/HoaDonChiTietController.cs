@@ -26,7 +26,7 @@ namespace AppAPI.Controllers
 
         // GET api/<HoaDonChiTietController>/5
         [HttpPost("Create-HoaDonChiTiet")]
-        public bool CreateHoaDonChiTiet(Guid IdHoaDon, Guid IdChiTietSp, int SoLuong, long Gia, int TrangThai)
+        public bool CreateHoaDonChiTiet(Guid IdHoaDon, Guid IdChiTietSp, int SoLuong, decimal Gia, int TrangThai)
         {
             HoaDonChiTiet hoaDonChiTiet = new HoaDonChiTiet();
             hoaDonChiTiet.Id = Guid.NewGuid();
@@ -34,13 +34,9 @@ namespace AppAPI.Controllers
             hoaDonChiTiet.IdChiTietSp = IdChiTietSp;
             hoaDonChiTiet.SoLuong = SoLuong;
             hoaDonChiTiet.TrangThai = TrangThai;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             hoaDonChiTiet.Gia = Gia;
-=======
->>>>>>> parent of af7471f (add hdct)
-=======
->>>>>>> parent of af7471f (add hdct)
+
             return _hoaDonChiTiet.CreateHoaDonChiTiet(hoaDonChiTiet);
 
 
