@@ -34,13 +34,9 @@ namespace AppAPI.Controllers
             hoaDonChiTiet.IdChiTietSp = IdChiTietSp;
             hoaDonChiTiet.SoLuong = SoLuong;
             hoaDonChiTiet.TrangThai = TrangThai;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             hoaDonChiTiet.Gia = Gia;
-=======
->>>>>>> parent of af7471f (add hdct)
-=======
->>>>>>> parent of af7471f (add hdct)
+
             return _hoaDonChiTiet.CreateHoaDonChiTiet(hoaDonChiTiet);
 
 
@@ -55,7 +51,7 @@ namespace AppAPI.Controllers
 
         // PUT api/<HoaDonChiTietController>/5
         [HttpPut("Update-HoaDonChiTiet-{id}")]
-        public bool Put(Guid id,Guid IdHoaDon, Guid IdChiTietSp, int SoLuong, long Gia, int TrangThai)
+        public bool Put(Guid id, Guid IdHoaDon, Guid IdChiTietSp, int SoLuong, long Gia, int TrangThai)
         {
             HoaDonChiTiet hoaDonChiTiet = new HoaDonChiTiet();
             hoaDonChiTiet.Id = id;
