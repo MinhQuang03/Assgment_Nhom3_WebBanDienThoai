@@ -26,7 +26,7 @@ namespace AppAPI.Controllers
 
         // GET api/<HoaDonChiTietController>/5
         [HttpPost("Create-HoaDonChiTiet")]
-        public bool CreateHoaDonChiTiet(Guid IdHoaDon, Guid IdChiTietSp, int SoLuong, long Gia, int TrangThai)
+        public bool CreateHoaDonChiTiet(Guid IdHoaDon, Guid IdChiTietSp, int SoLuong, decimal Gia, int TrangThai)
         {
             HoaDonChiTiet hoaDonChiTiet = new HoaDonChiTiet();
             hoaDonChiTiet.Id = Guid.NewGuid();
