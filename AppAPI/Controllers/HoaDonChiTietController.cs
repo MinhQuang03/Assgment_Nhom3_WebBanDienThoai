@@ -51,7 +51,7 @@ namespace AppAPI.Controllers
 
         // PUT api/<HoaDonChiTietController>/5
         [HttpPut("Update-HoaDonChiTiet-{id}")]
-        public bool Put(Guid id,Guid IdHoaDon, Guid IdChiTietSp, int SoLuong, long Gia, int TrangThai)
+        public bool Put(Guid id, Guid IdHoaDon, Guid IdChiTietSp, int SoLuong, long Gia, int TrangThai)
         {
             HoaDonChiTiet hoaDonChiTiet = new HoaDonChiTiet();
             hoaDonChiTiet.Id = id;
