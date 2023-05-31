@@ -689,3 +689,8 @@ C:\Users\hieu\Documents\GitHub\New folder\Assgment_Nhom3_WebBanDienThoai\Assgmen
 C:\Users\hieu\Documents\GitHub\New folder\Assgment_Nhom3_WebBanDienThoai\Assgment_Nhom3_WebBanDienThoai\obj\Debug\net6.0\Assgment_Nhom3_WebBanDienThoai.pdb
 C:\Users\hieu\Documents\GitHub\New folder\Assgment_Nhom3_WebBanDienThoai\Assgment_Nhom3_WebBanDienThoai\obj\Debug\net6.0\Assgment_Nhom3_WebBanDienThoai.genruntimeconfig.cache
 C:\Users\hieu\Documents\GitHub\New folder\Assgment_Nhom3_WebBanDienThoai\Assgment_Nhom3_WebBanDienThoai\obj\Debug\net6.0\ref\Assgment_Nhom3_WebBanDienThoai.dll
+C:\Users\ADMIN\Desktop\Assgment_Nhom3_WebBanDienThoai\Assgment_Nhom3_WebBanDienThoai\obj\Debug\net6.0\staticwebassets\msbuild.Assgment_Nhom3_WebBanDienThoai.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ADMIN\Desktop\Assgment_Nhom3_WebBanDienThoai\Assgment_Nhom3_WebBanDienThoai\obj\Debug\net6.0\staticwebassets\msbuild.build.Assgment_Nhom3_WebBanDienThoai.props
+C:\Users\ADMIN\Desktop\Assgment_Nhom3_WebBanDienThoai\Assgment_Nhom3_WebBanDienThoai\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Assgment_Nhom3_WebBanDienThoai.props
+C:\Users\ADMIN\Desktop\Assgment_Nhom3_WebBanDienThoai\Assgment_Nhom3_WebBanDienThoai\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Assgment_Nhom3_WebBanDienThoai.props
+C:\Users\ADMIN\Desktop\Assgment_Nhom3_WebBanDienThoai\Assgment_Nhom3_WebBanDienThoai\obj\Debug\net6.0\staticwebassets.pack.json
