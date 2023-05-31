@@ -3097,6 +3097,586 @@
       "PackagePath": "staticwebassets\\Adminassets\\vendors\\select2\\select2x2.png"
     },
     {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\Userassets\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\Userassets\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\Userassets\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\Userassets\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\Userassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Userassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\css\\style.css",
+      "PackagePath": "staticwebassets\\Userassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\css\\style.min.css",
+      "PackagePath": "staticwebassets\\Userassets\\css\\style.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\carousel-1.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\carousel-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\carousel-2.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\carousel-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\carousel-3.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\carousel-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\cat-1.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\cat-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\cat-2.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\cat-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\cat-3.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\cat-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\cat-4.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\cat-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\offer-1.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\offer-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\offer-2.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\offer-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\payments.png",
+      "PackagePath": "staticwebassets\\Userassets\\img\\payments.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\product-1.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\product-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\product-2.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\product-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\product-3.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\product-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\product-4.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\product-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\product-5.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\product-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\product-6.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\product-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\product-7.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\product-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\product-8.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\product-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\product-9.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\product-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\user.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\user.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\vendor-1.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\vendor-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\vendor-2.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\vendor-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\vendor-3.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\vendor-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\vendor-4.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\vendor-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\vendor-5.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\vendor-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\vendor-6.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\vendor-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\vendor-7.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\vendor-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\img\\vendor-8.jpg",
+      "PackagePath": "staticwebassets\\Userassets\\img\\vendor-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\js\\main.js",
+      "PackagePath": "staticwebassets\\Userassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\lib\\animate\\animate.min.css",
+      "PackagePath": "staticwebassets\\Userassets\\lib\\animate\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\Userassets\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\Userassets\\lib\\easing\\easing.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\Userassets\\lib\\owlcarousel"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\Userassets\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\Userassets\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\Userassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\Userassets\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\Userassets\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\Userassets\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\Userassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\Userassets\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\Userassets\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\Userassets\\lib\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\mail\\contact.js",
+      "PackagePath": "staticwebassets\\Userassets\\mail\\contact.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\mail\\contact.php",
+      "PackagePath": "staticwebassets\\Userassets\\mail\\contact.php"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\mail\\jqBootstrapValidation.min.js",
+      "PackagePath": "staticwebassets\\Userassets\\mail\\jqBootstrapValidation.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_code.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_code.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_custom-forms.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_custom-forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_input-group.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_jumbotron.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_jumbotron.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_media.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_media.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_print.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_print.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_background-variant.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_background-variant.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_badge.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_float.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_float.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_grid-framework.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_grid-framework.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_hover.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_hover.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_nav-divider.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_nav-divider.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_screen-reader.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_size.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_size.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_table-row.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_table-row.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_text-emphasis.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_text-emphasis.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_text-hide.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_text-hide.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\mixins\\_visibility.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\mixins\\_visibility.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_align.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_align.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_background.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_background.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_borders.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_borders.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_display.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_display.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_embed.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_embed.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_flex.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_flex.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_float.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_float.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_interactions.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_interactions.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_overflow.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_overflow.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_position.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_screenreaders.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_screenreaders.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_shadows.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_shadows.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_sizing.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_sizing.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_spacing.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_spacing.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_text.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_text.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\utilities\\_visibility.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\utilities\\_visibility.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\Userassets\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\Userassets\\scss\\style.scss"
+    },
+    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
