@@ -5,66 +5,66 @@ using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace AppAPI.Controllers
+namespace AppAPI.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class ImeiController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ImeiController : ControllerBase
+    public IImeiServices imeiServices { get; set; }
+
+    public ImeiController()
     {
-        public IImeiServices imeiServices { get; set; }
+        imeiServices = new ImeiServices();
+    }
 
-        public ImeiController()
-        {
-            imeiServices = new ImeiServices();
-        }
-        // GET: api/<ImeiController>
-        [HttpGet]
-        [HttpGet("get-all-Imei")]
-        public List<Imei> Get()
-        {
-            return imeiServices.GetAll();
-        }
+    // GET: api/<ImeiController>
+    [HttpGet]
+    [HttpGet("get-all-Imei")]
+    public List<Imei> Get()
+    {
+        return imeiServices.GetAll();
+    }
 
-        // GET api/<ImeiController>/5
-        //[HttpGet("{id}")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
+    // GET api/<ImeiController>/5
+    //[HttpGet("{id}")]
+    //public string Get(int id)
+    //{
+    //    return "value";
+    //}
 
-        // POST api/<ImeiController>
-        [HttpPost("create-imei")]
-        public bool Create(string ten, int TrangThai, Guid IdCtsp)
+    // POST api/<ImeiController>
+    [HttpPost("create-imei")]
+    public bool Create(string ten, int TrangThai, Guid IdCtsp)
+    {
+        var a = new Imei()
         {
-            Imei a = new Imei()
-            {
-                Id = Guid.NewGuid(),
-                imei = ten,
-                TrangThai = TrangThai,
-                IdCtsp = IdCtsp
-            };
-            return imeiServices.Create(a);
-        }
+            Id = Guid.NewGuid(),
+            imei = ten,
+            TrangThai = TrangThai,
+            IdCtsp = IdCtsp
+        };
+        return imeiServices.Create(a);
+    }
 
-        // PUT api/<ImeiController>/5
-        [HttpPut("update-imei-{id}")]
-        public bool update(Guid id, [FromBody] string ten, int TrangThai, Guid IdCtsp)
+    // PUT api/<ImeiController>/5
+    [HttpPut("update-imei-{id}")]
+    public bool update(Guid id, [FromBody] string ten, int TrangThai, Guid IdCtsp)
+    {
+        var a = new Imei()
         {
-            Imei a = new Imei()
-            {
-                Id = id,
-                imei = ten,
-                TrangThai = TrangThai,
-                IdCtsp = IdCtsp
-            };
-            return imeiServices.Update(a);
-        }
+            Id = id,
+            imei = ten,
+            TrangThai = TrangThai,
+            IdCtsp = IdCtsp
+        };
+        return imeiServices.Update(a);
+    }
 
-        // DELETE api/<ImeiController>/5
-        [HttpDelete("delete-imei-{id}")]
-        public bool Delete(Guid id)
-        {
-            return imeiServices.Delete(id);
-        }
+    // DELETE api/<ImeiController>/5
+    [HttpDelete("delete-imei-{id}")]
+    public bool Delete(Guid id)
+    {
+        return imeiServices.Delete(id);
     }
 }

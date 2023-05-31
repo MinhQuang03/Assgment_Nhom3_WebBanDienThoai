@@ -2,13 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Configurations
+namespace Assgment_Nhom3_WebBanDienThoai.Configurations;
+
+public class RamConfiguration : IEntityTypeConfiguration<Ram>
 {
-    public class RamConfiguration : IEntityTypeConfiguration<Ram>
+    public void Configure(EntityTypeBuilder<Ram> builder)
     {
-        public void Configure(EntityTypeBuilder<Ram> builder)
-        {
-            builder.HasKey(p => p.Id);
-        }
+        builder.HasKey(p => p.Id);
     }
 }

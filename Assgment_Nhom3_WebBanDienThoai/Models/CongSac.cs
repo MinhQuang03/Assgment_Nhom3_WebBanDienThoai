@@ -1,11 +1,8 @@
-﻿namespace Assgment_Nhom3_WebBanDienThoai.Models
+﻿namespace Assgment_Nhom3_WebBanDienThoai.Models;
+
+public class CongSac
 {
-    public class CongSac
-    {
-        public Guid Id { get; set; }
+    public Guid Id { get; set; }
 
-        public string Ten { get; set; }
-
-        
-    }
+    public string Ten { get; set; }
 }

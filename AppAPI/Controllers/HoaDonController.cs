@@ -5,72 +5,75 @@ using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace AppAPI.Controllers
+namespace AppAPI.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class HoaDonController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class HoaDonController : ControllerBase
+    private readonly IHoaDonServices _hoaDonServices;
+    private ShoppingDbContext context = new();
+
+    public HoaDonController()
     {
-        private readonly IHoaDonServices _hoaDonServices;
-        ShoppingDbContext context = new ShoppingDbContext();
-        public HoaDonController()
-        {
-            _hoaDonServices = new HoaDonServices();
-        }
-        // GET: api/<ValuesController>
-        [HttpGet("Get-all-hoaDon")]
-        public IEnumerable<HoaDon> Get()
-        {
-            return _hoaDonServices.GetAllHoaDons();
-        }
+        _hoaDonServices = new HoaDonServices();
+    }
 
-        // GET api/<ValuesController>/5
-        [HttpPost("Create-HoaDon")]
-        public bool CreateHoaDon(DateTime NgayTao, DateTime NgayThanhToan, string? HoVaTen, int? SDT, string? DiaChi, decimal? TongTien, int TrangThai, Guid IdThanhToan, Guid IdTaiKhoan)
-        {
-            HoaDon hoaDon = new HoaDon();
-            hoaDon.Id = Guid.NewGuid();
-            hoaDon.NgayTao = NgayTao;
-            hoaDon.NgayThanhToan = NgayThanhToan;
-            hoaDon.HoVaTen = HoVaTen;
-            hoaDon.SDT = SDT;
-            hoaDon.DiaChi = DiaChi;
-            hoaDon.TongTien = TongTien;
-            hoaDon.TrangThai = TrangThai;
-            hoaDon.IdTaiKhoan = IdTaiKhoan;
-            hoaDon.IdThanhToan = IdThanhToan;
-            return _hoaDonServices.CreateHoaDon(hoaDon);
-        }
+    // GET: api/<ValuesController>
+    [HttpGet("Get-all-hoaDon")]
+    public IEnumerable<HoaDon> Get()
+    {
+        return _hoaDonServices.GetAllHoaDons();
+    }
 
-        // POST api/<ValuesController>
-        [HttpDelete("Delete-HoaDon-{id}")]
-        public bool Post(Guid id)
-        {
-            return _hoaDonServices.DeleteHoaDon(id);
-        }
+    // GET api/<ValuesController>/5
+    [HttpPost("Create-HoaDon")]
+    public bool CreateHoaDon(DateTime NgayTao, DateTime NgayThanhToan, string? HoVaTen, int? SDT, string? DiaChi,
+        decimal? TongTien, int TrangThai, Guid IdThanhToan, Guid IdTaiKhoan)
+    {
+        var hoaDon = new HoaDon();
+        hoaDon.Id = Guid.NewGuid();
+        hoaDon.NgayTao = NgayTao;
+        hoaDon.NgayThanhToan = NgayThanhToan;
+        hoaDon.HoVaTen = HoVaTen;
+        hoaDon.SDT = SDT;
+        hoaDon.DiaChi = DiaChi;
+        hoaDon.TongTien = TongTien;
+        hoaDon.TrangThai = TrangThai;
+        hoaDon.IdTaiKhoan = IdTaiKhoan;
+        hoaDon.IdThanhToan = IdThanhToan;
+        return _hoaDonServices.CreateHoaDon(hoaDon);
+    }
 
-        // PUT api/<ValuesController>/5
-        [HttpPut("Update-HoaDon-{id}")]
-        public bool Put(Guid id , DateTime NgayTao, DateTime NgayThanhToan, string? HoVaTen, int? SDT, string? DiaChi, decimal? TongTien, int TrangThai, Guid IdThanhToan, Guid IdTaiKhoan)
-        {
-            HoaDon hoaDon = new HoaDon();
-            hoaDon.Id = id;
-            hoaDon.NgayTao = NgayTao;
-            hoaDon.NgayThanhToan = NgayThanhToan;
-            hoaDon.HoVaTen = HoVaTen;
-            hoaDon.SDT = SDT;
-            hoaDon.DiaChi = DiaChi;
-            hoaDon.TongTien = TongTien;
-            hoaDon.TrangThai = TrangThai;
-            hoaDon.IdTaiKhoan = IdTaiKhoan;
-            hoaDon.IdThanhToan = IdThanhToan;
-            return _hoaDonServices.UpdateHoaDon(hoaDon);
-        }
+    // POST api/<ValuesController>
+    [HttpDelete("Delete-HoaDon-{id}")]
+    public bool Post(Guid id)
+    {
+        return _hoaDonServices.DeleteHoaDon(id);
+    }
 
-        // DELETE api/<ValuesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+    // PUT api/<ValuesController>/5
+    [HttpPut("Update-HoaDon-{id}")]
+    public bool Put(Guid id, DateTime NgayTao, DateTime NgayThanhToan, string? HoVaTen, int? SDT, string? DiaChi,
+        decimal? TongTien, int TrangThai, Guid IdThanhToan, Guid IdTaiKhoan)
+    {
+        var hoaDon = new HoaDon();
+        hoaDon.Id = id;
+        hoaDon.NgayTao = NgayTao;
+        hoaDon.NgayThanhToan = NgayThanhToan;
+        hoaDon.HoVaTen = HoVaTen;
+        hoaDon.SDT = SDT;
+        hoaDon.DiaChi = DiaChi;
+        hoaDon.TongTien = TongTien;
+        hoaDon.TrangThai = TrangThai;
+        hoaDon.IdTaiKhoan = IdTaiKhoan;
+        hoaDon.IdThanhToan = IdThanhToan;
+        return _hoaDonServices.UpdateHoaDon(hoaDon);
+    }
+
+    // DELETE api/<ValuesController>/5
+    [HttpDelete("{id}")]
+    public void Delete(int id)
+    {
     }
 }

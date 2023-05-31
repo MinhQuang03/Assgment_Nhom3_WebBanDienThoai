@@ -1,68 +1,68 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Services
+namespace Assgment_Nhom3_WebBanDienThoai.Services;
+
+public class GiamGiaServices : IGiamGiaServices
 {
-    public class GiamGiaServices : IGiamGiaServices
+    private ShoppingDbContext _context;
+
+    public GiamGiaServices()
     {
-        private ShoppingDbContext _context;
-        public GiamGiaServices()
-        {
-            _context = new ShoppingDbContext();
-        }
+        _context = new ShoppingDbContext();
+    }
 
-        public bool Create(GiamGia obj)
+    public bool Create(GiamGia obj)
+    {
+        try
         {
-            try
-            {
-                _context.GiamGias.Add(obj);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            _context.GiamGias.Add(obj);
+            _context.SaveChanges();
+            return true;
         }
-
-        public bool Delete(Guid id)
+        catch (Exception e)
         {
-            try
-            {
-                var obj = _context.GiamGias.FirstOrDefault(x => x.Id == id);
-                _context.GiamGias.Remove(obj);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            return false;
         }
+    }
 
-        public List<GiamGia> GetAll()
+    public bool Delete(Guid id)
+    {
+        try
         {
-            return _context.GiamGias.ToList();
+            var obj = _context.GiamGias.FirstOrDefault(x => x.Id == id);
+            _context.GiamGias.Remove(obj);
+            _context.SaveChanges();
+            return true;
         }
-
-        public bool Update(GiamGia obj)
+        catch (Exception e)
         {
-            try
-            {
-                var x = _context.GiamGias.Find(obj.Id);
-                x.SoPhanTramGiam = obj.SoPhanTramGiam;
-                x.NgayBatDau = obj.NgayBatDau;
-                x.NgayKetThuc = obj.NgayKetThuc;
-                x.GhiChu = obj.GhiChu;
-                x.TrangThai = obj.TrangThai;
-                _context.GiamGias.Update(x);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            return false;
+        }
+    }
+
+    public List<GiamGia> GetAll()
+    {
+        return _context.GiamGias.ToList();
+    }
+
+    public bool Update(GiamGia obj)
+    {
+        try
+        {
+            var x = _context.GiamGias.Find(obj.Id);
+            x.SoPhanTramGiam = obj.SoPhanTramGiam;
+            x.NgayBatDau = obj.NgayBatDau;
+            x.NgayKetThuc = obj.NgayKetThuc;
+            x.GhiChu = obj.GhiChu;
+            x.TrangThai = obj.TrangThai;
+            _context.GiamGias.Update(x);
+            _context.SaveChanges();
+            return true;
+        }
+        catch (Exception e)
+        {
+            return false;
         }
     }
 }

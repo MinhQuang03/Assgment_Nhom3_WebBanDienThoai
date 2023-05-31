@@ -2,74 +2,73 @@
 using Assgment_Nhom3_WebBanDienThoai.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Services
+namespace Assgment_Nhom3_WebBanDienThoai.Services;
+
+public class CongSacServices : ICongSacServices
 {
-    public class CongSacServices : ICongSacServices
+    private ShoppingDbContext _context;
+
+    public CongSacServices()
     {
+        _context = new ShoppingDbContext();
+    }
 
-        private ShoppingDbContext _context;
-
-        public CongSacServices()
+    public bool CreateCongSac(CongSac cs)
+    {
+        try
         {
-            _context = new ShoppingDbContext();
+            _context.CongSacs.Add(cs);
+            _context.SaveChanges();
+            return true;
         }
-        public bool CreateCongSac(CongSac cs)
+        catch (Exception e)
         {
-            try
-            {
-                _context.CongSacs.Add(cs);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            return false;
         }
+    }
 
-        public bool DeleteCongSac(Guid id)
+    public bool DeleteCongSac(Guid id)
+    {
+        try
         {
-            try
-            {
-                var obj = _context.CongSacs.Find(id);
-                _context.CongSacs.Remove(obj);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            var obj = _context.CongSacs.Find(id);
+            _context.CongSacs.Remove(obj);
+            _context.SaveChanges();
+            return true;
         }
-
-        public List<CongSac> GetAllCongSacs()
+        catch (Exception e)
         {
-            return _context.CongSacs.ToList();
+            return false;
         }
+    }
 
-        public CongSac GetCongSacsById(Guid id)
+    public List<CongSac> GetAllCongSacs()
+    {
+        return _context.CongSacs.ToList();
+    }
+
+    public CongSac GetCongSacsById(Guid id)
+    {
+        return _context.CongSacs.FirstOrDefault(c => c.Id == id);
+    }
+
+    public List<CongSac> GetCongSacsByName(string name)
+    {
+        return _context.CongSacs.Where(c => c.Ten == name).ToList();
+    }
+
+    public bool UpdateCongSac(CongSac cs)
+    {
+        try
         {
-            return _context.CongSacs.FirstOrDefault(c => c.Id == id);
+            var obj = _context.CongSacs.Find(cs.Id);
+            _context.CongSacs.Update(obj);
+            _context.SaveChanges();
+            return true;
         }
-
-        public List<CongSac> GetCongSacsByName(string name)
+        catch (Exception e)
         {
-            return _context.CongSacs.Where(c => c.Ten == name).ToList();
-        }
-
-        public bool UpdateCongSac(CongSac cs)
-        {
-            try
-            {
-                var obj = _context.CongSacs.Find(cs.Id);
-                _context.CongSacs.Update(obj);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            return false;
         }
     }
 }
