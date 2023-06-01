@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M69KFDBdPl6DJKB9jx/hce3lKsFWUnFZd6MiGeNQoLGvufJQs9ZXeHEGMyOXSZNlI/WY4TNfSWTqVoYJrPKxjA==",
+  "dgSpecHash": "eXZc+Rk2jrPmJC/CORHq9tylApXf/Xx6VEnm/5DJc9OVfUGUP1qWoW5v1BAH0waOuCaM2xDQjAuQ5pEbiT0xPg==",
   "success": true,
-  "projectFilePath": "E:\\FPT Polytechnic\\C#5\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj",
+  "projectFilePath": "C:\\Users\\admin\\Desktop\\Test clone\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
