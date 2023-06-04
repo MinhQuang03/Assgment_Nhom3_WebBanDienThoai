@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ADMIN\Desktop\XinDay\Assgment_Nhom3_WebBanDienThoai\Assgment_Nhom3_WebBanDienThoai
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/ADMIN/Desktop/XinDay/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/GiamGia/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2lhbUdpYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Desktop/XinDay/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/GiamGia/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2lhbUdpYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ADMIN/Desktop/XinDay/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

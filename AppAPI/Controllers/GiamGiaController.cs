@@ -33,16 +33,16 @@ namespace AppAPI.Controllers
 
         // POST api/<GiamGiaController>
         [HttpPost("create-MaGiamGia")]
-        public bool Create(decimal SoPhanTram, DateTime NgayBatDau, DateTime NgayKetThuc, string GhiChu, int TrangThai)
+        public bool Create(GiamGia gg)
         {
             GiamGia a = new GiamGia()
             {
                 Id = Guid.NewGuid(),
-                SoPhanTramGiam = SoPhanTram,
-                NgayBatDau = NgayBatDau,
-                NgayKetThuc = NgayKetThuc,
-                GhiChu = GhiChu,
-                TrangThai = TrangThai
+                SoPhanTramGiam = gg.SoPhanTramGiam,
+                NgayBatDau = gg.NgayBatDau,
+                NgayKetThuc = gg.NgayKetThuc,
+                GhiChu = gg.GhiChu,
+                TrangThai = gg.TrangThai
             };
             return giamGiaServices.Create(a);
         }
