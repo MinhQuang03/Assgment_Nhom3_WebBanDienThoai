@@ -33,4 +33,28 @@ public class NhaSansXuatsController : Controller
         if (await _apiService.ApiPostService(nsx, requestUrl)) return RedirectToAction("Index");
         return View();
     }
+
+    public async Task<IActionResult> Update(Guid id)
+    {
+        ViewBag.Domain = domain;
+        client.BaseAddress = new Uri(domain);
+        var datajson = await client.GetStringAsync($"api/NhaSanXuat/{id}");
+        var nhaSanXuat = JsonConvert.DeserializeObject<NhaSanXuat>(datajson);
+        return View(nhaSanXuat);
+    }
+    [HttpPost]
+    public async Task<IActionResult> Update(Guid id, NhaSanXuat nsx)
+    {
+        var requestUrl = $"https://localhost:7151/api/NhaSanXuat/update-nhasanxuat-{id}";
+        if (await _apiService.ApiPutService(nsx, requestUrl)) return RedirectToAction("Index");
+        return View();
+    }
+
+
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        var requestUrl = $"https://localhost:7151/api/NhaSanXuat/delete-nhasanxuat-{id}";
+        await _apiService.ApiDeleteService(requestUrl);
+        return RedirectToAction("Index");
+    }
 }
