@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AppAPI.Controllers
 {
-    
+
     [Route("api/[controller]")]
     [ApiController]
     public class NhaSanXuatController : ControllerBase
@@ -27,31 +27,31 @@ namespace AppAPI.Controllers
 
         // GET api/<NhaSanXuatController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public NhaSanXuat GetByID(Guid id)
         {
-            return "value";
+            return nhaSanXuatServices.GetNhaSanXuatById(id);
         }
 
         // POST api/<NhaSanXuatController>
         [HttpPost("create-nhasanxuat")]
-        public bool CreateNhaSanXuat( string ten)
+        public bool CreateNhaSanXuat(NhaSanXuat obj)
         {
             NhaSanXuat nsx = new NhaSanXuat()
             {
                 Id = Guid.NewGuid(),
-                Ten = ten,
+                Ten = obj.Ten,
             };
             return nhaSanXuatServices.createNhaSanXuat(nsx);
         }
 
         // PUT api/<NhaSanXuatController>/5
         [HttpPut("update-nhasanxuat-{id}")]
-        public bool UpdateNhaSanXuat(Guid id, [FromBody] string ten)
+        public bool UpdateNhaSanXuat(Guid id, NhaSanXuat nsxs)
         {
             NhaSanXuat nsx = new NhaSanXuat()
             {
                 Id = id,
-                Ten = ten,
+                Ten = nsxs.Ten,
             };
             return nhaSanXuatServices.updateNhaSanXuat(nsx);
         }
