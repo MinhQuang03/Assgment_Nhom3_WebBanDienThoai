@@ -9,6 +9,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
     [Area("Admin")]
     public class GiamGiaController : Controller
     {
+        private ApiService _apiService = new();
         string domain = "https://localhost:7151/";
         HttpClient client = new HttpClient();
 
@@ -51,27 +52,19 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(Guid id)
         {
-            GiamGia gg = new GiamGia();
-            HttpResponseMessage response = await client.GetAsync("https://localhost:7151/api/GiamGia/Get" + id);
-            if (response.IsSuccessStatusCode)
-            {
-                string data = response.Content.ReadAsStringAsync().Result;
-                gg = JsonConvert.DeserializeObject<GiamGia>(data);
-            }
+            client.BaseAddress = new Uri(domain);
+            var datajson = await client.GetStringAsync($"api/GiamGia/{id}");
+            var gg = JsonConvert.DeserializeObject<GiamGia>(datajson);
             return View(gg);
         }
 
         [HttpPost]
-
-        public async Task<IActionResult> Edit(GiamGia gg)
+        public async Task<IActionResult> Edit(Guid id,GiamGia gg)
         {
-            string data = JsonConvert.SerializeObject(gg);
-            StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage response = await client.PutAsync("https://localhost:7151/api/GiamGia/update", content);
-            if (response.IsSuccessStatusCode) 
-            {
-                return RedirectToAction("Index");
-            }
+            
+
+            var requestUrl = $"https://localhost:7151/api/GiamGia/update-MaGiamGia-{id}";
+            if (await _apiService.ApiPutService(gg, requestUrl)) return RedirectToAction("Index");
             return View();
         }
     }

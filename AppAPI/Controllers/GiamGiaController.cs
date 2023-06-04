@@ -49,7 +49,7 @@ namespace AppAPI.Controllers
 
         // PUT api/<GiamGiaController>/5
         [HttpPut("update-MaGiamGia-{id}")]
-        public bool update(Guid id, [FromBody] GiamGia gg)
+        public bool update(Guid id, GiamGia gg)
         {
             GiamGia a = new GiamGia()
             {
