@@ -27,9 +27,9 @@ namespace AppAPI.Controllers
 
         // GET api/<NhaSanXuatController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public NhaSanXuat GetByID(Guid id)
         {
-            return "value";
+            return nhaSanXuatServices.GetNhaSanXuatById(id);
         }
 
         // POST api/<NhaSanXuatController>
@@ -46,12 +46,12 @@ namespace AppAPI.Controllers
 
         // PUT api/<NhaSanXuatController>/5
         [HttpPut("update-nhasanxuat-{id}")]
-        public bool UpdateNhaSanXuat(Guid id, [FromBody] string ten)
+        public bool UpdateNhaSanXuat(Guid id, NhaSanXuat nsxs)
         {
             NhaSanXuat nsx = new NhaSanXuat()
             {
                 Id = id,
-                Ten = ten,
+                Ten = nsxs.Ten,
             };
             return nhaSanXuatServices.updateNhaSanXuat(nsx);
         }
