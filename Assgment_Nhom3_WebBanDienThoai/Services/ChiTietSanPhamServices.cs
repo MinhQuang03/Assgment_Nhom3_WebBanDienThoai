@@ -46,6 +46,11 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
             return _dbContext.ChiTietSanPhams.ToList();
         }
 
+        public ChiTietSanPham GetById(Guid id)
+        {
+            return _dbContext.ChiTietSanPhams.FirstOrDefault(p => p.Id == id);
+        }
+
         public bool Update(ChiTietSanPham obj)
         {
             try
