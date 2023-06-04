@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AppAPI.Controllers
 {
-    
+
     [Route("api/[controller]")]
     [ApiController]
     public class NhaSanXuatController : ControllerBase
@@ -34,12 +34,12 @@ namespace AppAPI.Controllers
 
         // POST api/<NhaSanXuatController>
         [HttpPost("create-nhasanxuat")]
-        public bool CreateNhaSanXuat( string ten)
+        public bool CreateNhaSanXuat(NhaSanXuat obj)
         {
             NhaSanXuat nsx = new NhaSanXuat()
             {
                 Id = Guid.NewGuid(),
-                Ten = ten,
+                Ten = obj.Ten,
             };
             return nhaSanXuatServices.createNhaSanXuat(nsx);
         }
