@@ -8,5 +8,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.IServices
         public bool Delete(Guid id);
         public bool Update(GiamGia obj);
         public List<GiamGia> GetAll();
+
+        public GiamGia GetById(Guid id);
     }
 }

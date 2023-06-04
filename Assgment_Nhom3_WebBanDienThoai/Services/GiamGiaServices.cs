@@ -45,6 +45,11 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
             return _context.GiamGias.ToList();
         }
 
+        public GiamGia GetById(Guid id)
+        {
+            return _context.GiamGias.FirstOrDefault(p => p.Id == id);
+        }
+
         public bool Update(GiamGia obj)
         {
             try

@@ -26,12 +26,26 @@
                 
             </li>
             <li class="nav-item dropdown">
-                <a class="dropdown-toggle" asp-area="Admin" asp-controller="AdminPhone" asp-action="Index">
+                <a class="dropdown-toggle" href="javascript:void(0);">
                     <span class="icon-holder">
-                        <i class="anticon anticon-build"></i>
+                        <i class="anticon anticon-table"></i>
                     </span>
-                    <span class="title">Quản Lý Sản Phẩm</span>
+                    <span class="title">Quản lý sản phẩm</span>
+                    <span class="arrow">
+                        <i class="arrow-icon"></i>
+                    </span>
                 </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a asp-area="Admin" asp-controller="GiamGia" asp-action="Index">Mã giảm giá</a>
+                    </li>
+                    <li>
+                        <a asp-area="Admin" asp-controller="NhaSansXuats" asp-action="Index">Nhà sản xuất</a>
+                    </li>
+                    <li>
+                        <a href="data-table.html">Data Table</a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" asp-area="Admin" asp-controller="AdminRole" asp-action="Index">
