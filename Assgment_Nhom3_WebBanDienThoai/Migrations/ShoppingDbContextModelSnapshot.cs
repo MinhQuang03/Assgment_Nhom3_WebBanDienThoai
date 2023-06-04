@@ -250,7 +250,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.GioHang", b =>
                 {
                     b.Property<Guid>("IdTaiKhoan")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Mota")
@@ -380,8 +379,8 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<long>("Gia")
-                        .HasColumnType("bigint");
+                    b.Property<decimal>("Gia")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<Guid>("IdChiTietSp")
                         .HasColumnType("uniqueidentifier");
@@ -581,9 +580,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("GioHangsIdTaiKhoan")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("HoVaTen")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -610,8 +606,6 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("GioHangsIdTaiKhoan");
 
                     b.HasIndex("IdCv");
 
@@ -786,6 +780,17 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                     b.Navigation("TaiKhoans");
                 });
 
+            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.GioHang", b =>
+                {
+                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.TaiKhoan", "TaiKhoans")
+                        .WithOne("GioHangs")
+                        .HasForeignKey("Assgment_Nhom3_WebBanDienThoai.Models.GioHang", "IdTaiKhoan")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TaiKhoans");
+                });
+
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.GioHangChiTiet", b =>
                 {
                     b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.ChiTietSanPham", "ChiTietSanPhams")
@@ -889,21 +894,19 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.TaiKhoan", b =>
                 {
-                    b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.GioHang", "GioHangs")
-                        .WithMany()
-                        .HasForeignKey("GioHangsIdTaiKhoan")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Assgment_Nhom3_WebBanDienThoai.Models.PhanQuyen", "PhanQuyens")
                         .WithMany()
                         .HasForeignKey("IdCv")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("GioHangs");
-
                     b.Navigation("PhanQuyens");
+                });
+
+            modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.TaiKhoan", b =>
+                {
+                    b.Navigation("GioHangs")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

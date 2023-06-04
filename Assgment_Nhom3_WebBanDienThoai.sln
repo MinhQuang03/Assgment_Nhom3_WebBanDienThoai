@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assgment_Nhom3_WebBanDienThoai", "Assgment_Nhom3_WebBanDienThoai\Assgment_Nhom3_WebBanDienThoai.csproj", "{E76FAC7E-7D7C-409F-9F04-A36396D1AC6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppAPI", "AppAPI\AppAPI.csproj", "{2A89C053-A27D-449F-9792-7C338513CBDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppAPI", "AppAPI\AppAPI.csproj", "{2A89C053-A27D-449F-9792-7C338513CBDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

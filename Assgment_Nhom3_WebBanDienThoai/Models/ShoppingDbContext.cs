@@ -66,11 +66,14 @@ namespace Assgment_Nhom3_WebBanDienThoai.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-H6TL71T\MINGG;Initial Catalog=BanDienThoai_Nhom2;User ID=minh160801;Password=minhanh321  ;TrustServerCertificate=True");
+            //optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-H6TL71T\MINGG;Initial Catalog=BanDienThoai_Nhom2;User ID=minh160801;Password=minhanh321  ;TrustServerCertificate=True");
+
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-C378UQD\SQLEXPRESS;Initial Catalog=BanDienThoai_Nhom2;User ID=tainq27;Password=123456;TrustServerCertificate=True;Integrated Security=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<GioHang>().HasOne(c => c.TaiKhoans).WithOne(p => p.GioHangs).HasForeignKey<GioHang>();
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
     }

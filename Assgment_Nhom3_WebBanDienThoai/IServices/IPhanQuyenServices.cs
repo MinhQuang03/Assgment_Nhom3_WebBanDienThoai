@@ -4,12 +4,12 @@ namespace Assgment_Nhom3_WebBanDienThoai.IServices
 {
     public interface IPhanQuyenServices
     {
-        public bool CreateQuyen(Pin p);
-        public bool UpdatePin(Pin p);
-        public bool DeletePin(Guid id);
-        public List<Pin> GetAllPins();
-        public Pin GetPinsById(Guid id);
+        public bool CreateQuyen(PhanQuyen p);
+        public bool UpdateQuyen(PhanQuyen p);
+        public bool DeleteQuyen(Guid id);
+        public List<PhanQuyen> GetAllQuyens();
+        public PhanQuyen GetQuyensById(Guid id);
 
-        public List<Pin> GetPinsByName(string name);
+        public List<PhanQuyen> GetQuyenByName(string name);
     }
 }
