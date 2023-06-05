@@ -49,8 +49,6 @@ public class NhaSansXuatsController : Controller
         if (await _apiService.ApiPutService(nsx, requestUrl)) return RedirectToAction("Index");
         return View();
     }
-
-
     public async Task<IActionResult> Delete(Guid id)
     {
         var requestUrl = $"https://localhost:7151/api/NhaSanXuat/delete-nhasanxuat-{id}";
