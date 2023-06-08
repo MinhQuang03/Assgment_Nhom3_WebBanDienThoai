@@ -25,31 +25,31 @@ namespace AppAPI.Controllers
 
         // GET api/<ChipCPUController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public ChipCPU GetByID(Guid id)
         {
-            return "value";
+            return chipCPUServices.GetChipCPUById(id);
         }
 
         // POST api/<ChipCPUController>
         [HttpPost("create-chip")]
-        public bool Create(string ten)
+        public bool Create(ChipCPU chipCPU)
         {
             ChipCPU a = new ChipCPU()
             {
                 Id = Guid.NewGuid(),
-                Ten = ten,
+                Ten = chipCPU.Ten,
             };
             return chipCPUServices.Create(a);
         }
 
         // PUT api/<ChipCPUController>/5
         [HttpPut("update-chip-{id}")]
-        public bool update(Guid id, [FromBody] string ten)
+        public bool update(Guid id, ChipCPU chipCPU)
         {
             ChipCPU a = new ChipCPU()
             {
                 Id = id,
-                Ten = ten,
+                Ten = chipCPU.Ten,
             };
             return chipCPUServices.Update(a);
         }
