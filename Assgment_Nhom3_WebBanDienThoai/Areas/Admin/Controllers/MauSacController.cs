@@ -3,12 +3,12 @@ using Assgment_Nhom3_WebBanDienThoai.Services;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-<<<<<<< Updated upstream
+
 namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers;
 [Area("Admin")]
 
 public class MauSacController : Controller
-    {
+{
     private ApiService _apiService = new();
     private string domain = "https://localhost:7151/";
     private HttpClient client = new();
@@ -60,61 +60,4 @@ public class MauSacController : Controller
     }
 }
 
-=======
-namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
-{
-    [Area("Admin")]
-    public class MauSacController : Controller
-    {
-        private ApiService _apiService = new();
-        private string domain = "https://localhost:7151/";
-        private HttpClient client = new();
-        [HttpGet]
-        public async Task<IActionResult> Index()
-        {
-            ViewBag.Domain = domain;
-            client.BaseAddress = new Uri(domain);
-            var datajson = await client.GetStringAsync("api/MauSac/get-all-mausac");
-            var mauSac = JsonConvert.DeserializeObject<List<MauSac>>(datajson);
-            return View(mauSac);
-        }
-        [HttpGet]
-        public IActionResult Create()
-        {
-            return View();
-        }
 
-        [HttpPost]
-        public async Task<IActionResult> Create(MauSac ms)
-        {
-            var requestUrl = "https://localhost:7151/api/MauSac/create-mausac";
-            if (await _apiService.ApiPostService(ms, requestUrl)) return RedirectToAction("Index");
-            return View();
-        }
-
-        public async Task<IActionResult> Update(Guid id)
-        {
-            ViewBag.Domain = domain;
-            client.BaseAddress = new Uri(domain);
-            var datajson = await client.GetStringAsync($"api/MauSac/{id}");
-            var mauSac = JsonConvert.DeserializeObject<MauSac>(datajson);
-            return View(mauSac);
-        }
-        [HttpPost]
-        public async Task<IActionResult> Update(Guid id, MauSac ms)
-        {
-            var requestUrl = $"https://localhost:7151/api/MauSac/update-mausac-{id}";
-            if (await _apiService.ApiPutService(ms, requestUrl)) return RedirectToAction("Index");
-            return View();
-        }
-
-
-        public async Task<IActionResult> Delete(Guid id)
-        {
-            var requestUrl = $"https://localhost:7151/api/MauSac/delete-mausac-{id}";
-            await _apiService.ApiDeleteService(requestUrl);
-            return RedirectToAction("Index");
-        }
-    }
-}
->>>>>>> Stashed changes
