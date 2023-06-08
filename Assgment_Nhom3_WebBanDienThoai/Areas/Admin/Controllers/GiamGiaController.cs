@@ -9,6 +9,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
     [Area("Admin")]
     public class GiamGiaController : Controller
     {
+        private ApiService _apiService = new();
         string domain = "https://localhost:7151/";
         HttpClient client = new HttpClient();
 
@@ -20,7 +21,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
             List<GiamGia> giamGias = JsonConvert.DeserializeObject<List<GiamGia>>(datajson);
             return View(giamGias);
         }
-       
+
         public IActionResult Create()
         {
             return View();
@@ -29,19 +30,40 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(GiamGia gg)
         {
-            string jsonData = JsonConvert.SerializeObject(gg);
-            HttpContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.PostAsync("https://localhost:7151/api/GiamGia/create-MaGiamGia", content);
-            if (response.IsSuccessStatusCode)
+            try
             {
-                return RedirectToAction("Index");
+                string jsonData = JsonConvert.SerializeObject(gg);
+                HttpContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await client.PostAsync("https://localhost:7151/api/GiamGia/create-MaGiamGia", content);
+                if (response.IsSuccessStatusCode)
+                {
+                    TempData["successMessage"] = "Them thanh cong";
+                    return RedirectToAction("Index");
+                }
             }
-
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = ex.Message;
+                return View();
+            }
             return View();
         }
 
-        
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            client.BaseAddress = new Uri(domain);
+            var datajson = await client.GetStringAsync($"api/GiamGia/{id}");
+            var gg = JsonConvert.DeserializeObject<GiamGia>(datajson);
+            return View(gg);
+        }
 
+        [HttpPost]
+        public async Task<IActionResult> Edit(Guid id, GiamGia gg)
+        {
+            var requestUrl = $"https://localhost:7151/api/GiamGia/update-MaGiamGia-{id}";
+            if (await _apiService.ApiPutService(gg, requestUrl)) return RedirectToAction("Index");
+            return View();
+        }
     }
 }
