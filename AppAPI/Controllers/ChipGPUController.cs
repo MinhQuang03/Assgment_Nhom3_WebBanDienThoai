@@ -24,31 +24,43 @@ namespace AppAPI.Controllers
 
         // GET api/<ChipCPUController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public ChipGPU GetByID(Guid id)
         {
-            return "value";
+<<<<<<< Updated upstream
+            return chipGPUServices.GetChipGPUById(id);
+=======
+            return chipGPUServices.GetChipGPUsById(id);
+>>>>>>> Stashed changes
         }
 
         // POST api/<ChipCPUController>
         [HttpPost("create-chip")]
-        public bool Create(string ten)
+        public bool Create(ChipGPU chipGPU)
         {
             ChipGPU a = new ChipGPU()
             {
                 Id = Guid.NewGuid(),
-                Ten = ten,
+                Ten = chipGPU.Ten,
             };
             return chipGPUServices.Create(a);
         }
 
         // PUT api/<ChipCPUController>/5
         [HttpPut("update-chip-{id}")]
-        public bool update(Guid id, [FromBody] string ten)
+<<<<<<< Updated upstream
+        public bool update(Guid id, ChipGPU chipGPU)
+=======
+        public bool update(Guid id, ChipGPU gpu)
+>>>>>>> Stashed changes
         {
             ChipGPU a = new ChipGPU()
             {
                 Id = id,
-                Ten = ten,
+<<<<<<< Updated upstream
+                Ten = chipGPU.Ten,
+=======
+                Ten = gpu.Ten,
+>>>>>>> Stashed changes
             };
             return chipGPUServices.Update(a);
         }

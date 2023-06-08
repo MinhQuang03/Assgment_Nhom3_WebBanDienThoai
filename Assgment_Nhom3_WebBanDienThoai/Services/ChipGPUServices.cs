@@ -44,6 +44,19 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
             return _context.ChipGPUs.ToList();
         }
 
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+        public ChipGPU GetChipGPUById(Guid id)
+=======
+        public ChipGPU GetChipGPUsById(Guid id)
+>>>>>>> Stashed changes
+=======
+        public ChipGPU GetChipGPUById(Guid id)
+>>>>>>> b1e186e0a7587ef6700df88d596bd0bba174aaae
+        {
+            return _context.ChipGPUs.FirstOrDefault(c => c.Id == id);
+        }
+
         public bool Update(ChipGPU obj)
         {
             try

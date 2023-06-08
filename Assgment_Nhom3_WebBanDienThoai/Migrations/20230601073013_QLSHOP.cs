@@ -6,7 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     /// <inheritdoc />
+<<<<<<<< HEAD:Assgment_Nhom3_WebBanDienThoai/Migrations/20230601073013_QLSHOP.cs
     public partial class QLSHOP : Migration
+========
+    public partial class Shop : Migration
+>>>>>>>> b1e186e0a7587ef6700df88d596bd0bba174aaae:Assgment_Nhom3_WebBanDienThoai/Migrations/20230608111053_Shop.cs
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

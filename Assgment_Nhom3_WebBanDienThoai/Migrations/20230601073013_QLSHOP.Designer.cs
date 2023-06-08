@@ -12,8 +12,13 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
+<<<<<<<< HEAD:Assgment_Nhom3_WebBanDienThoai/Migrations/20230601073013_QLSHOP.Designer.cs
     [Migration("20230601073013_QLSHOP")]
     partial class QLSHOP
+========
+    [Migration("20230608111053_Shop")]
+    partial class Shop
+>>>>>>>> b1e186e0a7587ef6700df88d596bd0bba174aaae:Assgment_Nhom3_WebBanDienThoai/Migrations/20230608111053_Shop.Designer.cs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
