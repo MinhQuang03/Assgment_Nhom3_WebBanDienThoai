@@ -60,6 +60,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
             try
             {
                 var obj = _context.MauSacs.Find(ms.Id);
+                obj.Ten = ms.Ten;
                 _context.MauSacs.Update(obj);
                 _context.SaveChanges();
                 return true;

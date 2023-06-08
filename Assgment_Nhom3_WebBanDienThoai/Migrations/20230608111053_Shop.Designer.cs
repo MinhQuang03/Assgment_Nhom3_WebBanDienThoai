@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
-    [Migration("20230525095836_shoppingWebDB")]
-    partial class shoppingWebDB
+    [Migration("20230608111053_Shop")]
+    partial class Shop
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -382,8 +382,8 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<long>("Gia")
-                        .HasColumnType("bigint");
+                    b.Property<decimal>("Gia")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<Guid>("IdChiTietSp")
                         .HasColumnType("uniqueidentifier");

@@ -25,39 +25,39 @@ namespace AppAPI.Controllers
             return mauSacServices.GetAllMauSacs();
         }
 
-        
+
 
         // GET api/<MauSacController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public MauSac GetByID(Guid id)
         {
-            return "value";
+            return mauSacServices.GetMauSacsById(id);
         }
 
         // POST api/<MauSacController>
         [HttpPost("create-mausac")]
-        public bool CreateMauSac(string ten)
+        public bool CreateMauSac(MauSac msdt)
         {
             MauSac ms = new MauSac()
             {
                 Id = Guid.NewGuid(),
-                Ten = ten,
+                Ten = msdt.Ten,
             };
             return mauSacServices.CreateMauSac(ms);
         }
 
         // PUT api/<MauSacController>/5
         [HttpPut("update-mausac-{id}")]
-        public bool UpdateMauSac(Guid id, [FromBody] string ten)
+        public bool UpdateMauSac(Guid id, MauSac msdt)
         {
             MauSac ms = new MauSac()
             {
                 Id = id,
-                Ten = ten,
+                Ten = msdt.Ten,
             };
             return mauSacServices.UpdateMauSac(ms);
         }
-     
+
         // DELETE api/<MauSacController>/5
         [HttpDelete("delete-mausac-{id}")]
         public bool Delete(Guid id)

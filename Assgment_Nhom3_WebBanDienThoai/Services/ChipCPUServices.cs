@@ -45,6 +45,11 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
             return _context.ChipCPUs.ToList();
         }
 
+        public ChipCPU GetChipCPUById(Guid id)
+        {
+            return _context.ChipCPUs.FirstOrDefault(c => c.Id == id);
+        }
+
         public bool Update(ChipCPU obj)
         {
             try
