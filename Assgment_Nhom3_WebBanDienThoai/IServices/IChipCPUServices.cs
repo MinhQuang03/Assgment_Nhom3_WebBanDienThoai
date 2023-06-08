@@ -7,6 +7,9 @@ namespace Assgment_Nhom3_WebBanDienThoai.IServices
         public bool Create(ChipCPU obj);
         public bool Delete(Guid id);
         public bool Update(ChipCPU obj);
+
+        public ChipCPU GetChipCPUsById(Guid id);
         public List<ChipCPU> GetAll();
+        public ChipCPU GetChipCPUById(Guid id);
     }
 }

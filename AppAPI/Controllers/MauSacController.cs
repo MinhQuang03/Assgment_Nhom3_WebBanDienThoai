@@ -25,7 +25,7 @@ namespace AppAPI.Controllers
             return mauSacServices.GetAllMauSacs();
         }
 
-        
+
 
         // GET api/<MauSacController>/5
         [HttpGet("{id}")]
@@ -57,7 +57,7 @@ namespace AppAPI.Controllers
             };
             return mauSacServices.UpdateMauSac(ms);
         }
-     
+
         // DELETE api/<MauSacController>/5
         [HttpDelete("delete-mausac-{id}")]
         public bool Delete(Guid id)

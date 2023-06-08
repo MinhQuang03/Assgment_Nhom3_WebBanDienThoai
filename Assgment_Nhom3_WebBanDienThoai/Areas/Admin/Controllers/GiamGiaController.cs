@@ -59,8 +59,10 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Guid id, GiamGia gg)
+        public async Task<IActionResult> Edit(Guid id,GiamGia gg)
         {
+            
+
             var requestUrl = $"https://localhost:7151/api/GiamGia/update-MaGiamGia-{id}";
             if (await _apiService.ApiPutService(gg, requestUrl)) return RedirectToAction("Index");
             return View();

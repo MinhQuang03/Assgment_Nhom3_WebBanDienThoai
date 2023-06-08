@@ -39,9 +39,19 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
             }
         }
 
+        public ChipGPU GetChipGPUsById(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<ChipGPU> GetAll()
         {
             return _context.ChipGPUs.ToList();
+        }
+
+        public ChipGPU GetChipGPUById(Guid id)
+        {
+            throw new NotImplementedException();
         }
 
         public bool Update(ChipGPU obj)

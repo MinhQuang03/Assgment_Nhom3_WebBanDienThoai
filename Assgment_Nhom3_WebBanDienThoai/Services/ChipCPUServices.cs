@@ -40,9 +40,19 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
             }
         }
 
+        public ChipCPU GetChipCPUsById(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<ChipCPU> GetAll()
         {
             return _context.ChipCPUs.ToList();
+        }
+
+        public ChipCPU GetChipCPUById(Guid id)
+        {
+            throw new NotImplementedException();
         }
 
         public bool Update(ChipCPU obj)
