@@ -71,6 +71,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Models
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-C378UQD\SQLEXPRESS;Initial Catalog=BanDienThoai_Nhom2;User ID=tainq27;Password=123456;TrustServerCertificate=True;Integrated Security=True");
 =======
             optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-C378UQD\SQLEXPRESS;Initial Catalog=BanDienThoai_Nhom141;User ID=tainq27;Password=123456;TrustServerCertificate=True");
@@ -78,6 +79,9 @@ namespace Assgment_Nhom3_WebBanDienThoai.Models
 =======
             optionsBuilder.UseSqlServer(@"Data Source=MSI\SQLEXPRESS;Initial Catalog=BanDienThoai_Nhom2;User ID=QuangBm36;Password=123;TrustServerCertificate=True");
 >>>>>>> parent of d501b68 (lstAnh)
+=======
+            optionsBuilder.UseSqlServer(@"Data Source=MSI\SQLEXPRESS;Initial Catalog=BanDienThoai_Nhom2;User ID=QuangBm36;Password=123;TrustServerCertificate=True");
+>>>>>>> parent of 5dbf9e2 (Merge pull request #46 from thành)
 =======
             optionsBuilder.UseSqlServer(@"Data Source=MSI\SQLEXPRESS;Initial Catalog=BanDienThoai_Nhom2;User ID=QuangBm36;Password=123;TrustServerCertificate=True");
 >>>>>>> parent of 5dbf9e2 (Merge pull request #46 from thành)
