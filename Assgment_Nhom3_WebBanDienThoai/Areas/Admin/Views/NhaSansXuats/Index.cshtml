@@ -21,15 +21,19 @@
     </thead>
     <tbody>
 @foreach (var item in await Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ten)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Update", new {  id=item.Id  }) |
-                @Html.ActionLink("Delete", "Delete", new {  id=item.Id  })
-            </td>
-        </tr>
+    if (Model !=null)
+    {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ten)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Update", new {  id=item.Id  }) |
+                        @Html.ActionLink("Delete", "Delete", new {  id=item.Id  })
+                    </td>
+                </tr>
+    }
+
 }
     </tbody>
 </table>
