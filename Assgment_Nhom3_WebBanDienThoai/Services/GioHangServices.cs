@@ -1,52 +1,53 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Services
+namespace Assgment_Nhom3_WebBanDienThoai.Services;
+
+public class GioHangServices : IGioHangServices
 {
-    public class GioHangServices : IGioHangServices
+    private ShoppingDbContext _context;
+
+    public GioHangServices()
     {
-        private ShoppingDbContext _context;
-        public GioHangServices()
-        {
-            _context = new ShoppingDbContext();
-        }
-        public bool Create(GioHang obj)
-        {
-            try
-            {
-                _context.GioHangs.Add(obj);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
-        }
+        _context = new ShoppingDbContext();
+    }
 
-        public bool Delete(Guid id)
+    public bool Create(GioHang obj)
+    {
+        try
         {
-            try
-            {
-                var obj = _context.GioHangs.FirstOrDefault(x => x.IdTaiKhoan == id);
-                _context.GioHangs.Remove(obj);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            _context.GioHangs.Add(obj);
+            _context.SaveChanges();
+            return true;
         }
+        catch (Exception e)
+        {
+            return false;
+        }
+    }
 
-        public List<GioHang> GetAll()
+    public bool Delete(Guid id)
+    {
+        try
         {
-            return _context.GioHangs.ToList();
+            var obj = _context.GioHangs.FirstOrDefault(x => x.IdTaiKhoan == id);
+            _context.GioHangs.Remove(obj);
+            _context.SaveChanges();
+            return true;
         }
+        catch (Exception e)
+        {
+            return false;
+        }
+    }
 
-        public bool Update(GioHang obj)
-        {
-            throw new NotImplementedException();
-        }
+    public List<GioHang> GetAll()
+    {
+        return _context.GioHangs.ToList();
+    }
+
+    public bool Update(GioHang obj)
+    {
+        throw new NotImplementedException();
     }
 }

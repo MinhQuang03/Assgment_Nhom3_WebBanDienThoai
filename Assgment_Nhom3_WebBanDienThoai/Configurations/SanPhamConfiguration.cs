@@ -2,16 +2,14 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Configurations
+namespace Assgment_Nhom3_WebBanDienThoai.Configurations;
+
+public class SanPhamConfiguration : IEntityTypeConfiguration<SanPham>
 {
-    public class SanPhamConfiguration : IEntityTypeConfiguration<SanPham>
+    public void Configure(EntityTypeBuilder<SanPham> builder)
     {
-        public void Configure(EntityTypeBuilder<SanPham> builder)
-        {
-            builder.HasKey(p => p.Id);
+        builder.HasKey(p => p.Id);
 
-            builder.HasOne(p => p.NhaSanXuats).WithMany().HasForeignKey(p => p.IdHsx);
-
-        }
+        builder.HasOne(p => p.NhaSanXuats).WithMany().HasForeignKey(p => p.IdHsx);
     }
 }

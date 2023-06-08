@@ -1,67 +1,67 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Services
+namespace Assgment_Nhom3_WebBanDienThoai.Services;
+
+public class DanhGiaServices : IDanhGiaServices
 {
-    public class DanhGiaServices:IDanhGiaServices
+    private ShoppingDbContext _context;
+
+    public DanhGiaServices()
     {
-        private ShoppingDbContext _context;
+        _context = new ShoppingDbContext();
+    }
 
-        public DanhGiaServices()
+    public bool Create(DanhGia obj)
+    {
+        try
         {
-            _context = new ShoppingDbContext();
+            _context.DanhGias.Add(obj);
+            _context.SaveChanges();
+            return true;
         }
-        public bool Create(DanhGia obj)
+        catch (Exception e)
         {
-            try
-            {
-                _context.DanhGias.Add(obj);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            return false;
         }
+    }
 
-        public bool Delete(Guid id)
+    public bool Delete(Guid id)
+    {
+        try
         {
-            try
-            {
-                var obj = _context.DanhGias.FirstOrDefault(x => x.Id == id);
-                _context.DanhGias.Remove(obj);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            var obj = _context.DanhGias.FirstOrDefault(x => x.Id == id);
+            _context.DanhGias.Remove(obj);
+            _context.SaveChanges();
+            return true;
         }
+        catch (Exception e)
+        {
+            return false;
+        }
+    }
 
-        public bool Update(DanhGia obj)
+    public bool Update(DanhGia obj)
+    {
+        try
         {
-            try
-            {
-                var dg = _context.DanhGias.FirstOrDefault(x => x.Id == obj.Id);
-                dg.IdSpct = obj.IdSpct;
-                dg.IdTaiKhoan = obj.IdTaiKhoan;
-                dg.NgayDanhGia = obj.NgayDanhGia;
-                dg.NoiDung = obj.NoiDung;
-                _context.DanhGias.Update(dg);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            var dg = _context.DanhGias.FirstOrDefault(x => x.Id == obj.Id);
+            dg.IdSpct = obj.IdSpct;
+            dg.IdTaiKhoan = obj.IdTaiKhoan;
+            dg.NgayDanhGia = obj.NgayDanhGia;
+            dg.NoiDung = obj.NoiDung;
+            _context.DanhGias.Update(dg);
+            _context.SaveChanges();
+            return true;
         }
+        catch (Exception e)
+        {
+            return false;
+        }
+    }
 
-        public List<DanhGia> GetAll()
-        {
-            return _context.DanhGias.ToList();
-        }
+    public List<DanhGia> GetAll()
+    {
+        return _context.DanhGias.ToList();
     }
 }
