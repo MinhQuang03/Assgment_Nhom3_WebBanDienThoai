@@ -44,7 +44,11 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
             return _context.ChipGPUs.ToList();
         }
 
+<<<<<<< Updated upstream
         public ChipGPU GetChipGPUById(Guid id)
+=======
+        public ChipGPU GetChipGPUsById(Guid id)
+>>>>>>> Stashed changes
         {
             return _context.ChipGPUs.FirstOrDefault(c => c.Id == id);
         }

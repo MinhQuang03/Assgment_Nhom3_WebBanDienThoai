@@ -27,7 +27,11 @@ namespace AppAPI.Controllers
         [HttpGet("{id}")]
         public ChipCPU GetByID(Guid id)
         {
+<<<<<<< Updated upstream
             return chipCPUServices.GetChipCPUById(id);
+=======
+            return chipCPUServices.GetChipCPUsById(id);
+>>>>>>> Stashed changes
         }
 
         // POST api/<ChipCPUController>
@@ -44,12 +48,20 @@ namespace AppAPI.Controllers
 
         // PUT api/<ChipCPUController>/5
         [HttpPut("update-chip-{id}")]
+<<<<<<< Updated upstream
         public bool update(Guid id, ChipCPU chipCPU)
+=======
+        public bool update(Guid id, ChipCPU cpu)
+>>>>>>> Stashed changes
         {
             ChipCPU a = new ChipCPU()
             {
                 Id = id,
+<<<<<<< Updated upstream
                 Ten = chipCPU.Ten,
+=======
+                Ten = cpu.Ten,
+>>>>>>> Stashed changes
             };
             return chipCPUServices.Update(a);
         }

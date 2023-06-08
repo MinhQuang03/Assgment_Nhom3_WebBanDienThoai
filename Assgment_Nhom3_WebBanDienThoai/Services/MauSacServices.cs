@@ -59,7 +59,11 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
         {
             try
             {
+<<<<<<< Updated upstream
                 var obj = _context.MauSacs.Find(ms.Id);
+=======
+                var obj = _context.MauSacs.FirstOrDefault(c => c.Id == ms.Id);
+>>>>>>> Stashed changes
                 obj.Ten = ms.Ten;
                 _context.MauSacs.Update(obj);
                 _context.SaveChanges();
