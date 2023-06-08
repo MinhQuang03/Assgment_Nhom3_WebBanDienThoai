@@ -294,11 +294,18 @@ C:\Users\ADMIN\Desktop\Assgment_Nhom3_WebBanDienThoai\AppAPI\obj\Debug\net6.0\re
 C:\Users\ADMIN\Desktop\Assgment_Nhom3_WebBanDienThoai\AppAPI\obj\Debug\net6.0\AppAPI.pdb
 C:\Users\ADMIN\Desktop\Assgment_Nhom3_WebBanDienThoai\AppAPI\obj\Debug\net6.0\AppAPI.genruntimeconfig.cache
 C:\Users\ADMIN\Desktop\Assgment_Nhom3_WebBanDienThoai\AppAPI\obj\Debug\net6.0\ref\AppAPI.dll
+<<<<<<< Updated upstream
+=======
+E:\C#5\Assgment_Nhom3_WebBanDienThoai\AppAPI\bin\Debug\net6.0\Assgment_Nhom3_WebBanDienThoai.runtimeconfig.json
+>>>>>>> Stashed changes
 E:\C#5\Assgment_Nhom3_WebBanDienThoai\AppAPI\bin\Debug\net6.0\Assgment_Nhom3_WebBanDienThoai.staticwebassets.runtime.json
 E:\C#5\Assgment_Nhom3_WebBanDienThoai\AppAPI\bin\Debug\net6.0\appsettings.Development.json
 E:\C#5\Assgment_Nhom3_WebBanDienThoai\AppAPI\bin\Debug\net6.0\appsettings.json
 E:\C#5\Assgment_Nhom3_WebBanDienThoai\AppAPI\bin\Debug\net6.0\Assgment_Nhom3_WebBanDienThoai.deps.json
+<<<<<<< Updated upstream
 E:\C#5\Assgment_Nhom3_WebBanDienThoai\AppAPI\bin\Debug\net6.0\Assgment_Nhom3_WebBanDienThoai.runtimeconfig.json
+=======
+>>>>>>> Stashed changes
 E:\C#5\Assgment_Nhom3_WebBanDienThoai\AppAPI\bin\Debug\net6.0\Assgment_Nhom3_WebBanDienThoai.exe
 E:\C#5\Assgment_Nhom3_WebBanDienThoai\AppAPI\bin\Debug\net6.0\AppAPI.staticwebassets.runtime.json
 E:\C#5\Assgment_Nhom3_WebBanDienThoai\AppAPI\bin\Debug\net6.0\AppAPI.exe

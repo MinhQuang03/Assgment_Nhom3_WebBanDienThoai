@@ -48,12 +48,20 @@ namespace AppAPI.Controllers
 
         // PUT api/<MauSacController>/5
         [HttpPut("update-mausac-{id}")]
+<<<<<<< Updated upstream
         public bool UpdateMauSac(Guid id, MauSac msdt)
+=======
+        public bool UpdateMauSac(Guid id, MauSac mauSac)
+>>>>>>> Stashed changes
         {
             MauSac ms = new MauSac()
             {
                 Id = id,
+<<<<<<< Updated upstream
                 Ten = msdt.Ten,
+=======
+                Ten = mauSac.Ten,
+>>>>>>> Stashed changes
             };
             return mauSacServices.UpdateMauSac(ms);
         }

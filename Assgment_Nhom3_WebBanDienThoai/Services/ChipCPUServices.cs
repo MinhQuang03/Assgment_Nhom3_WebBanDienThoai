@@ -45,7 +45,11 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
             return _context.ChipCPUs.ToList();
         }
 
+<<<<<<< Updated upstream
         public ChipCPU GetChipCPUById(Guid id)
+=======
+        public ChipCPU GetChipCPUsById(Guid id)
+>>>>>>> Stashed changes
         {
             return _context.ChipCPUs.FirstOrDefault(c => c.Id == id);
         }
