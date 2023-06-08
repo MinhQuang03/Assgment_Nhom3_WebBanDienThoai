@@ -1,6 +1,7 @@
 {
   "version": 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dgSpecHash": "FdsiYJF3ycxB8i+dwGECAY7tl7hRnS3V36DO84W5i+dMmxZhLhu/AmQQ6KNyylEXT1g5sRhw5ORoUlE+ncuF/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\ADMIN\\Downloads\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj",
@@ -9,6 +10,11 @@
   "success": true,
   "projectFilePath": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj",
 >>>>>>> parent of d501b68 (lstAnh)
+=======
+  "dgSpecHash": "hN7eJ3XSRaS4WmpF/e3eeAhtqLiaceaETdMv+9kReOSTwHH9UvD79M/7Wl4CRiunwOIZnHThzCS/hTp8SmwbCA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj",
+>>>>>>> parent of 5dbf9e2 (Merge pull request #46 from thành)
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
