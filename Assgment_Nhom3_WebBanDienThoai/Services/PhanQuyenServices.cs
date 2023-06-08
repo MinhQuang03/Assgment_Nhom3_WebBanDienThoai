@@ -1,76 +1,75 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Services
+namespace Assgment_Nhom3_WebBanDienThoai.Services;
+
+public class PhanQuyenServices : IPhanQuyenServices
 {
-    public class PhanQuyenServices:IPhanQuyenServices
+    private ShoppingDbContext _context;
+
+    public PhanQuyenServices()
     {
-        private ShoppingDbContext _context;
+        _context = new ShoppingDbContext();
+    }
 
-        public PhanQuyenServices()
+    public bool CreateQuyen(PhanQuyen p)
+    {
+        try
         {
-            _context = new ShoppingDbContext();
+            _context.PhanQuyens.Add(p);
+            _context.SaveChanges();
+            return true;
         }
-        public bool CreateQuyen(PhanQuyen p)
+        catch (Exception e)
         {
-            try
-            {
-                _context.PhanQuyens.Add(p);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            return false;
         }
+    }
 
-        public bool UpdateQuyen(PhanQuyen p)
+    public bool UpdateQuyen(PhanQuyen p)
+    {
+        try
         {
-            try
-            {
-                var quyen = _context.PhanQuyens.Find(p.Id);
-                quyen.TenQuyen = p.TenQuyen;
-                quyen.TrangThai = p.TrangThai; 
-                _context.PhanQuyens.Update(p);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            var quyen = _context.PhanQuyens.Find(p.Id);
+            quyen.TenQuyen = p.TenQuyen;
+            quyen.TrangThai = p.TrangThai;
+            _context.PhanQuyens.Update(p);
+            _context.SaveChanges();
+            return true;
         }
-
-        public bool DeleteQuyen(Guid id)
+        catch (Exception e)
         {
-            try
-            {
-                var quyen = _context.PhanQuyens.Find(id);
-                _context.Remove(quyen);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            return false;
         }
+    }
 
-        public List<PhanQuyen> GetAllQuyens()
+    public bool DeleteQuyen(Guid id)
+    {
+        try
         {
-            return _context.PhanQuyens.ToList();
+            var quyen = _context.PhanQuyens.Find(id);
+            _context.Remove(quyen);
+            _context.SaveChanges();
+            return true;
         }
-
-        public PhanQuyen GetQuyensById(Guid id)
+        catch (Exception e)
         {
-            return _context.PhanQuyens.Find(id);
+            return false;
         }
+    }
 
-        public List<PhanQuyen> GetQuyenByName(string name)
-        {
-            return _context.PhanQuyens.Where(c => c.TenQuyen.ToLower() == name.ToLower()).ToList();
-        }
+    public List<PhanQuyen> GetAllQuyens()
+    {
+        return _context.PhanQuyens.ToList();
+    }
 
+    public PhanQuyen GetQuyensById(Guid id)
+    {
+        return _context.PhanQuyens.Find(id);
+    }
+
+    public List<PhanQuyen> GetQuyenByName(string name)
+    {
+        return _context.PhanQuyens.Where(c => c.TenQuyen.ToLower() == name.ToLower()).ToList();
     }
 }

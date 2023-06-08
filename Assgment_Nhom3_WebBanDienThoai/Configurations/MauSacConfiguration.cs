@@ -2,13 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Configurations
+namespace Assgment_Nhom3_WebBanDienThoai.Configurations;
+
+public class MauSacConfiguration : IEntityTypeConfiguration<MauSac>
 {
-    public class MauSacConfiguration : IEntityTypeConfiguration<MauSac>
+    public void Configure(EntityTypeBuilder<MauSac> builder)
     {
-        public void Configure(EntityTypeBuilder<MauSac> builder)
-        {
-            builder.HasKey(p => p.Id);
-        }
+        builder.HasKey(p => p.Id);
     }
 }

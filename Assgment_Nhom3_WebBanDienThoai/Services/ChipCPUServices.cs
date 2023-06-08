@@ -1,74 +1,74 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Services
+namespace Assgment_Nhom3_WebBanDienThoai.Services;
+
+public class ChipCPUServices : IChipCPUServices
 {
-    public class ChipCPUServices : IChipCPUServices
+    private ShoppingDbContext _context;
+
+    public ChipCPUServices()
     {
-        private ShoppingDbContext _context;
-        public ChipCPUServices()
-        {
-            _context = new ShoppingDbContext();
-        }
+        _context = new ShoppingDbContext();
+    }
 
-        public bool Create(ChipCPU obj)
+    public bool Create(ChipCPU obj)
+    {
+        try
         {
-            try
-            {
-                _context.ChipCPUs.Add(obj);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            _context.ChipCPUs.Add(obj);
+            _context.SaveChanges();
+            return true;
         }
-
-        public bool Delete(Guid id)
+        catch (Exception e)
         {
-            try
-            {
-                var obj = _context.ChipCPUs.FirstOrDefault(x => x.Id == id);
-                _context.ChipCPUs.Remove(obj);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            return false;
         }
+    }
 
-        public ChipCPU GetChipCPUsById(Guid id)
+    public bool Delete(Guid id)
+    {
+        try
         {
-            throw new NotImplementedException();
+            var obj = _context.ChipCPUs.FirstOrDefault(x => x.Id == id);
+            _context.ChipCPUs.Remove(obj);
+            _context.SaveChanges();
+            return true;
         }
-
-        public List<ChipCPU> GetAll()
+        catch (Exception e)
         {
-            return _context.ChipCPUs.ToList();
+            return false;
         }
+    }
 
-        public ChipCPU GetChipCPUById(Guid id)
+    public ChipCPU GetChipCPUsById(Guid id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public List<ChipCPU> GetAll()
+    {
+        return _context.ChipCPUs.ToList();
+    }
+
+    public ChipCPU GetChipCPUById(Guid id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public bool Update(ChipCPU obj)
+    {
+        try
         {
-            throw new NotImplementedException();
+            var x = _context.ChipCPUs.Find(obj.Id);
+            x.Ten = obj.Ten;
+            _context.ChipCPUs.Update(x);
+            _context.SaveChanges();
+            return true;
         }
-
-        public bool Update(ChipCPU obj)
+        catch (Exception e)
         {
-            try
-            {
-                var x = _context.ChipCPUs.Find(obj.Id);
-                x.Ten = obj.Ten;
-                _context.ChipCPUs.Update(x);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            return false;
         }
     }
 }

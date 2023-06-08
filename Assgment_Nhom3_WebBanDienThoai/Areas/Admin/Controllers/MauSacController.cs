@@ -5,13 +5,14 @@ using Newtonsoft.Json;
 
 
 namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers;
-[Area("Admin")]
 
+[Area("Admin")]
 public class MauSacController : Controller
 {
     private ApiService _apiService = new();
     private string domain = "https://localhost:7151/";
     private HttpClient client = new();
+
     [HttpGet]
     public async Task<IActionResult> Index()
     {
@@ -21,6 +22,7 @@ public class MauSacController : Controller
         var mauSac = JsonConvert.DeserializeObject<List<MauSac>>(datajson);
         return View(mauSac);
     }
+
     [HttpGet]
     public IActionResult Create()
     {
@@ -43,6 +45,7 @@ public class MauSacController : Controller
         var mauSac = JsonConvert.DeserializeObject<MauSac>(datajson);
         return View(mauSac);
     }
+
     [HttpPost]
     public async Task<IActionResult> Update(Guid id, MauSac msdt)
     {
@@ -59,5 +62,3 @@ public class MauSacController : Controller
         return RedirectToAction("Index");
     }
 }
-
-
