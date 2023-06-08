@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj": {}
+    "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj": {}
   },
   "projects": {
-    "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj": {
+    "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj",
+        "projectUniqueName": "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj",
         "projectName": "AppAPI",
-        "projectPath": "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj",
+        "projectPath": "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj",
         "packagesPath": "C:\\Users\\taibeo\\.nuget\\packages\\",
-        "outputPath": "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\obj\\",
+        "outputPath": "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj": {
-                "projectPath": "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj"
+              "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj": {
+                "projectPath": "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj"
               }
             }
           }
@@ -93,14 +93,14 @@
         }
       }
     },
-    "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj": {
+    "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj",
+        "projectUniqueName": "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj",
         "projectName": "Assgment_Nhom3_WebBanDienThoai",
-        "projectPath": "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj",
+        "projectPath": "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj",
         "packagesPath": "C:\\Users\\taibeo\\.nuget\\packages\\",
-        "outputPath": "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\obj\\",
+        "outputPath": "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

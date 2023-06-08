@@ -25,11 +25,11 @@ namespace AppAPI.Controllers
         }
 
         // GET api/<GiamGiaController>/5
-        //[HttpGet("{id}")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
+        [HttpGet("{id}")]
+        public GiamGia Get(Guid id)
+        {
+            return giamGiaServices.GetById(id);
+        }
 
         // POST api/<GiamGiaController>
         [HttpPost("create-MaGiamGia")]
@@ -49,16 +49,16 @@ namespace AppAPI.Controllers
 
         // PUT api/<GiamGiaController>/5
         [HttpPut("update-MaGiamGia-{id}")]
-        public bool update(Guid id, [FromBody] decimal SoPhanTram, DateTime NgayBatDau, DateTime NgayKetThuc, string GhiChu, int TrangThai)
+        public bool update(Guid id, GiamGia gg)
         {
             GiamGia a = new GiamGia()
             {
                 Id = id,
-                SoPhanTramGiam = SoPhanTram,
-                NgayBatDau = NgayBatDau,
-                NgayKetThuc = NgayKetThuc,
-                GhiChu = GhiChu,
-                TrangThai = TrangThai
+                SoPhanTramGiam = gg.SoPhanTramGiam,
+                NgayBatDau = gg.NgayBatDau,
+                NgayKetThuc = gg.NgayKetThuc,
+                GhiChu = gg.GhiChu,
+                TrangThai = gg.TrangThai
             };
             return giamGiaServices.Update(a);
         }

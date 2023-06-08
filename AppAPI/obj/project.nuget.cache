@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sGkdLpMvKlYfshrcdcxLYFTQR3lSVaG+OwARDlxMB8QcaekmHvX+glAYDRlAkU5YLN+WIvtdL3w2CzQstTUbVg==",
+  "dgSpecHash": "P9/fQA9d99ukFSC1jivCaijjYI19kqCKrI6bis69x8f8U7KLuhF4QfjI5wSjW15iMVgROQUpw58+gJLV62A65A==",
   "success": true,
-  "projectFilePath": "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj",
+  "projectFilePath": "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\taibeo\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\taibeo\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -10517,11 +10517,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj",
       "projectName": "Assgment_Nhom3_WebBanDienThoai",
       "projectPath": "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj",
       "packagesPath": "C:\\Users\\taibeo\\.nuget\\packages\\",
       "outputPath": "E:\\ASM C#5\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\obj\\",
+=======
+      "projectUniqueName": "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj",
+      "projectName": "Assgment_Nhom3_WebBanDienThoai",
+      "projectPath": "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj",
+      "packagesPath": "C:\\Users\\taibeo\\.nuget\\packages\\",
+      "outputPath": "E:\\ASM C#5\\New folder\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\obj\\",
+>>>>>>> b1e186e0a7587ef6700df88d596bd0bba174aaae
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
