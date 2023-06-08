@@ -2,13 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Configurations
+namespace Assgment_Nhom3_WebBanDienThoai.Configurations;
+
+public class SimConfiguration : IEntityTypeConfiguration<Sim>
 {
-    public class SimConfiguration : IEntityTypeConfiguration<Sim>
+    public void Configure(EntityTypeBuilder<Sim> builder)
     {
-        public void Configure(EntityTypeBuilder<Sim> builder)
-        {
-            builder.HasKey(p => p.Id);
-        }
+        builder.HasKey(p => p.Id);
     }
 }

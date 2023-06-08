@@ -11,15 +11,15 @@ public class NhaSansXuatsController : Controller
     private ApiService _apiService = new();
     private string domain = "https://localhost:7151/";
     private HttpClient client = new();
+
     [HttpGet]
     public async Task<IActionResult> Index()
     {
-        ViewBag.Domain = domain;
-        client.BaseAddress = new Uri(domain);
-        var datajson = await client.GetStringAsync("api/NhaSanXuat/get-all-nhasanxuat");
-        var nhaSanXuat = JsonConvert.DeserializeObject<List<NhaSanXuat>>(datajson);
+        var requestUrl = "https://localhost:7151/api/NhaSanXuat/get-all-nhasanxuat";
+        var nhaSanXuat = _apiService.ApiGetService<NhaSanXuat>(requestUrl);
         return View(nhaSanXuat);
     }
+
     [HttpGet]
     public IActionResult Create()
     {
@@ -42,6 +42,7 @@ public class NhaSansXuatsController : Controller
         var nhaSanXuat = JsonConvert.DeserializeObject<NhaSanXuat>(datajson);
         return View(nhaSanXuat);
     }
+
     [HttpPost]
     public async Task<IActionResult> Update(Guid id, NhaSanXuat nsx)
     {

@@ -1,77 +1,74 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Services
+namespace Assgment_Nhom3_WebBanDienThoai.Services;
+
+public class BoNhoTrongServices : IBoNhoTrongServices
 {
-    public class BoNhoTrongServices : IBoNhoTrongServices
+    private readonly ShoppingDbContext _dbContext;
+
+    public BoNhoTrongServices()
     {
-        private readonly ShoppingDbContext _dbContext;
+        _dbContext = new ShoppingDbContext();
+    }
 
-        public BoNhoTrongServices()
+    public bool CreateBoNhoTrong(BoNhoTrong p)
+    {
+        try
         {
-            this._dbContext = new ShoppingDbContext();
+            _dbContext.BoNhoTrongs.Add(p);
+            _dbContext.SaveChanges();
+            return true;
         }
-        public bool CreateBoNhoTrong(BoNhoTrong p)
+        catch (Exception)
         {
-            try
-            {
-                _dbContext.BoNhoTrongs.Add(p);
-                _dbContext.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
+            return false;
         }
+    }
 
-        public bool DeleteChatLieu(Guid id)
+    public bool DeleteChatLieu(Guid id)
+    {
+        try
         {
-            try
-            {
-                var p = _dbContext.BoNhoTrongs.Find(id);
-                _dbContext.BoNhoTrongs.Remove(p);
-                _dbContext.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
+            var p = _dbContext.BoNhoTrongs.Find(id);
+            _dbContext.BoNhoTrongs.Remove(p);
+            _dbContext.SaveChanges();
+            return true;
         }
-
-        public List<BoNhoTrong> GetAllBoNhoTrongs()
+        catch (Exception)
         {
-            return _dbContext.BoNhoTrongs.ToList();
+            return false;
         }
+    }
 
-        public BoNhoTrong GetBoNhoTrongsById(Guid id)
+    public List<BoNhoTrong> GetAllBoNhoTrongs()
+    {
+        return _dbContext.BoNhoTrongs.ToList();
+    }
+
+    public BoNhoTrong GetBoNhoTrongsById(Guid id)
+    {
+        return _dbContext.BoNhoTrongs.FirstOrDefault(p => p.Id == id);
+    }
+
+    public List<BoNhoTrong> GetBoNhoTrongsByName(string name)
+    {
+        return _dbContext.BoNhoTrongs.Where(p => p.Ten.Contains(name)).ToList();
+    }
+
+    public bool UpdateChatLieu(BoNhoTrong p)
+    {
+        try
         {
-            return _dbContext.BoNhoTrongs.FirstOrDefault(p => p.Id == id);
+            var a = _dbContext.BoNhoTrongs.Find(p.Id);
+            a.Ten = p.Ten;
+            _dbContext.BoNhoTrongs.Update(a);
+            _dbContext.SaveChanges();
+            return true;
         }
-
-        public List<BoNhoTrong> GetBoNhoTrongsByName(string name)
+        catch (Exception)
         {
-            return _dbContext.BoNhoTrongs.Where(p => p.Ten.Contains(name)).ToList();
-        }
-
-        public bool UpdateChatLieu(BoNhoTrong p)
-        {
-            try
-            {
-                var a = _dbContext.BoNhoTrongs.Find(p.Id);
-                a.Ten = p.Ten;
-                _dbContext.BoNhoTrongs.Update(a);
-                _dbContext.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
+            return false;
         }
     }
 }

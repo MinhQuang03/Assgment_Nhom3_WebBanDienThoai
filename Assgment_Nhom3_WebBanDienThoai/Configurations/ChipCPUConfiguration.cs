@@ -2,13 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Configurations
+namespace Assgment_Nhom3_WebBanDienThoai.Configurations;
+
+public class ChipCPUConfiguration : IEntityTypeConfiguration<ChipCPU>
 {
-    public class ChipCPUConfiguration : IEntityTypeConfiguration<ChipCPU>
+    public void Configure(EntityTypeBuilder<ChipCPU> builder)
     {
-        public void Configure(EntityTypeBuilder<ChipCPU> builder)
-        {
-            builder.HasKey(p => p.Id);
-        }
+        builder.HasKey(p => p.Id);
     }
 }

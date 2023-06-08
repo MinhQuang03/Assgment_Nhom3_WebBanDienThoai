@@ -2,13 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Configurations
+namespace Assgment_Nhom3_WebBanDienThoai.Configurations;
+
+public class TinTucConfiguration : IEntityTypeConfiguration<TinTuc>
 {
-    public class TinTucConfiguration : IEntityTypeConfiguration<TinTuc>
+    public void Configure(EntityTypeBuilder<TinTuc> builder)
     {
-        public void Configure(EntityTypeBuilder<TinTuc> builder)
-        {
-            builder.HasKey(p => p.Id);
-        }
+        builder.HasKey(p => p.Id);
     }
 }

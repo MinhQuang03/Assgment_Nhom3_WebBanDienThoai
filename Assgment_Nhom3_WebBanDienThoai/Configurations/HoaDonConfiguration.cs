@@ -2,16 +2,14 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Configurations
+namespace Assgment_Nhom3_WebBanDienThoai.Configurations;
+
+public class HoaDonConfiguration : IEntityTypeConfiguration<HoaDon>
 {
-    public class HoaDonConfiguration : IEntityTypeConfiguration<HoaDon>
+    public void Configure(EntityTypeBuilder<HoaDon> builder)
     {
-        public void Configure(EntityTypeBuilder<HoaDon> builder)
-        {
-            builder.HasKey(p => p.Id);
+        builder.HasKey(p => p.Id);
 
-            builder.HasOne(p => p.TaiKhoans).WithMany().HasForeignKey(p => p.IdTaiKhoan);
-
-        }
+        builder.HasOne(p => p.TaiKhoans).WithMany().HasForeignKey(p => p.IdTaiKhoan);
     }
 }

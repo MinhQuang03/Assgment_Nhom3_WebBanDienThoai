@@ -2,13 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Configurations
+namespace Assgment_Nhom3_WebBanDienThoai.Configurations;
+
+public class CongSacConfiguration : IEntityTypeConfiguration<CongSac>
 {
-    public class CongSacConfiguration : IEntityTypeConfiguration<CongSac>
+    public void Configure(EntityTypeBuilder<CongSac> builder)
     {
-        public void Configure(EntityTypeBuilder<CongSac> builder)
-        {
-            builder.HasKey(p => p.Id);
-        }
+        builder.HasKey(p => p.Id);
     }
 }

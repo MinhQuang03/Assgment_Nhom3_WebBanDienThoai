@@ -27,28 +27,28 @@
 </head>
 
 <body>
-    
-    @await Html.PartialAsync("_HeaderPartialView.cshtml")
 
-    @RenderBody()
-    @RenderSection("scripts", required: false)
+@await Html.PartialAsync("_HeaderPartialView.cshtml")
 
-
-    @await Html.PartialAsync("_FooterPartialView.cshtml")
+@RenderBody()
+@RenderSection("scripts", false)
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="~/Userassets/lib/easing/easing.min.js"></script>
-    <script src="~/Userassets/lib/owlcarousel/owl.carousel.min.js"></script>
+@await Html.PartialAsync("_FooterPartialView.cshtml")
 
-    <!-- Contact Javascript File -->
-    <script src="~/Userassets/mail/jqBootstrapValidation.min.js"></script>
-    <script src="~/Userassets/mail/contact.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="~/Userassets/js/main.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="~/Userassets/lib/easing/easing.min.js"></script>
+<script src="~/Userassets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Contact Javascript File -->
+<script src="~/Userassets/mail/jqBootstrapValidation.min.js"></script>
+<script src="~/Userassets/mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="~/Userassets/js/main.js"></script>
 </body>
 
 </html>

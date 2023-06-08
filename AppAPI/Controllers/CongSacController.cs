@@ -5,54 +5,54 @@ using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace AppAPI.Controllers
+namespace AppAPI.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class CongSacController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CongSacController : ControllerBase
+    private ICongSacServices congSacServices;
+    // GET: api/<CongSacController>
+
+    public CongSacController()
     {
-        private ICongSacServices congSacServices;
-        // GET: api/<CongSacController>
+        congSacServices = new CongSacServices();
+    }
 
-        public CongSacController()
-        {
-            congSacServices = new CongSacServices();
-        }
-        [HttpGet("get-all-congsac")]
-        public List<CongSac> Get()
-        {
-            return congSacServices.GetAllCongSacs();
-        }
+    [HttpGet("get-all-congsac")]
+    public List<CongSac> Get()
+    {
+        return congSacServices.GetAllCongSacs();
+    }
 
-      
-        [HttpPost("create-CongSac")]
-        public bool CreateCongSac(string ten)
-        {
-            CongSac cs = new CongSac()
-            {
-                Id = Guid.NewGuid(),
-                Ten = ten
-            };
-            return congSacServices.CreateCongSac(cs);
-        }
 
-        // PUT api/<CongSacController>/5
-        [HttpPut("update-congsac-{id}")]
-        public bool UpdateCongSac (Guid id, [FromBody] string ten)
+    [HttpPost("create-CongSac")]
+    public bool CreateCongSac(string ten)
+    {
+        var cs = new CongSac()
         {
-            CongSac cs = new CongSac()
-            {
-                Id = id,
-                Ten = ten,
-            };
-            return congSacServices.UpdateCongSac(cs);
-        }
+            Id = Guid.NewGuid(),
+            Ten = ten
+        };
+        return congSacServices.CreateCongSac(cs);
+    }
 
-        // DELETE api/<CongSacController>/5
-        [HttpDelete("delete-congsac-{id}")]
-        public bool Delete(Guid id)
+    // PUT api/<CongSacController>/5
+    [HttpPut("update-congsac-{id}")]
+    public bool UpdateCongSac(Guid id, [FromBody] string ten)
+    {
+        var cs = new CongSac()
         {
-            return congSacServices.DeleteCongSac(id);
-        }
+            Id = id,
+            Ten = ten
+        };
+        return congSacServices.UpdateCongSac(cs);
+    }
+
+    // DELETE api/<CongSacController>/5
+    [HttpDelete("delete-congsac-{id}")]
+    public bool Delete(Guid id)
+    {
+        return congSacServices.DeleteCongSac(id);
     }
 }

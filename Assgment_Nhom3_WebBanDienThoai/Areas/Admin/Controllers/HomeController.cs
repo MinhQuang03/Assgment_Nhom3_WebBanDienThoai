@@ -1,14 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
-{
-    [Area("Admin")]
+namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers;
 
-    public class HomeController : Controller
+[Area("Admin")]
+public class HomeController : Controller
+{
+    public IActionResult Index()
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        return View();
     }
 }

@@ -69,6 +69,6 @@ public class NhaSanXuatServices : INhaSanXuatServices
 
     public NhaSanXuat GetNhaSanXuatById(Guid id)
     {
-        return _context.NhaSanXuats.FirstOrDefault(c =>c.Id == id);
+        return _context.NhaSanXuats.FirstOrDefault(c => c.Id == id);
     }
 }
