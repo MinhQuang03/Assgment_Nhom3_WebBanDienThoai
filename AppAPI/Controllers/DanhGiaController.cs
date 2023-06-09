@@ -17,7 +17,6 @@ public class DanhGiaController : ControllerBase
     {
         _danhGiaServices = new DanhGiaServices();
     }
-
     // GET: api/<DanhGiaController>
     [HttpGet]
     public IEnumerable<DanhGia> GetAll()
@@ -36,7 +35,7 @@ public class DanhGiaController : ControllerBase
     [HttpPost]
     public bool CreateDanhGia(DateTime ngayDanhGia, string noiDung, Guid IdSpct, Guid IdTaiKhoan)
     {
-        var dg = new DanhGia()
+        DanhGia dg = new DanhGia()
         {
             Id = Guid.NewGuid(),
             NgayDanhGia = ngayDanhGia,
@@ -51,7 +50,7 @@ public class DanhGiaController : ControllerBase
     [HttpPut("{id}")]
     public bool UpdateDanhGia(Guid id, [FromBody] DateTime ngayDanhGia, string noiDung, Guid IdSpct, Guid IdTaiKhoan)
     {
-        var dg = new DanhGia()
+        DanhGia dg = new DanhGia()
         {
             Id = id,
             NgayDanhGia = ngayDanhGia,

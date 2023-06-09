@@ -12,14 +12,13 @@ namespace AppAPI.Controllers;
 public class ChatLieuController : ControllerBase
 {
     public readonly IChatLieuServices ChatLieuServices;
-
     public ChatLieuController()
     {
         ChatLieuServices = new ChatLieuServices();
     }
 
     // GET: api/<GiamGiaController>
-    [HttpGet("get-all-MaGiamGia")]
+    [HttpGet("get-all-MaChatLieu")]
     public List<ChatLieu> Get()
     {
         return ChatLieuServices.GetAllChatLieus();
@@ -29,10 +28,11 @@ public class ChatLieuController : ControllerBase
     [HttpPost("create-ChatLieu")]
     public bool Create(string ten)
     {
-        var a = new ChatLieu()
+        ChatLieu a = new ChatLieu()
         {
             Id = Guid.NewGuid(),
-            Ten = ten
+            Ten = ten,
+
         };
         return ChatLieuServices.CreateChatLieu(a);
     }
@@ -41,10 +41,10 @@ public class ChatLieuController : ControllerBase
     [HttpPut("update-ChatLieu-{id}")]
     public bool update(Guid id, string ten)
     {
-        var a = new ChatLieu()
+        ChatLieu a = new ChatLieu()
         {
             Id = id,
-            Ten = ten
+            Ten = ten,
         };
         return ChatLieuServices.UpdateChatLieu(a);
     }
