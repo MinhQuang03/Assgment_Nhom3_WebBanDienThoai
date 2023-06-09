@@ -41,11 +41,6 @@ public class ChipGPUServices : IChipGPUServices
         }
     }
 
-    public ChipGPU GetChipGPUsById(Guid id)
-    {
-        throw new NotImplementedException();
-    }
-
     public List<ChipGPU> GetAll()
     {
         return _context.ChipGPUs.ToList();
@@ -53,7 +48,7 @@ public class ChipGPUServices : IChipGPUServices
 
     public ChipGPU GetChipGPUById(Guid id)
     {
-        throw new NotImplementedException();
+        return _context.ChipGPUs.FirstOrDefault(c => c.Id == id);
     }
 
     public bool Update(ChipGPU obj)

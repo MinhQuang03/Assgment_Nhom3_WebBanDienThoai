@@ -7,7 +7,6 @@ public interface IChipGPUServices
     public bool Create(ChipGPU obj);
     public bool Delete(Guid id);
     public bool Update(ChipGPU obj);
-    public ChipGPU GetChipGPUsById(Guid id);
     public List<ChipGPU> GetAll();
     public ChipGPU GetChipGPUById(Guid id);
 }
