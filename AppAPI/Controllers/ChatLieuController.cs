@@ -18,7 +18,7 @@ namespace AppAPI.Controllers
         }
 
         // GET: api/<GiamGiaController>
-        [HttpGet("get-all-MaGiamGia")]
+        [HttpGet("get-all-MaChatLieu")]
         public List<ChatLieu> Get()
         {
             return ChatLieuServices.GetAllChatLieus();

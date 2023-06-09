@@ -16,7 +16,7 @@ namespace AppAPI.Controllers
         {
             chipGPUServices = new ChipGPUServices();
         }
-        [HttpGet("get-all-Chip")]
+        [HttpGet("get-all-ChipGPU")]
         public List<ChipGPU> Get()
         {
             return chipGPUServices.GetAll();

@@ -19,7 +19,7 @@ namespace AppAPI.Controllers
             _heDieuHanh = new HeDieuHanhServices();
         }
         // GET: api/<HeDieuHanhController>
-        [HttpGet]
+        [HttpGet("get-all-HeDieuHanh")]
         public IEnumerable<HeDieuHanh> Get()
         {
             return _heDieuHanh.GetHeDieuHanhs();

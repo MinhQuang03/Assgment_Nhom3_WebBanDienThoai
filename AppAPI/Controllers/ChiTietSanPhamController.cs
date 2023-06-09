@@ -29,31 +29,30 @@ namespace AppAPI.Controllers
 
         // POST api/<ChiTietSanPhamController>
         [HttpPost("create-ThongTin-SanPham")]
-        public bool Create(Guid IdSp, Guid IdGiamGia, Guid IdChatLieu, Guid IdBoNhoTrong, Guid IdHeDieuHanh, Guid IdCongSac, Guid IdPin, Guid IdSim,
-            Guid IdRam, Guid IdChipCPU, Guid IdChipGPU, Guid IdMauSac, double TrongLuong, string CameraTruoc, string CameraSau,int dophangiai,string kichthuoc, decimal DonGia, int TrangThai)
+        public bool Create(ChiTietSanPham obj)
         {
             ChiTietSanPham a = new ChiTietSanPham()
             {
                 Id = Guid.NewGuid(),
-                IdSanPham = IdSp,
-                IdGiamGia = IdGiamGia,
-                IdChatLieu = IdChatLieu,
-                IdBoNhoTrong = IdBoNhoTrong,
-                IdHeDieuHanh = IdHeDieuHanh,
-                IdCongSac = IdCongSac,
-                IdPin = IdPin,
-                IdSim = IdSim,
-                IdRam = IdRam,
-                IdChipCPU = IdChipCPU,
-                IdChipGPU = IdChipGPU,
-                IdMauSac = IdMauSac,
-                TrongLuong = TrongLuong,
-                CameraTruoc = CameraTruoc,
-                CameraSau = CameraSau,
-                DoPhanGiaiManHinh = dophangiai,
-                KichThuoc = kichthuoc,
-                DonGia = DonGia,
-                TrangThai = TrangThai
+                IdSanPham = obj.IdSanPham,
+                IdGiamGia = obj.IdGiamGia,
+                IdChatLieu = obj.IdChatLieu,
+                IdBoNhoTrong = obj.IdBoNhoTrong,
+                IdHeDieuHanh = obj.IdHeDieuHanh,
+                IdCongSac = obj.IdCongSac,
+                IdPin = obj.IdPin,
+                IdSim = obj.IdSim,
+                IdRam = obj.IdRam,
+                IdChipCPU = obj.IdChipCPU,
+                IdChipGPU = obj.IdChipGPU,
+                IdMauSac = obj.IdMauSac,
+                TrongLuong = obj.TrongLuong,
+                CameraTruoc = obj.CameraTruoc,
+                CameraSau = obj.CameraSau,
+                DoPhanGiaiManHinh = obj.DoPhanGiaiManHinh,
+                KichThuoc = obj.KichThuoc,
+                DonGia = obj.DonGia,
+                TrangThai = obj.TrangThai
             };
             return chiTietSanPhamServices.Create(a);
         }
