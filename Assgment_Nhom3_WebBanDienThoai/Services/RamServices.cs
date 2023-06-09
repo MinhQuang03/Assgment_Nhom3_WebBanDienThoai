@@ -1,79 +1,76 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Services
+namespace Assgment_Nhom3_WebBanDienThoai.Services;
+
+public class RamServices : IRamServices
 {
-    public class RamServices : IRamServices
+    private readonly ShoppingDbContext _dbContext;
+
+    public RamServices()
     {
-        private readonly ShoppingDbContext _dbContext;
+        _dbContext = new ShoppingDbContext();
+    }
 
-        public RamServices()
+    public bool CreateRam(Ram p)
+    {
+        try
         {
-            this._dbContext = new ShoppingDbContext();
+            _dbContext.Rams.Add(p);
+            _dbContext.SaveChanges();
+            return true;
         }
-        public bool CreateRam(Ram p)
+        catch (Exception)
         {
-            try
-            {
-
-                _dbContext.Rams.Add(p);
-                _dbContext.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
+            return false;
         }
+    }
 
-        public bool DeleteRam(Guid id)
+    public bool DeleteRam(Guid id)
+    {
+        try
         {
-            try
-            {
-                var p = _dbContext.Rams.Find(id);
-                _dbContext.Rams.Remove(p);
-                _dbContext.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
+            var p = _dbContext.Rams.Find(id);
+            _dbContext.Rams.Remove(p);
+            _dbContext.SaveChanges();
+            return true;
         }
-
-        public List<Ram> GetAllRams()
+        catch (Exception)
         {
-            return _dbContext.Rams.ToList();
+            return false;
         }
+    }
 
-        public Ram GetRamsById(Guid id)
+    public List<Ram> GetAllRams()
+    {
+        return _dbContext.Rams.ToList();
+    }
+
+    public Ram GetRamsById(Guid id)
+    {
+        return _dbContext.Rams.FirstOrDefault(p => p.Id == id);
+    }
+
+    public bool UpdateRam(Ram p)
+    {
+        try
         {
-            return _dbContext.Rams.FirstOrDefault(p => p.Id == id);
-        }
+            var a = _dbContext.Rams.Find(p.Id);
+            a.Ten = p.Ten;
 
-        public bool UpdateRam(Ram p)
+
+            _dbContext.Rams.Update(a);
+            _dbContext.SaveChanges();
+            return true;
+        }
+        catch (Exception)
         {
-            try
-            {
-                var a = _dbContext.Rams.Find(p.Id);
-                a.Ten = p.Ten;
-               
-
-                _dbContext.Rams.Update(a);
-                _dbContext.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
+            return false;
         }
-        public List<Ram> GetRamsByName(string name)
-        {
-            return _dbContext.Rams.Where(p => p.Ten.Contains(name)).ToList();
-        }
+    }
+
+    public List<Ram> GetRamsByName(string name)
+    {
+        return _dbContext.Rams.Where(p => p.Ten.Contains(name)).ToList();
     }
 }

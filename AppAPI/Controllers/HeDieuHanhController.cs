@@ -1,61 +1,61 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
-
 using Assgment_Nhom3_WebBanDienThoai.Models;
 using Assgment_Nhom3_WebBanDienThoai.Services;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace AppAPI.Controllers
+namespace AppAPI.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class HeDieuHanhController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class HeDieuHanhController : ControllerBase
+    private readonly IHeDieuHanhServices _heDieuHanh;
+    private ShoppingDbContext context = new();
+
+    public HeDieuHanhController()
     {
-        private readonly IHeDieuHanhServices _heDieuHanh;
-        ShoppingDbContext context = new ShoppingDbContext();
-        public HeDieuHanhController()
-        {
-            _heDieuHanh = new HeDieuHanhServices();
-        }
-        // GET: api/<HeDieuHanhController>
-        [HttpGet("get-all-HeDieuHanh")]
-        public IEnumerable<HeDieuHanh> Get()
-        {
-            return _heDieuHanh.GetHeDieuHanhs();
-        }
+        _heDieuHanh = new HeDieuHanhServices();
+    }
 
-        // GET api/<HeDieuHanhController>/5
-        [HttpPost("Create-he-dieu-hanh")]
-        public bool CreateHeDieuHanh(string name)
-        {
-            HeDieuHanh heDieuHanh = new HeDieuHanh();
-            heDieuHanh.Id = Guid.NewGuid();
-            heDieuHanh.Ten = name;
-            return _heDieuHanh.CreateHeDieuHanh(heDieuHanh);
-        }
+    // GET: api/<HeDieuHanhController>
+    [HttpGet]
+    public IEnumerable<HeDieuHanh> Get()
+    {
+        return _heDieuHanh.GetHeDieuHanhs();
+    }
 
-        // POST api/<HeDieuHanhController>
-        [HttpPut("Update-he-dieu-hanh")]
-        public bool Post(Guid id ,string name)
-        {
-            HeDieuHanh heDieuHanh = new HeDieuHanh();
-            heDieuHanh.Id = id;
-            heDieuHanh.Ten = name;
-            return _heDieuHanh.UpdateHeDieuHanh(heDieuHanh);
-        }
+    // GET api/<HeDieuHanhController>/5
+    [HttpPost("Create-he-dieu-hanh")]
+    public bool CreateHeDieuHanh(string name)
+    {
+        var heDieuHanh = new HeDieuHanh();
+        heDieuHanh.Id = Guid.NewGuid();
+        heDieuHanh.Ten = name;
+        return _heDieuHanh.CreateHeDieuHanh(heDieuHanh);
+    }
 
-        // PUT api/<HeDieuHanhController>/5
-        [HttpDelete("Delete-he-dieu-hanh")]
-        public bool Put(Guid id)
-        {
-            return _heDieuHanh.DeleteHeDieuHanh(id);
-        }
+    // POST api/<HeDieuHanhController>
+    [HttpPut("Update-he-dieu-hanh")]
+    public bool Post(Guid id, string name)
+    {
+        var heDieuHanh = new HeDieuHanh();
+        heDieuHanh.Id = id;
+        heDieuHanh.Ten = name;
+        return _heDieuHanh.UpdateHeDieuHanh(heDieuHanh);
+    }
 
-        // DELETE api/<HeDieuHanhController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+    // PUT api/<HeDieuHanhController>/5
+    [HttpDelete("Delete-he-dieu-hanh")]
+    public bool Put(Guid id)
+    {
+        return _heDieuHanh.DeleteHeDieuHanh(id);
+    }
+
+    // DELETE api/<HeDieuHanhController>/5
+    [HttpDelete("{id}")]
+    public void Delete(int id)
+    {
     }
 }

@@ -2,13 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Configurations
+namespace Assgment_Nhom3_WebBanDienThoai.Configurations;
+
+public class PhanQuyenConfiguration : IEntityTypeConfiguration<PhanQuyen>
 {
-    public class PhanQuyenConfiguration : IEntityTypeConfiguration<PhanQuyen>
+    public void Configure(EntityTypeBuilder<PhanQuyen> builder)
     {
-        public void Configure(EntityTypeBuilder<PhanQuyen> builder)
-        {
-            builder.HasKey(p => p.Id);
-        }
+        builder.HasKey(p => p.Id);
     }
 }

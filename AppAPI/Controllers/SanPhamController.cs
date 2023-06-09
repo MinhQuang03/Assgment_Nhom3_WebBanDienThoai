@@ -33,67 +33,31 @@ public class SanPhamController : ControllerBase
     }
 
     // POST api/<SanPhamController>
-    [HttpPost("create-SanPham")]
-    public bool createSanPham(SanPham a)
+    [HttpPost]
+    public bool createSanPham(string ten, string moTa, string anh, Guid idHsx)
     {
-        SanPham sp = new SanPham()
+        var sp = new SanPham()
         {
             Id = Guid.NewGuid(),
-            TenSp = a.TenSp,
-            MoTa = a.MoTa,
-            Anh = a.Anh,
-            IdHsx = a.IdHsx,
+            TenSp = ten,
+            MoTa = moTa,
+            Anh = anh,
+            IdHsx = idHsx
         };
-       return sanPhamServices.createSanPham(sp);
-    }
-
-
-
-    [HttpPost("create-SanPham-img")]
-    public bool createSanPhamImg(SanPham a, IFormFile imageFile)
-    {
-        SanPham sp = new SanPham()
-        {
-            Id = Guid.NewGuid(),
-            TenSp = a.TenSp,
-            MoTa = a.MoTa,
-            Anh = a.Anh,
-            IdHsx = a.IdHsx,
-        };
-        if (imageFile != null && imageFile.Length > 0) // khong null va khong trong 
-        {
-            // Tro toi thu muc wwwroot de lat nua thuc hien viec Copy sang 
-            var path = Path.Combine(
-                Directory.GetCurrentDirectory(), "wwwroot", "img", imageFile.FileName);
-            using (var stream = new FileStream(path, FileMode.Create))
-            {
-                // Thuc hien copy anh vua chon sang thu muc moi (wwwroot)
-                imageFile.CopyTo(stream);
-            }
-            // Gan lai gia tri cho Image cua doi tuong bang ten file anh da duoc sao chep
-            sp.Anh = imageFile.FileName;
-        }
-        
         return sanPhamServices.createSanPham(sp);
     }
 
-
-
-
-
-
-
     // PUT api/<SanPhamController>/5
-    [HttpPut("update-SanPham-{id}")]
-    public bool Put(Guid id, [FromBody] string ten,string moTa,string anh,Guid idHsx)
+    [HttpPut("{id}")]
+    public bool Put(Guid id, [FromBody] string ten, string moTa, string anh, Guid idHsx)
     {
-        SanPham sp = new SanPham()
+        var sp = new SanPham()
         {
             Id = id,
             TenSp = ten,
             MoTa = moTa,
             Anh = anh,
-            IdHsx = idHsx,
+            IdHsx = idHsx
         };
         return sanPhamServices.updateSanPham(sp);
     }

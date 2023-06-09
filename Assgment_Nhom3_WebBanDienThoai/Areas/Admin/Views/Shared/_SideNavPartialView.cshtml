@@ -1,7 +1,6 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "_SideNavPartialView";
-    
+
 }
 
 <div class="side-nav">
@@ -21,9 +20,9 @@
                         <i class="anticon anticon-appstore"></i>
                     </span>
                     <span class="title">Quản Lý Hóa Đơn</span>
-                    
+
                 </a>
-                
+
             </li>
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" href="javascript:void(0);">
@@ -43,10 +42,17 @@
                         <a asp-area="Admin" asp-controller="NhaSansXuats" asp-action="Index">Nhà sản xuất</a>
                     </li>
                     <li>
-                        <a asp-area="Admin" asp-controller="ThongTinSanPham" asp-action="Index">Thong Tin San Pham</a>
+                        <a asp-area="Admin" asp-controller="MauSac" asp-action="Index">Màu Sắc</a>
+
                     </li>
                     <li>
-                        <a asp-area="Admin" asp-controller="SanPham" asp-action="Index">San Pham</a>
+                        <a asp-area="Admin" asp-controller="ChipCPU" asp-action="Index">Chip CPU</a>
+                    </li>
+                    <li>
+                        <a asp-area="Admin" asp-controller="ChipGPU" asp-action="Index">Chip GPU</a>
+                    </li>
+                    <li>
+                        <a href="data-table.html">Data Table</a>
                     </li>
                 </ul>
             </li>
@@ -56,7 +62,7 @@
                         <i class="anticon anticon-hdd"></i>
                     </span>
                     <span class="title">Quản Lý Chuc Vu</span>
-                    
+
                 </a>
             </li>
             <li class="nav-item dropdown">
@@ -69,7 +75,7 @@
                         <i class="arrow-icon"></i>
                     </span>
                 </a>
-                
+
             </li>
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" href="javascript:void(0);">
@@ -90,7 +96,7 @@
                     </li>
                 </ul>
             </li>
-            
+
         </ul>
     </div>
 </div>

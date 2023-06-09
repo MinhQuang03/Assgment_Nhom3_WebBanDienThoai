@@ -5,60 +5,61 @@ using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace AppAPI.Controllers
+namespace AppAPI.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class ChipCPUController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ChipCPUController : ControllerBase
+    public IChipCPUServices chipCPUServices;
+
+    public ChipCPUController()
     {
-        public IChipCPUServices chipCPUServices;
-        public ChipCPUController()
-        {
-            chipCPUServices = new ChipCPUServices();
-        }
-        // GET: api/<ChipCPUController>
-        [HttpGet("get-all-Chip")]
-        public List<ChipCPU> Get()
-        {
-            return chipCPUServices.GetAll();
-        }
+        chipCPUServices = new ChipCPUServices();
+    }
 
-        // GET api/<ChipCPUController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+    // GET: api/<ChipCPUController>
+    [HttpGet("get-all-Chip")]
+    public List<ChipCPU> Get()
+    {
+        return chipCPUServices.GetAll();
+    }
 
-        // POST api/<ChipCPUController>
-        [HttpPost("create-chip")]
-        public bool Create(string ten)
-        {
-            ChipCPU a = new ChipCPU()
-            {
-                Id = Guid.NewGuid(),
-                Ten = ten,
-            };
-            return chipCPUServices.Create(a);
-        }
+    // GET api/<ChipCPUController>/5
+    [HttpGet("{id}")]
+    public ChipCPU GetByID(Guid id)
+    {
+        return chipCPUServices.GetChipCPUById(id);
+    }
 
-        // PUT api/<ChipCPUController>/5
-        [HttpPut("update-chip-{id}")]
-        public bool update(Guid id, [FromBody] string ten)
+    // POST api/<ChipCPUController>
+    [HttpPost("create-chip")]
+    public bool Create(ChipCPU chipCPU)
+    {
+        var a = new ChipCPU()
         {
-            ChipCPU a = new ChipCPU()
-            {
-                Id = id,
-                Ten = ten,
-            };
-            return chipCPUServices.Update(a);
-        }
+            Id = Guid.NewGuid(),
+            Ten =  chipCPU.Ten
+        };
+        return chipCPUServices.Create(a);
+    }
 
-        // DELETE api/<ChipCPUController>/5
-        [HttpDelete("delete-chip-{id}")]
-        public bool Delete(Guid id)
+    // PUT api/<ChipCPUController>/5
+    [HttpPut("update-chip-{id}")]
+    public bool update(Guid id, ChipCPU chipCPU)
+    {
+        var a = new ChipCPU()
         {
-            return chipCPUServices.Delete(id);
-        }
+            Id = id,
+            Ten = chipCPU.Ten
+        };
+        return chipCPUServices.Update(a);
+    }
+
+    // DELETE api/<ChipCPUController>/5
+    [HttpDelete("delete-chip-{id}")]
+    public bool Delete(Guid id)
+    {
+        return chipCPUServices.Delete(id);
     }
 }
