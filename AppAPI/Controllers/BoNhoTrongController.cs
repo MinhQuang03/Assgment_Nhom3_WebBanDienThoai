@@ -11,55 +11,55 @@ namespace AppAPI.Controllers;
 [ApiController]
 public class BoNhoTrongController : ControllerBase
 {
-    public readonly IBoNhoTrongServices BoNhoTrongServices;
-
-    public BoNhoTrongController()
-    {
-        BoNhoTrongServices = new BoNhoTrongServices();
-    }
-
-    // GET: api/<GiamGiaController>
-    [HttpGet("get-all-BoNhoTrong")]
-    public List<BoNhoTrong> Get()
-    {
-        return BoNhoTrongServices.GetAllBoNhoTrongs();
-    }
-
-    // GET api/<GiamGiaController>/5
-    //[HttpGet("{id}")]
-    //public string Get(int id)
-    //{
-    //    return "value";
-    //}
-
-    // POST api/<GiamGiaController>
-    [HttpPost("create-BoNhoTrong")]
-    public bool Create(string ten)
-    {
-        var a = new BoNhoTrong()
+   
+        public readonly IBoNhoTrongServices BoNhoTrongServices;
+        public BoNhoTrongController()
         {
-            Id = Guid.NewGuid(),
-            Ten = ten
-        };
-        return BoNhoTrongServices.CreateBoNhoTrong(a);
-    }
+            BoNhoTrongServices = new BoNhoTrongServices();
+        }
 
-    // PUT api/<GiamGiaController>/5
-    [HttpPut("update-BoNhoTrong-{id}")]
-    public bool update(Guid id, string ten)
-    {
-        var a = new BoNhoTrong()
+        // GET: api/<GiamGiaController>
+        [HttpGet("get-all-BoNhoTrong")]
+        public List<BoNhoTrong> Get()
         {
-            Id = id,
-            Ten = ten
-        };
-        return BoNhoTrongServices.UpdateChatLieu(a);
-    }
+            return BoNhoTrongServices.GetAllBoNhoTrongs();
+        }
 
-    // DELETE api/<GiamGiaController>/5
-    [HttpDelete("delete-BoNhoTrong-{id}")]
-    public bool Delete(Guid id)
-    {
-        return BoNhoTrongServices.DeleteChatLieu(id);
-    }
+        // GET api/<GiamGiaController>/5
+        //[HttpGet("{id}")]
+        //public string Get(int id)
+        //{
+        //    return "value";
+        //}
+
+        // POST api/<GiamGiaController>
+        [HttpPost("create-BoNhoTrong")]
+        public bool Create(string ten)
+        {
+            BoNhoTrong a = new BoNhoTrong()
+            {
+                Id = Guid.NewGuid(),
+                Ten = ten,
+            };
+            return BoNhoTrongServices.CreateBoNhoTrong(a);
+        }
+
+        // PUT api/<GiamGiaController>/5
+        [HttpPut("update-BoNhoTrong-{id}")]
+        public bool update(Guid id, string ten)
+        {
+            BoNhoTrong a = new BoNhoTrong()
+            {
+                Id = id,
+                Ten = ten,
+            };
+            return BoNhoTrongServices.UpdateChatLieu(a);
+        }
+
+        // DELETE api/<GiamGiaController>/5
+        [HttpDelete("delete-BoNhoTrong-{id}")]
+        public bool Delete(Guid id)
+        {
+            return BoNhoTrongServices.DeleteChatLieu(id);
+        }
 }
