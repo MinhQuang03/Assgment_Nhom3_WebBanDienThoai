@@ -34,30 +34,30 @@ public class SanPhamController : ControllerBase
 
     // POST api/<SanPhamController>
     [HttpPost]
-    public bool createSanPham(string ten,string moTa,string anh,Guid idHsx)
+    public bool createSanPham(string ten, string moTa, string anh, Guid idHsx)
     {
-        SanPham sp = new SanPham()
+        var sp = new SanPham()
         {
             Id = Guid.NewGuid(),
             TenSp = ten,
             MoTa = moTa,
             Anh = anh,
-            IdHsx = idHsx,
+            IdHsx = idHsx
         };
-       return sanPhamServices.createSanPham(sp);
+        return sanPhamServices.createSanPham(sp);
     }
 
     // PUT api/<SanPhamController>/5
     [HttpPut("{id}")]
-    public bool Put(Guid id, [FromBody] string ten,string moTa,string anh,Guid idHsx)
+    public bool Put(Guid id, [FromBody] string ten, string moTa, string anh, Guid idHsx)
     {
-        SanPham sp = new SanPham()
+        var sp = new SanPham()
         {
             Id = id,
             TenSp = ten,
             MoTa = moTa,
             Anh = anh,
-            IdHsx = idHsx,
+            IdHsx = idHsx
         };
         return sanPhamServices.updateSanPham(sp);
     }

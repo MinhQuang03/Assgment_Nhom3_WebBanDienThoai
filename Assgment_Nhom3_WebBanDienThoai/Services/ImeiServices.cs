@@ -2,65 +2,66 @@
 using Assgment_Nhom3_WebBanDienThoai.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Services
+namespace Assgment_Nhom3_WebBanDienThoai.Services;
+
+public class ImeiServices : IImeiServices
 {
-    public class ImeiServices : IImeiServices
+    private ShoppingDbContext _dbContext;
+
+    public ImeiServices()
     {
-        ShoppingDbContext _dbContext;
-        public ImeiServices()
-        {
-            _dbContext = new ShoppingDbContext();
-        }
-        public bool Create(Imei obj)
-        {
-            try
-            {
-                _dbContext.Imeis.Add(obj);
-                _dbContext.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
-        }
+        _dbContext = new ShoppingDbContext();
+    }
 
-        public bool Delete(Guid id)
+    public bool Create(Imei obj)
+    {
+        try
         {
-            try
-            {
-                var obj = _dbContext.Imeis.FirstOrDefault(x => x.Id == id);
-                _dbContext.Imeis.Remove(obj);
-                _dbContext.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            _dbContext.Imeis.Add(obj);
+            _dbContext.SaveChanges();
+            return true;
         }
-
-        public List<Imei> GetAll()
+        catch (Exception e)
         {
-            return _dbContext.Imeis.ToList();
+            return false;
         }
+    }
 
-        public bool Update(Imei obj)
+    public bool Delete(Guid id)
+    {
+        try
         {
-            try
-            {
-                var a = _dbContext.Imeis.Find(obj.Id);
-                a.imei = obj.imei;
-                a.TrangThai = obj.TrangThai;
-                a.IdCtsp = obj.IdCtsp;
-                _dbContext.Imeis.Update(a);
-                _dbContext.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            var obj = _dbContext.Imeis.FirstOrDefault(x => x.Id == id);
+            _dbContext.Imeis.Remove(obj);
+            _dbContext.SaveChanges();
+            return true;
+        }
+        catch (Exception e)
+        {
+            return false;
+        }
+    }
+
+    public List<Imei> GetAll()
+    {
+        return _dbContext.Imeis.ToList();
+    }
+
+    public bool Update(Imei obj)
+    {
+        try
+        {
+            var a = _dbContext.Imeis.Find(obj.Id);
+            a.imei = obj.imei;
+            a.TrangThai = obj.TrangThai;
+            a.IdCtsp = obj.IdCtsp;
+            _dbContext.Imeis.Update(a);
+            _dbContext.SaveChanges();
+            return true;
+        }
+        catch (Exception e)
+        {
+            return false;
         }
     }
 }

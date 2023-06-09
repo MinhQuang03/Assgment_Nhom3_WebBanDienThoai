@@ -4,12 +4,14 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers;
+
 [Area("Admin")]
 public class ChipGPUController : Controller
-    {
+{
     private ApiService _apiService = new();
     private string domain = "https://localhost:7151/";
     private HttpClient client = new();
+
     [HttpGet]
     public async Task<IActionResult> Index()
     {
@@ -19,6 +21,7 @@ public class ChipGPUController : Controller
         var chipGPU = JsonConvert.DeserializeObject<List<ChipGPU>>(datajson);
         return View(chipGPU);
     }
+
     [HttpGet]
     public IActionResult Create()
     {
@@ -41,6 +44,7 @@ public class ChipGPUController : Controller
         var chipGPU = JsonConvert.DeserializeObject<ChipGPU>(datajson);
         return View(chipGPU);
     }
+
     [HttpPost]
     public async Task<IActionResult> Update(Guid id, ChipGPU chipGPU)
     {
@@ -57,5 +61,3 @@ public class ChipGPUController : Controller
         return RedirectToAction("Index");
     }
 }
-    
-

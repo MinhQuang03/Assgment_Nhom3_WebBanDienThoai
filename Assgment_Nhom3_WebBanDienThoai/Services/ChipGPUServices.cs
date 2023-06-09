@@ -1,73 +1,74 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
 
-namespace Assgment_Nhom3_WebBanDienThoai.Services
+namespace Assgment_Nhom3_WebBanDienThoai.Services;
+
+public class ChipGPUServices : IChipGPUServices
 {
-    public class ChipGPUServices : IChipGPUServices
+    private ShoppingDbContext _context;
+
+    public ChipGPUServices()
     {
-        private ShoppingDbContext _context;
-        public ChipGPUServices()
-        {
-            _context = new ShoppingDbContext();
-        }
-        public bool Create(ChipGPU obj)
-        {
-            try
-            {
-                _context.ChipGPUs.Add(obj);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
-        }
+        _context = new ShoppingDbContext();
+    }
 
-        public bool Delete(Guid id)
+    public bool Create(ChipGPU obj)
+    {
+        try
         {
-            try
-            {
-                var obj = _context.ChipGPUs.FirstOrDefault(x => x.Id == id);
-                _context.ChipGPUs.Remove(obj);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            _context.ChipGPUs.Add(obj);
+            _context.SaveChanges();
+            return true;
         }
-
-        public ChipGPU GetChipGPUsById(Guid id)
+        catch (Exception e)
         {
-            throw new NotImplementedException();
+            return false;
         }
+    }
 
-        public List<ChipGPU> GetAll()
+    public bool Delete(Guid id)
+    {
+        try
         {
-            return _context.ChipGPUs.ToList();
+            var obj = _context.ChipGPUs.FirstOrDefault(x => x.Id == id);
+            _context.ChipGPUs.Remove(obj);
+            _context.SaveChanges();
+            return true;
         }
-
-        public ChipGPU GetChipGPUById(Guid id)
+        catch (Exception e)
         {
-            throw new NotImplementedException();
+            return false;
         }
+    }
 
-        public bool Update(ChipGPU obj)
+    public ChipGPU GetChipGPUsById(Guid id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public List<ChipGPU> GetAll()
+    {
+        return _context.ChipGPUs.ToList();
+    }
+
+    public ChipGPU GetChipGPUById(Guid id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public bool Update(ChipGPU obj)
+    {
+        try
         {
-            try
-            {
-                var x = _context.ChipGPUs.Find(obj.Id);
-                x.Ten = obj.Ten;
-                _context.ChipGPUs.Update(x);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            var x = _context.ChipGPUs.Find(obj.Id);
+            x.Ten = obj.Ten;
+            _context.ChipGPUs.Update(x);
+            _context.SaveChanges();
+            return true;
+        }
+        catch (Exception e)
+        {
+            return false;
         }
     }
 }
