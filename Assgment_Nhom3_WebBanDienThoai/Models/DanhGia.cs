@@ -12,7 +12,7 @@ public class DanhGia
 
     public Guid IdTaiKhoan { get; set; }
 
-    public virtual ChiTietSanPham ChiTietSanPhams { get; set; }
+    public virtual ChiTietSanPham? ChiTietSanPhams { get; set; }
 
-    public virtual TaiKhoan TaiKhoans { get; set; }
+    public virtual TaiKhoan? TaiKhoans { get; set; }
 }

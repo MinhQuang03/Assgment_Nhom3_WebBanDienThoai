@@ -905,8 +905,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.TaiKhoan", b =>
                 {
-                    b.Navigation("GioHangs")
-                        .IsRequired();
+                    b.Navigation("GioHangs");
                 });
 #pragma warning restore 612, 618
         }

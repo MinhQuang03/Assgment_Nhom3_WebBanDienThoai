@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
-    [Migration("20230608132715_QLBANHANG")]
-    partial class QLBANHANG
+    [Migration("20230609171327_VipPro")]
+    partial class VipPro
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -908,8 +908,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.TaiKhoan", b =>
                 {
-                    b.Navigation("GioHangs")
-                        .IsRequired();
+                    b.Navigation("GioHangs");
                 });
 #pragma warning restore 612, 618
         }
