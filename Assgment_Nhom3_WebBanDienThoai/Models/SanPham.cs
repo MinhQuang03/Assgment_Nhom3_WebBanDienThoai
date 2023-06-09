@@ -12,5 +12,5 @@ public class SanPham
 
     public Guid IdHsx { get; set; }
 
-    public virtual NhaSanXuat NhaSanXuats { get; set; }
+    public virtual NhaSanXuat? NhaSanXuats { get; set; }
 }

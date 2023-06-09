@@ -10,5 +10,5 @@ public class Imei
 
     public Guid IdCtsp { get; set; }
 
-    public virtual ChiTietSanPham ChiTietSanPhams { get; set; }
+    public virtual ChiTietSanPham? ChiTietSanPhams { get; set; }
 }

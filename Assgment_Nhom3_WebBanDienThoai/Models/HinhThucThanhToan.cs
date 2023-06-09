@@ -12,7 +12,7 @@ public class HinhThucThanhToan
     public Guid IdThanhToan { get; set; }
     public Guid IdHd { get; set; }
 
-    public virtual ThanhToan ThanhToans { get; set; }
+    public virtual ThanhToan? ThanhToans { get; set; }
 
-    public virtual HoaDon HoaDons { get; set; }
+    public virtual HoaDon? HoaDons { get; set; }
 }
