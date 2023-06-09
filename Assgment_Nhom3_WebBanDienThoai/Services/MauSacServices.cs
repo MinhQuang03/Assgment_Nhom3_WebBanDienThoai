@@ -1,6 +1,7 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 
 namespace Assgment_Nhom3_WebBanDienThoai.Services;
 
@@ -62,6 +63,7 @@ public class MauSacServices : IMauSacServices
         try
         {
             var obj = _context.MauSacs.Find(ms.Id);
+            obj.Ten = ms.Ten;
             _context.MauSacs.Update(obj);
             _context.SaveChanges();
             return true;

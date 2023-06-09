@@ -1,11 +1,11 @@
-﻿@model IEnumerable<Assgment_Nhom3_WebBanDienThoai.Models.MauSac>
+﻿@model Task<List<MauSac>>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>List Màu Sắc</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -14,29 +14,26 @@
     <thead>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Id)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Ten)
+            Tên
         </th>
         <th></th>
     </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model)
+    @foreach (var item in await Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ten)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Update", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
+        if (Model != null)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ten)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Update", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
     }
     </tbody>
 </table>

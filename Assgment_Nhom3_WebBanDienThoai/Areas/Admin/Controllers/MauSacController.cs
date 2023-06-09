@@ -3,12 +3,10 @@ using Assgment_Nhom3_WebBanDienThoai.Services;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-
 namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers;
-
 [Area("Admin")]
 public class MauSacController : Controller
-{
+    {
     private ApiService _apiService = new();
     private string domain = "https://localhost:7151/";
     private HttpClient client = new();
@@ -16,11 +14,9 @@ public class MauSacController : Controller
     [HttpGet]
     public async Task<IActionResult> Index()
     {
-        ViewBag.Domain = domain;
-        client.BaseAddress = new Uri(domain);
-        var datajson = await client.GetStringAsync("api/MauSac/get-all-mausac");
-        var mauSac = JsonConvert.DeserializeObject<List<MauSac>>(datajson);
-        return View(mauSac);
+        var requestUrl = "https://localhost:7151/api/MauSac/get-all-mausac";
+        var ms = _apiService.ApiGetService<MauSac>(requestUrl);
+        return View(ms);
     }
 
     [HttpGet]
@@ -42,8 +38,8 @@ public class MauSacController : Controller
         ViewBag.Domain = domain;
         client.BaseAddress = new Uri(domain);
         var datajson = await client.GetStringAsync($"api/MauSac/{id}");
-        var mauSac = JsonConvert.DeserializeObject<MauSac>(datajson);
-        return View(mauSac);
+        var ms = JsonConvert.DeserializeObject<MauSac>(datajson);
+        return View(ms);
     }
 
     [HttpPost]
@@ -62,3 +58,4 @@ public class MauSacController : Controller
         return RedirectToAction("Index");
     }
 }
+
