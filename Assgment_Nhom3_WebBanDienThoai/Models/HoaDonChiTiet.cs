@@ -14,9 +14,9 @@
 
         public int TrangThai { get; set; }
 
-        public virtual HoaDon HoaDons { get; set; }
+        public virtual HoaDon?   HoaDons { get; set; }
 
-        public virtual ChiTietSanPham ChiTietSanPhams { get; set; }
+        public virtual ChiTietSanPham? ChiTietSanPhams { get; set; }
 
 
     }

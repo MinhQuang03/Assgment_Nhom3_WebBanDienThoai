@@ -22,8 +22,8 @@
 
         public Guid IdCv { get; set; }
 
-        public virtual GioHang GioHangs { get; set; }
+        public virtual GioHang? GioHangs { get; set; }
 
-        public virtual PhanQuyen PhanQuyens { get; set; }
+        public virtual PhanQuyen? PhanQuyens { get; set; }
     }
 }

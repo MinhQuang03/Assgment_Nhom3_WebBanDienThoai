@@ -8,6 +8,6 @@
 
         public string Anh { get; set; }
 
-        public virtual ChiTietSanPham ChiTietSanPhams { get; set; }
+        public virtual ChiTietSanPham? ChiTietSanPhams { get; set; }
     }
 }

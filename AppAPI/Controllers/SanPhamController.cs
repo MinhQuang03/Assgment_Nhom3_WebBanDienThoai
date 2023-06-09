@@ -52,6 +52,14 @@ public class SanPhamController : ControllerBase
     [HttpPost("create-SanPham-img")]
     public bool createSanPhamImg(SanPham a, IFormFile imageFile)
     {
+        SanPham sp = new SanPham()
+        {
+            Id = Guid.NewGuid(),
+            TenSp = a.TenSp,
+            MoTa = a.MoTa,
+            Anh = a.Anh,
+            IdHsx = a.IdHsx,
+        };
         if (imageFile != null && imageFile.Length > 0) // khong null va khong trong 
         {
             // Tro toi thu muc wwwroot de lat nua thuc hien viec Copy sang 
@@ -63,18 +71,9 @@ public class SanPhamController : ControllerBase
                 imageFile.CopyTo(stream);
             }
             // Gan lai gia tri cho Image cua doi tuong bang ten file anh da duoc sao chep
-            a.Anh = imageFile.FileName;
+            sp.Anh = imageFile.FileName;
         }
-
-
-        SanPham sp = new SanPham()
-        {
-            Id = Guid.NewGuid(),
-            TenSp = a.TenSp,
-            MoTa = a.MoTa,
-            Anh = a.Anh,
-            IdHsx = a.IdHsx,
-        };
+        
         return sanPhamServices.createSanPham(sp);
     }
 

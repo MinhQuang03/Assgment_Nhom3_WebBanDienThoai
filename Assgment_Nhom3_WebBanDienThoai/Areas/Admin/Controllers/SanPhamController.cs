@@ -3,6 +3,7 @@ using Assgment_Nhom3_WebBanDienThoai.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
 {
@@ -30,12 +31,29 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(SanPham sp)
+        public async Task<IActionResult> Create(SanPham sp, IFormFile file)
         {
-            var requestUrl = "https://localhost:7151/api/SanPham/create-SanPham-img";
-            if (await _apiService.ApiPostService(sp, requestUrl))
+            if (file != null && file.Length > 0) // khong null va khong trong 
+            {
+                var fileName = Path.GetFileName(file.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", fileName);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+
+                sp.Anh = "/img/" + fileName;
+            }
+            var requestUrl = $"https://localhost:7151/api/SanPham/create-SanPhams";
+            var jsonData = JsonConvert.SerializeObject(sp);
+            HttpContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var response = await client.PostAsync(requestUrl, content);
+            if (response.IsSuccessStatusCode)
+            {
                 return RedirectToAction("Index");
-            else return View();
+            }
+
+            return BadRequest(response.Content.ReadAsStringAsync());
         }
     }
 }
