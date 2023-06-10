@@ -15,7 +15,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
         HttpClient client = new HttpClient();
         public async Task<IActionResult> Index()
         {
-            ViewBag.Domain = domain;
+            ViewBag.domain = domain;
             client.BaseAddress = new Uri(domain);
             string datajson = await client.GetStringAsync("api/SanPham/get-all-sanpham");
             List<SanPham> sp = JsonConvert.DeserializeObject<List<SanPham>>(datajson);
