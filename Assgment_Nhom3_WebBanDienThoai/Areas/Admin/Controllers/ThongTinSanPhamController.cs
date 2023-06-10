@@ -3,6 +3,7 @@ using Assgment_Nhom3_WebBanDienThoai.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
 {
@@ -82,5 +83,27 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             else return View();
         }
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            client.BaseAddress = new Uri(domain);
+            var datajson = await client.GetStringAsync($"api/ChiTietSanPham/{id}");
+            var ctsp = JsonConvert.DeserializeObject<ChiTietSanPham>(datajson);
+            return View(ctsp);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Guid id, ChiTietSanPham ctsp)
+        {
+            var requestUrl = $"https://localhost:7151/api/ChiTietSanPham/update-ThongTinSanPham-{id}";
+            if (await _apiService.ApiPutService(ctsp, requestUrl)) return RedirectToAction("Index");
+            return View();
+        }
+
+
+
     }
 }

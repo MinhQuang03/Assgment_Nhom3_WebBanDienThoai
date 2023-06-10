@@ -55,5 +55,42 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
 
             return BadRequest(response.Content.ReadAsStringAsync());
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            client.BaseAddress = new Uri(domain);
+            var datajson = await client.GetStringAsync($"api/SanPham/{id}");
+            var sp = JsonConvert.DeserializeObject<SanPham>(datajson);
+            return View(sp);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Guid id, SanPham sp, IFormFile file)
+        {
+            if (file != null && file.Length > 0) // khong null va khong trong 
+            {
+                var fileName = Path.GetFileName(file.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", fileName);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+
+                sp.Anh = "/img/" + fileName;
+            }
+            var requestUrl = $"https://localhost:7151/api/SanPham/update-SanPham-{id}";
+            var jsonData = JsonConvert.SerializeObject(sp);
+            HttpContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var response = await client.PutAsync(requestUrl, content);
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return BadRequest(response.Content.ReadAsStringAsync());
+        }
+
+
     }
 }
