@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iaiEgTw/mSDtHzIKUBA1xYYWMN3hgnYdK16E0yuQ4Ek=",
+  "Hash": "e5Fz0XA6htyPp8/a95r6aq0VvmvqmmEBKRCG11PkX/I=",
   "Source": "AppAPI",
   "BasePath": "_content/AppAPI",
   "Mode": "Default",
@@ -13236,6 +13236,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\img\\ny.jpg",
+      "SourceId": "Assgment_Nhom3_WebBanDienThoai",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\",
+      "BasePath": "_content/Assgment_Nhom3_WebBanDienThoai",
+      "RelativePath": "img/ny.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\ny.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\img\\tải xuống.png",
+      "SourceId": "Assgment_Nhom3_WebBanDienThoai",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\",
+      "BasePath": "_content/Assgment_Nhom3_WebBanDienThoai",
+      "RelativePath": "img/tải xuống.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\tải xuống.png"
     },
     {
       "Identity": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\img\\z4371019359543_d68918d31118cbb13f12a9e8ef1f150a.jpg",

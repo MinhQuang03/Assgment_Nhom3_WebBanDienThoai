@@ -3685,6 +3685,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\img\\ny.jpg",
+      "PackagePath": "staticwebassets\\img\\ny.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\img\\tải xuống.png",
+      "PackagePath": "staticwebassets\\img\\tải xuống.png"
+    },
+    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\img\\z4371019359543_d68918d31118cbb13f12a9e8ef1f150a.jpg",
       "PackagePath": "staticwebassets\\img\\z4371019359543_d68918d31118cbb13f12a9e8ef1f150a.jpg"
     },

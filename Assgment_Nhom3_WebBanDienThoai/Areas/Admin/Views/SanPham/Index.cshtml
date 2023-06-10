@@ -3,6 +3,11 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    //List<string> extensions = new List<string>()
+    //{
+    //    ".png", ".jpg", ".jpeg", ".gif", ".pdf", ".raw", ".bmp", ".tif"
+    //};
+
 }
 
 <h1>Index</h1>
@@ -33,7 +38,9 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+            ShoppingDbContext dbContext = new ShoppingDbContext();
+            var tennsx = dbContext.NhaSanXuats.FirstOrDefault(p => p.Id == item.IdHsx).Ten;
+            <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Id)
             </td>
@@ -44,10 +51,22 @@
                 @Html.DisplayFor(modelItem => item.MoTa)
             </td>
             <td>
-                    <img src="@ViewBag.Domain@item.Anh" width="100">
+                    @*<img src="@ViewBag.domain@item.Anh" width="100">*@
+                    @*@{
+                        string a = System.IO.Path.GetExtension(item.Anh);
+                    }
+                    @if (@extensions.Contains(System.IO.Path.GetExtension(item.Anh).Trim()))
+                    {
+                        <img src="/img/@item.Anh" height="100">
+                    }
+                    else
+                    {
+                        <span>Ảnh lỗi rồi =)))</span>
+                    }*@
+                    <img src="@Url.Content(item.Anh)" alt="Hình ảnh" style="width:50px">
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdHsx)
+                @Html.DisplayFor(modelItem => tennsx)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new {  id=item.Id }) |
