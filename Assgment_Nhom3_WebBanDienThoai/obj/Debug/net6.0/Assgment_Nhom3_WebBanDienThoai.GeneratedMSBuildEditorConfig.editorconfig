@@ -56,6 +56,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ADMIN/Desktop/XinDay/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/Imei/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW1laVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Desktop/XinDay/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/Imei/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW1laVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ADMIN/Desktop/XinDay/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/MauSac/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWF1U2FjXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -106,6 +114,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ADMIN/Desktop/XinDay/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/ThongTinSanPham/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGhvbmdUaW5TYW5QaGFtXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Desktop/XinDay/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/ThongTinSanPham/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGhvbmdUaW5TYW5QaGFtXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ADMIN/Desktop/XinDay/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/ThongTinSanPham/Index.cshtml]

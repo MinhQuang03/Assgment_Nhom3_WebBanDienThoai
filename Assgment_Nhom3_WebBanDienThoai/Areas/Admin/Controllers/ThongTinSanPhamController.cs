@@ -13,6 +13,10 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
         private ApiService _apiService = new();
         string domain = "https://localhost:7151/";
         HttpClient client = new HttpClient();
+        public ThongTinSanPhamController()
+        {
+            
+        }
         public async Task<IActionResult> Index()
         {
             ViewBag.Domain = domain;
