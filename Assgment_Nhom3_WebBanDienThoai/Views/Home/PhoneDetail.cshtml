@@ -3,6 +3,19 @@
     ShoppingDbContext dbContext = new ShoppingDbContext();
     var tensp = dbContext.SanPhams.FirstOrDefault(p => p.Id == Model.IdSanPham).TenSp;
     string anhsp = dbContext.SanPhams.FirstOrDefault(p => p.Id == Model.IdSanPham).Anh;
+
+    string anh1 = dbContext.ListAnhs.FirstOrDefault(p => p.IdCtsp == Model.Id).Anh;
+
+    string anh2 = dbContext.ListAnhs.FirstOrDefault(p => p.IdCtsp == Model.Id).Anh1;
+
+    string anh3 = dbContext.ListAnhs.FirstOrDefault(p => p.IdCtsp == Model.Id).Anh2;
+
+    var chipCpu = dbContext.ChipCPUs.FirstOrDefault(p => p.Id == Model.IdChipCPU).Ten;
+
+    var pin = dbContext.Pins.FirstOrDefault(p => p.Id == Model.IdPin).Ten; 
+    var chipGpu = dbContext.ChipGPUs.FirstOrDefault(p => p.Id == Model.IdChipGPU).Ten;
+    var ram = dbContext.Rams.FirstOrDefault(p => p.Id == Model.IdRam).Ten;
+    var mausac = dbContext.MauSacs.FirstOrDefault(p => p.Id == Model.IdMauSac).Ten;
 }
 <!-- Breadcrumb Start -->
 <div class="container-fluid">
@@ -29,13 +42,13 @@
                             <img class="w-100 h-100" src="@Url.Content(anhsp)" alt="Image">
                         </div>
                         <div class="carousel-item">
-                            <img class="w-100 h-100" src="img/product-2.jpg" alt="Image">
+                            <img class="w-100 h-100" src="/img/@anh1" alt="Image">
                         </div>
                         <div class="carousel-item">
-                            <img class="w-100 h-100" src="img/product-3.jpg" alt="Image">
+                            <img class="w-100 h-100" src="/img/@anh2" alt="Image">
                         </div>
                         <div class="carousel-item">
-                            <img class="w-100 h-100" src="img/product-4.jpg" alt="Image">
+                            <img class="w-100 h-100" src="/img/@anh3" alt="Image">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#product-carousel" data-slide="prev">
@@ -62,59 +75,23 @@
                     </div>
                     <h3 class="font-weight-semi-bold mb-4">@Model.DonGia</h3>
                     <p class="mb-4">
-                        Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit
-                        clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea
-                        Nonumy
+                        @tensp là một siêu phẩm trong giới smartphone được nhà sản xuất tung ra thị trường vào tháng 9/2022,
+                        Máy trang bị con chip @chipCpu, đi kèm theo đó là theo đó là màn hình @Model.DoPhanGiaiManHinh Hz.
+                        Hiệu năng mạnh mẽ của @chipGpu cùng cụm camera @Model.CameraSau  mang chất lượng chuẩn studio.
+                        Với viên pin @pin mang lại thời lượng pin vượt trội.
                     </p>
                     <div class="d-flex mb-3">
-                        <strong class="text-dark mr-3">Sizes:</strong>
-                        <form>
+                        <strong class="text-dark mr-3">Dung lượng:</strong>
+                    <form>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="size-1" name="size">
-                                <label class="custom-control-label" for="size-1">XS</label>
+                                <input type="radio" class="custom-control-input" id="size-1" name="size" checked>
+                                <label class="custom-control-label" for="size-1">@ram</label>
                             </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="size-2" name="size">
-                                <label class="custom-control-label" for="size-2">S</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="size-3" name="size">
-                                <label class="custom-control-label" for="size-3">M</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="size-4" name="size">
-                                <label class="custom-control-label" for="size-4">L</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="size-5" name="size">
-                                <label class="custom-control-label" for="size-5">XL</label>
-                            </div>
-                        </form>
+                    </form>
                     </div>
                     <div class="d-flex mb-4">
                         <strong class="text-dark mr-3">Colors:</strong>
-                        <form>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="color-1" name="color">
-                                <label class="custom-control-label" for="color-1">Black</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="color-2" name="color">
-                                <label class="custom-control-label" for="color-2">White</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="color-3" name="color">
-                                <label class="custom-control-label" for="color-3">Red</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="color-4" name="color">
-                                <label class="custom-control-label" for="color-4">Blue</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="color-5" name="color">
-                                <label class="custom-control-label" for="color-5">Green</label>
-                            </div>
-                        </form>
+                        <h6 class=" mb-4">@mausac</h6>
                     </div>
                     <div class="d-flex align-items-center mb-4 pt-2">
                         <div class="input-group quantity mr-3" style="width: 130px;">

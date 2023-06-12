@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
-    [Migration("20230609171327_VipPro")]
-    partial class VipPro
+    [Migration("20230612154502_vipPro")]
+    partial class vipPro
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -436,6 +436,18 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Anh")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Anh1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Anh2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Anh3")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
