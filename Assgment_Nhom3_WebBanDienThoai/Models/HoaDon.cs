@@ -22,5 +22,5 @@ public class HoaDon
 
     public Guid IdTaiKhoan { get; set; }
 
-    public virtual TaiKhoan TaiKhoans { get; set; }
+    public virtual TaiKhoan? TaiKhoans { get; set; }
 }

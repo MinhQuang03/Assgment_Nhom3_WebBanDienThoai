@@ -4,10 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers;
-
 [Area("Admin")]
 public class ChipCPUController : Controller
-{
+    {
     private ApiService _apiService = new();
     private string domain = "https://localhost:7151/";
     private HttpClient client = new();
@@ -15,11 +14,9 @@ public class ChipCPUController : Controller
     [HttpGet]
     public async Task<IActionResult> Index()
     {
-        ViewBag.Domain = domain;
-        client.BaseAddress = new Uri(domain);
-        var datajson = await client.GetStringAsync("api/ChipCPU/get-all-Chip");
-        var chipCPU = JsonConvert.DeserializeObject<List<ChipCPU>>(datajson);
-        return View(chipCPU);
+        var requestUrl = "https://localhost:7151/api/ChipCPU/get-all-Chip";
+        var ms = _apiService.ApiGetService<ChipCPU>(requestUrl);
+        return View(ms);
     }
 
     [HttpGet]
@@ -41,8 +38,8 @@ public class ChipCPUController : Controller
         ViewBag.Domain = domain;
         client.BaseAddress = new Uri(domain);
         var datajson = await client.GetStringAsync($"api/ChipCPU/{id}");
-        var chipCPU = JsonConvert.DeserializeObject<ChipCPU>(datajson);
-        return View(chipCPU);
+        var cpu = JsonConvert.DeserializeObject<ChipCPU>(datajson);
+        return View(cpu);
     }
 
     [HttpPost]
@@ -61,3 +58,4 @@ public class ChipCPUController : Controller
         return RedirectToAction("Index");
     }
 }
+

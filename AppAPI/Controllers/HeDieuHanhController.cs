@@ -12,15 +12,13 @@ namespace AppAPI.Controllers;
 public class HeDieuHanhController : ControllerBase
 {
     private readonly IHeDieuHanhServices _heDieuHanh;
-    private ShoppingDbContext context = new();
-
+    ShoppingDbContext context = new ShoppingDbContext();
     public HeDieuHanhController()
     {
         _heDieuHanh = new HeDieuHanhServices();
     }
-
     // GET: api/<HeDieuHanhController>
-    [HttpGet]
+    [HttpGet("get-all-HeDieuHanh")]
     public IEnumerable<HeDieuHanh> Get()
     {
         return _heDieuHanh.GetHeDieuHanhs();
@@ -30,7 +28,7 @@ public class HeDieuHanhController : ControllerBase
     [HttpPost("Create-he-dieu-hanh")]
     public bool CreateHeDieuHanh(string name)
     {
-        var heDieuHanh = new HeDieuHanh();
+        HeDieuHanh heDieuHanh = new HeDieuHanh();
         heDieuHanh.Id = Guid.NewGuid();
         heDieuHanh.Ten = name;
         return _heDieuHanh.CreateHeDieuHanh(heDieuHanh);
@@ -40,7 +38,7 @@ public class HeDieuHanhController : ControllerBase
     [HttpPut("Update-he-dieu-hanh")]
     public bool Post(Guid id, string name)
     {
-        var heDieuHanh = new HeDieuHanh();
+        HeDieuHanh heDieuHanh = new HeDieuHanh();
         heDieuHanh.Id = id;
         heDieuHanh.Ten = name;
         return _heDieuHanh.UpdateHeDieuHanh(heDieuHanh);

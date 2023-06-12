@@ -41,11 +41,6 @@ public class ChipCPUServices : IChipCPUServices
         }
     }
 
-    public ChipCPU GetChipCPUsById(Guid id)
-    {
-        throw new NotImplementedException();
-    }
-
     public List<ChipCPU> GetAll()
     {
         return _context.ChipCPUs.ToList();
@@ -53,7 +48,7 @@ public class ChipCPUServices : IChipCPUServices
 
     public ChipCPU GetChipCPUById(Guid id)
     {
-        throw new NotImplementedException();
+        return _context.ChipCPUs.FirstOrDefault(c => c.Id == id);
     }
 
     public bool Update(ChipCPU obj)

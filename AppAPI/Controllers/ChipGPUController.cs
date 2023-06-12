@@ -12,13 +12,11 @@ namespace AppAPI.Controllers;
 public class ChipGPUController : ControllerBase
 {
     public IChipGPUServices chipGPUServices;
-
     public ChipGPUController()
     {
         chipGPUServices = new ChipGPUServices();
     }
-
-    [HttpGet("get-all-Chip")]
+    [HttpGet("get-all-ChipGPU")]
     public List<ChipGPU> Get()
     {
         return chipGPUServices.GetAll();
@@ -35,10 +33,10 @@ public class ChipGPUController : ControllerBase
     [HttpPost("create-chip")]
     public bool Create(string ten)
     {
-        var a = new ChipGPU()
+        ChipGPU a = new ChipGPU()
         {
             Id = Guid.NewGuid(),
-            Ten = ten
+            Ten = ten,
         };
         return chipGPUServices.Create(a);
     }
@@ -47,10 +45,10 @@ public class ChipGPUController : ControllerBase
     [HttpPut("update-chip-{id}")]
     public bool update(Guid id, [FromBody] string ten)
     {
-        var a = new ChipGPU()
+        ChipGPU a = new ChipGPU()
         {
             Id = id,
-            Ten = ten
+            Ten = ten,
         };
         return chipGPUServices.Update(a);
     }

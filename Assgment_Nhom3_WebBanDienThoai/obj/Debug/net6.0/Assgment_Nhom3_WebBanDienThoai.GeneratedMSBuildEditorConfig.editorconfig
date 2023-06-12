@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hpcENQVVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/ChipCPU/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hpcENQVVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/ChipGPU/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hpcEdQVVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -92,6 +96,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmhhU2Fuc1h1YXRzXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/SanPham/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/SanPham/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/SanPham/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -102,6 +118,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/ThongTinSanPham/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGhvbmdUaW5TYW5QaGFtXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/ThongTinSanPham/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGhvbmdUaW5TYW5QaGFtXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/_ViewImports.cshtml]

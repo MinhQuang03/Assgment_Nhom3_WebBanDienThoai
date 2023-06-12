@@ -18,7 +18,6 @@ public class CongSacController : ControllerBase
     {
         congSacServices = new CongSacServices();
     }
-
     [HttpGet("get-all-congsac")]
     public List<CongSac> Get()
     {
@@ -29,7 +28,7 @@ public class CongSacController : ControllerBase
     [HttpPost("create-CongSac")]
     public bool CreateCongSac(string ten)
     {
-        var cs = new CongSac()
+        CongSac cs = new CongSac()
         {
             Id = Guid.NewGuid(),
             Ten = ten
@@ -41,10 +40,10 @@ public class CongSacController : ControllerBase
     [HttpPut("update-congsac-{id}")]
     public bool UpdateCongSac(Guid id, [FromBody] string ten)
     {
-        var cs = new CongSac()
+        CongSac cs = new CongSac()
         {
             Id = id,
-            Ten = ten
+            Ten = ten,
         };
         return congSacServices.UpdateCongSac(cs);
     }

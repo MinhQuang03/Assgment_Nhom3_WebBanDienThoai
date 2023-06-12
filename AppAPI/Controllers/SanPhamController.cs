@@ -27,43 +27,43 @@ public class SanPhamController : ControllerBase
 
     // GET api/<SanPhamController>/5
     [HttpGet("{id}")]
-    public string Get(int id)
+    public SanPham Get(Guid id)
     {
-        return "value";
+        return sanPhamServices.GetSanPhamById(id);
     }
 
     // POST api/<SanPhamController>
-    [HttpPost]
-    public bool createSanPham(string ten, string moTa, string anh, Guid idHsx)
+    [HttpPost("create-SanPhams")]
+    public bool createSanPham(SanPham a)
     {
         var sp = new SanPham()
         {
             Id = Guid.NewGuid(),
-            TenSp = ten,
-            MoTa = moTa,
-            Anh = anh,
-            IdHsx = idHsx
+            TenSp = a.TenSp,
+            MoTa = a.MoTa,
+            Anh = a.Anh,
+            IdHsx = a.IdHsx
         };
         return sanPhamServices.createSanPham(sp);
     }
 
     // PUT api/<SanPhamController>/5
-    [HttpPut("{id}")]
-    public bool Put(Guid id, [FromBody] string ten, string moTa, string anh, Guid idHsx)
+    [HttpPut("update-SanPham-{id}")]
+    public bool Put(Guid id, SanPham a)
     {
         var sp = new SanPham()
         {
             Id = id,
-            TenSp = ten,
-            MoTa = moTa,
-            Anh = anh,
-            IdHsx = idHsx
+            TenSp = a.TenSp,
+            MoTa = a.MoTa,
+            Anh = a.Anh,
+            IdHsx = a.IdHsx
         };
         return sanPhamServices.updateSanPham(sp);
     }
 
     // DELETE api/<SanPhamController>/5
-    [HttpDelete("{id}")]
+    [HttpDelete("delete-SanPham-{id}")]
     public bool Delete(Guid id)
     {
         return sanPhamServices.deleteSanPham(id);

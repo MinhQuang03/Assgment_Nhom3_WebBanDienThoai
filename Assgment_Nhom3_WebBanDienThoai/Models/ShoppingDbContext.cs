@@ -69,8 +69,7 @@ public class ShoppingDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(
-            @"Data Source=DESKTOP-H6TL71T\MINGG;Initial Catalog=BanDienThoai_Nhom2;User ID=minh160801;Password=minhanh321;TrustServerCertificate=True");
+        optionsBuilder.UseSqlServer(@"Data Source=MSI\SQLEXPRESS;Initial Catalog=BanDienThoai_Nhom2_C5;User ID=QuangBm36;Password=123;TrustServerCertificate=True;Integrated Security=True");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

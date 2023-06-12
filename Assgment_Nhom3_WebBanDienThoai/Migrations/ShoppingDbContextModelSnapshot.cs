@@ -379,8 +379,8 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<long>("Gia")
-                        .HasColumnType("bigint");
+                    b.Property<decimal>("Gia")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<Guid>("IdChiTietSp")
                         .HasColumnType("uniqueidentifier");
@@ -905,8 +905,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 
             modelBuilder.Entity("Assgment_Nhom3_WebBanDienThoai.Models.TaiKhoan", b =>
                 {
-                    b.Navigation("GioHangs")
-                        .IsRequired();
+                    b.Navigation("GioHangs");
                 });
 #pragma warning restore 612, 618
         }

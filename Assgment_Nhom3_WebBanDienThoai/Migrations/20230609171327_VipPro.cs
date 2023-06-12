@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     /// <inheritdoc />
-    public partial class shoppingWebDB : Migration
+    public partial class VipPro : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -524,7 +524,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                     IdHoaDon = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdChiTietSp = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     SoLuong = table.Column<int>(type: "int", nullable: false),
-                    Gia = table.Column<long>(type: "bigint", nullable: false),
+                    Gia = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     TrangThai = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
