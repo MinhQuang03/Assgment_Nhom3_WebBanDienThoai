@@ -19,7 +19,7 @@ public class ChatLieuController : ControllerBase
     }
 
     // GET: api/<GiamGiaController>
-    [HttpGet("get-all-MaGiamGia")]
+    [HttpGet("get-all-ChatLieu")]
     public List<ChatLieu> Get()
     {
         return ChatLieuServices.GetAllChatLieus();
