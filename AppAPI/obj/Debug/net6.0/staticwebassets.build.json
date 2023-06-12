@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e5Fz0XA6htyPp8/a95r6aq0VvmvqmmEBKRCG11PkX/I=",
+  "Hash": "kYVgiWcoL0Wwnp7kl8UIoPENhqWW/VwJaVarDGFJbiI=",
   "Source": "AppAPI",
   "BasePath": "_content/AppAPI",
   "Mode": "Default",
@@ -13236,6 +13236,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\img\\hinh-anh-dong-tien-500k.jpg",
+      "SourceId": "Assgment_Nhom3_WebBanDienThoai",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\",
+      "BasePath": "_content/Assgment_Nhom3_WebBanDienThoai",
+      "RelativePath": "img/hinh-anh-dong-tien-500k.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\hinh-anh-dong-tien-500k.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\img\\New Bitmap image.bmp",
+      "SourceId": "Assgment_Nhom3_WebBanDienThoai",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\",
+      "BasePath": "_content/Assgment_Nhom3_WebBanDienThoai",
+      "RelativePath": "img/New Bitmap image.bmp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\New Bitmap image.bmp"
     },
     {
       "Identity": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\img\\ny.jpg",

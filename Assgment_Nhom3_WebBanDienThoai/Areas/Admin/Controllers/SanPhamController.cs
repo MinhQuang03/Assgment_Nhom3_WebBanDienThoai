@@ -64,6 +64,11 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(Guid id)
         {
             client.BaseAddress = new Uri(domain);
+
+            string nhaSanXuat = await client.GetStringAsync("api/NhaSanXuat/get-all-nhasanxuat");
+            List<NhaSanXuat> nsx = JsonConvert.DeserializeObject<List<NhaSanXuat>>(nhaSanXuat);
+            ViewBag.IdHsx = new SelectList(nsx, "Id", "Ten");
+
             var datajson = await client.GetStringAsync($"api/SanPham/{id}");
             var sp = JsonConvert.DeserializeObject<SanPham>(datajson);
             return View(sp);

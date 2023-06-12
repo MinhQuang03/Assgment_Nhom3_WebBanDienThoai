@@ -49,8 +49,10 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Imei imei)
         {
+            var x = imei;
             var requestUrl = "https://localhost:7151/api/Imei/create-imei";
-            if (await _apiService.ApiPostService(imei, requestUrl)) return RedirectToAction("Index");
+            if (await _apiService.ApiPostService(imei, requestUrl)) 
+                return RedirectToAction("Index");
             return View();
         }
     }

@@ -3685,6 +3685,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\img\\New Bitmap image.bmp",
+      "PackagePath": "staticwebassets\\img\\New Bitmap image.bmp"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\img\\hinh-anh-dong-tien-500k.jpg",
+      "PackagePath": "staticwebassets\\img\\hinh-anh-dong-tien-500k.jpg"
+    },
+    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\wwwroot\\img\\ny.jpg",
       "PackagePath": "staticwebassets\\img\\ny.jpg"
     },
