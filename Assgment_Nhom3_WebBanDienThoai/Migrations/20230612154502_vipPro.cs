@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Assgment_Nhom3_WebBanDienThoai.Migrations
 {
     /// <inheritdoc />
-    public partial class VipPro : Migration
+    public partial class vipPro : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -448,7 +448,10 @@ namespace Assgment_Nhom3_WebBanDienThoai.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdCtsp = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Anh = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Anh = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Anh1 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Anh2 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Anh3 = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

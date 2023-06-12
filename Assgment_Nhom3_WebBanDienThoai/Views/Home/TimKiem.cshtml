@@ -56,19 +56,20 @@
             </div>
             <!-- Price End -->
             <!-- Color Start -->
-            <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Filter by Price</span></h5>
-            <div class="bg-light p-4 mb-30">
+            <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Filter by color</span></h5>
+            <div class="bg-light p-5 mb-30">
                 <form asp-action="TimKiem">
                     <div>
-                        <br/>
-                        <div >
+                        <br />
+                        <div>
                             <input type="number" name="minPrice" step="1" placeholder="$min" class="form-control-sm col-5" />&nbsp;&#8212;&nbsp;<input type="number" name="maxPrice" step="1" placeholder="$max" class="form-control-sm col-5" />
                         </div>
-                        <br/>
+                        <br />
                         <input type="submit" value="Filter" class="btn btn-primary btn-sm" />
                         <a asp-action="TimKiem" class="btn btn-secondary btn-sm float-right">Clear</a>
                     </div>
                 </form>
+
             </div>
             <!-- Color End -->
 
