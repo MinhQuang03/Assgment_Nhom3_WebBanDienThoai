@@ -17,6 +17,7 @@ public class ImeiServices : IImeiServices
     {
         try
         {
+            var x = obj;
             _dbContext.Imeis.Add(obj);
             _dbContext.SaveChanges();
             return true;

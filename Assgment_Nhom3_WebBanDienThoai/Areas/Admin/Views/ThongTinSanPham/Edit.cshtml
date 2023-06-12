@@ -1,17 +1,17 @@
 ﻿@model Assgment_Nhom3_WebBanDienThoai.Models.ChiTietSanPham
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
+<h1>Edit</h1>
 
-
-<h4>Thêm thông tin sản phẩm</h4>
+<h4>ChiTietSanPham</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             
             <div class="form-group">
@@ -26,7 +26,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="IdChatLieu" class="control-label"></label>
-                <select asp-for="IdChatLieu" asp-items="@ViewBag.IdChatLieu" class="form-control" ></select>
+                <select asp-for="IdChatLieu" asp-items="@ViewBag.IdChatLieu" class="form-control"></select>
                 <span asp-validation-for="IdChatLieu" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -41,7 +41,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="IdCongSac" class="control-label"></label>
-                <select asp-for="IdCongSac" asp-items="@ViewBag.IdCongSac" class="form-control" > </select>
+                <select asp-for="IdCongSac" asp-items="@ViewBag.IdCongSac" class="form-control"> </select>
                 <span asp-validation-for="IdCongSac" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -106,22 +106,11 @@
             </div>
             <div class="form-group">
                 <label asp-for="TrangThai" class="control-label"></label>
-                <div class="form-check">
-                    <input type="radio" asp-for="TrangThai" value="1" checked />
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Còn hàng
-                    </label>
-                </div>
-
-                <div class="form-check">
-                    <input type="radio" asp-for="TrangThai" value="0" />
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Hết hàng
-                    </label>
-                </div>
+                <input asp-for="TrangThai" class="form-control" />
+                <span asp-validation-for="TrangThai" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
@@ -131,6 +120,4 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-@*@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}*@
+

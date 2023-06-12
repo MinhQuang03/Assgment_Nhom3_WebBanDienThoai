@@ -19,7 +19,7 @@ public class ImeiController : ControllerBase
     }
 
     // GET: api/<ImeiController>
-    [HttpGet]
+
     [HttpGet("get-all-Imei")]
     public List<Imei> Get()
     {
@@ -35,28 +35,28 @@ public class ImeiController : ControllerBase
 
     // POST api/<ImeiController>
     [HttpPost("create-imei")]
-    public bool Create(string ten, int TrangThai, Guid IdCtsp)
+    public bool Create(Imei sp)
     {
         var a = new Imei()
         {
             Id = Guid.NewGuid(),
-            imei = ten,
-            TrangThai = TrangThai,
-            IdCtsp = IdCtsp
+            imei = sp.imei,
+            TrangThai = sp.TrangThai,
+            IdCtsp = sp.IdCtsp
         };
         return imeiServices.Create(a);
     }
 
     // PUT api/<ImeiController>/5
     [HttpPut("update-imei-{id}")]
-    public bool update(Guid id, [FromBody] string ten, int TrangThai, Guid IdCtsp)
+    public bool update(Guid id, Imei sp)
     {
         var a = new Imei()
         {
             Id = id,
-            imei = ten,
-            TrangThai = TrangThai,
-            IdCtsp = IdCtsp
+            imei = sp.imei,
+            TrangThai = sp.TrangThai,
+            IdCtsp = sp.IdCtsp
         };
         return imeiServices.Update(a);
     }
