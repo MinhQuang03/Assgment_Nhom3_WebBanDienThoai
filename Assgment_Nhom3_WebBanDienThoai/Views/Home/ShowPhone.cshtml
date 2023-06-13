@@ -60,21 +60,20 @@
             <div class="bg-light p-4 mb-30">
                 <form asp-action="TimKiem">
                     <div>
-                        
-                        <div>
-                            <input type="number" name="minPrice" step="1" placeholder="$min" class="form-control-sm col-5"/>&nbsp;&#8212;&nbsp;<input type="number" name="maxPrice" step="1" placeholder="$max" class="form-control-sm col-5" />
+                        <br/>
+                        <div >
+                            <input type="number" name="minPrice" step="1" placeholder="$min" class="form-control-sm col-5" />&nbsp;&#8212;&nbsp;<input type="number" name="maxPrice" step="1" placeholder="$max" class="form-control-sm col-5" />
                         </div>
+                        <br/>
                         <input type="submit" value="Filter" class="btn btn-primary btn-sm" />
                         <a asp-action="TimKiem" class="btn btn-secondary btn-sm float-right">Clear</a>
                     </div>
                 </form>
             </div>
             <!-- Color End -->
-            
+
         </div>
         <!-- Shop Sidebar End -->
-
-
         <!-- Shop Product Start -->
         <div class="col-lg-9 col-md-8">
             <div class="row pb-3">
@@ -104,60 +103,60 @@
                         </div>
                     </div>
                 </div>
-                
-                    
-                        @foreach (var item in Model)
-                        {
-                            if (item.TrangThai == 1)
-                            {
-                                ShoppingDbContext dbContext = new ShoppingDbContext();
-                                var tensp = dbContext.SanPhams.FirstOrDefault(p => p.Id == item.IdSanPham).TenSp;
-                                string anhsp = dbContext.SanPhams.FirstOrDefault(p => p.Id == item.IdSanPham).Anh;
-                                var giamgia = dbContext.GiamGias.FirstOrDefault(p => p.Id == item.IdGiamGia).SoPhanTramGiam;
-                            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                                    <div class="product-item bg-light mb-4">
-                                        <div class="product-img position-relative overflow-hidden">
-                                        <img class="img-fluid w-100" src="@Url.Content(anhsp)" alt="Hình ảnh" style="width:400px; height:310px">
-                                            <div class="product-action">
-                                                <a class="btn btn-outline-dark btn-square" href="@Url.Action("PhoneDetail","Home", new { Id = item.Id})">
-                                                    <i class="fa fa-shopping-cart"></i>
-                                                </a>
-                                                <a class="btn btn-outline-dark btn-square" href="">
-                                                    <i class="far fa-heart"></i>
-                                                </a>
-                                                <a class="btn btn-outline-dark btn-square" href="">
-                                                    <i class="fa fa-sync-alt"></i>
-                                                </a>
-                                                <a class="btn btn-outline-dark btn-square" href="">
-                                                    <i class="fa fa-search"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="text-center py-4">
-                                            <a class="h6 text-decoration-none text-truncate" href="">@tensp</a>
-                                            <div class="d-flex align-items-center justify-content-center mt-2">
-                                                <h5>@item.DonGia</h5>
-                                                <h6 class="text-muted ml-2">
-                                                <del>@giamgia%</del>
-                                                </h6>
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-center mb-1">
-                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                <small>(99)</small>
-                                            </div>
-                                        </div>
+
+
+                @foreach (var item in Model)
+                {
+                    if (item.TrangThai == 1)
+                    {
+                        ShoppingDbContext dbContext = new ShoppingDbContext();
+                        var tensp = dbContext.SanPhams.FirstOrDefault(p => p.Id == item.IdSanPham).TenSp;
+                        string anhsp = dbContext.SanPhams.FirstOrDefault(p => p.Id == item.IdSanPham).Anh;
+                        var giamgia = dbContext.GiamGias.FirstOrDefault(p => p.Id == item.IdGiamGia).SoPhanTramGiam;
+                        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                            <div class="product-item bg-light mb-4">
+                                <div class="product-img position-relative overflow-hidden">
+                                    <img class="img-fluid w-100" src="@Url.Content(anhsp)" alt="Hình ảnh" style="width:400px; height:310px">
+                                    <div class="product-action">
+                                        <a class="btn btn-outline-dark btn-square" href="@Url.Action("PhoneDetail","Home", new { Id = item.Id})">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                        <a class="btn btn-outline-dark btn-square" href="">
+                                            <i class="far fa-heart"></i>
+                                        </a>
+                                        <a class="btn btn-outline-dark btn-square" href="">
+                                            <i class="fa fa-sync-alt"></i>
+                                        </a>
+                                        <a class="btn btn-outline-dark btn-square" href="">
+                                            <i class="fa fa-search"></i>
+                                        </a>
                                     </div>
                                 </div>
-                            }
+                                <div class="text-center py-4">
+                                    <a class="h6 text-decoration-none text-truncate" href="">@tensp</a>
+                                    <div class="d-flex align-items-center justify-content-center mt-2">
+                                        <h5>@item.DonGia</h5>
+                                        <h6 class="text-muted ml-2">
+                                            <del>@giamgia%</del>
+                                        </h6>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center mb-1">
+                                        <small class="fa fa-star text-primary mr-1"></small>
+                                        <small class="fa fa-star text-primary mr-1"></small>
+                                        <small class="fa fa-star text-primary mr-1"></small>
+                                        <small class="fa fa-star text-primary mr-1"></small>
+                                        <small class="fa fa-star text-primary mr-1"></small>
+                                        <small>(99)</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
 
-                        }
-                    
-         
-                
+                }
+
+
+
                 <div class="col-12">
                     <nav>
                         <ul class="pagination justify-content-center">
