@@ -13,6 +13,10 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
         private ApiService _apiService = new();
         string domain = "https://localhost:7151/";
         HttpClient client = new HttpClient();
+        public SanPhamController()
+        {
+            
+        }
         public async Task<IActionResult> Index()
         {
             ViewBag.domain = domain;
@@ -60,6 +64,11 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(Guid id)
         {
             client.BaseAddress = new Uri(domain);
+
+            string nhaSanXuat = await client.GetStringAsync("api/NhaSanXuat/get-all-nhasanxuat");
+            List<NhaSanXuat> nsx = JsonConvert.DeserializeObject<List<NhaSanXuat>>(nhaSanXuat);
+            ViewBag.IdHsx = new SelectList(nsx, "Id", "Ten");
+
             var datajson = await client.GetStringAsync($"api/SanPham/{id}");
             var sp = JsonConvert.DeserializeObject<SanPham>(datajson);
             return View(sp);
