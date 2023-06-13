@@ -72,6 +72,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/Imei/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW1laVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/Imei/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW1laVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/ListAnh/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGlzdEFuaFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/ListAnh/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGlzdEFuaFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/MauSac/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWF1U2FjXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -124,6 +140,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGhvbmdUaW5TYW5QaGFtXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/ThongTinSanPham/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGhvbmdUaW5TYW5QaGFtXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Areas/Admin/Views/ThongTinSanPham/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGhvbmdUaW5TYW5QaGFtXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -136,12 +156,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Views/Cart/showcart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxzaG93Y2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Views/CheckOut/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tPdXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Views/Home/PhoneDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQaG9uZURldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Views/Home/showcart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzaG93Y2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Views/Home/ShowPhone.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG93UGhvbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Views/Home/TimKiem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaW1LaWVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/admin/Desktop/ASM/Assgment_Nhom3_WebBanDienThoai/Assgment_Nhom3_WebBanDienThoai/Views/Login/Login.cshtml]
