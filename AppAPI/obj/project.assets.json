@@ -10746,39 +10746,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\khanh\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\hieu\\.nuget\\packages\\": {},
->>>>>>> 5f4c0b1a8e9867626a1c3a5422f0ad4e6e9ef053
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "D:\\khanh\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj",
       "projectName": "AppAPI",
-      "projectPath": "D:\\khanh\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj",
-      "packagesPath": "C:\\Users\\khanh\\.nuget\\packages\\",
-      "outputPath": "D:\\khanh\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\hieu\\Documents\\GitHub\\New folder\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj",
-      "projectName": "AppAPI",
-      "projectPath": "C:\\Users\\hieu\\Documents\\GitHub\\New folder\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj",
-      "packagesPath": "C:\\Users\\hieu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hieu\\Documents\\GitHub\\New folder\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\obj\\",
->>>>>>> 5f4c0b1a8e9867626a1c3a5422f0ad4e6e9ef053
+      "projectPath": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\AppAPI.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\AppAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\khanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\hieu\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 5f4c0b1a8e9867626a1c3a5422f0ad4e6e9ef053
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10787,20 +10771,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-<<<<<<< HEAD
-            "D:\\khanh\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj": {
-              "projectPath": "D:\\khanh\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj"
-=======
-            "C:\\Users\\hieu\\Documents\\GitHub\\New folder\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj": {
-              "projectPath": "C:\\Users\\hieu\\Documents\\GitHub\\New folder\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj"
->>>>>>> 5f4c0b1a8e9867626a1c3a5422f0ad4e6e9ef053
+            "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj": {
+              "projectPath": "C:\\Users\\ADMIN\\Desktop\\XinDay\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai\\Assgment_Nhom3_WebBanDienThoai.csproj"
             }
           }
         }
@@ -10855,11 +10833,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
-=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
->>>>>>> 5f4c0b1a8e9867626a1c3a5422f0ad4e6e9ef053
       }
     }
   }

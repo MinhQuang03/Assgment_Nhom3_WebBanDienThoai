@@ -3,11 +3,10 @@ using Assgment_Nhom3_WebBanDienThoai.Models;
 using Assgment_Nhom3_WebBanDienThoai.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-<<<<<<< HEAD
+
 using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
-=======
+
 using Microsoft.EntityFrameworkCore;
->>>>>>> 5f4c0b1a8e9867626a1c3a5422f0ad4e6e9ef053
 using Newtonsoft.Json;
 using System.Diagnostics;
 
@@ -25,12 +24,12 @@ public class HomeController : Controller
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-<<<<<<< HEAD
+
         ShoppingDbContext= new ShoppingDbContext();
         GioHangChiTietServices = new GioHangChiTietServices();
-=======
+
         _context = new ShoppingDbContext();
->>>>>>> 5f4c0b1a8e9867626a1c3a5422f0ad4e6e9ef053
+
     }
 
     public async Task<IActionResult> Index()
@@ -59,7 +58,7 @@ public class HomeController : Controller
         return View(ctsp);
     }
 
-<<<<<<< HEAD
+
     public async Task<IActionResult> AddToCard(Guid id)
     {
         var check = GioHangChiTietServices.GetAll().FirstOrDefault(x => x.IdChiTietSp == id);
@@ -102,7 +101,6 @@ public class HomeController : Controller
         
         return View(ghct);
     }
-=======
     public async Task<IActionResult> TimKiem(string searchString, string minPrice, string maxPrice)
     {
         var books = _context.ChiTietSanPhams.Select(b => b);
@@ -130,7 +128,6 @@ public class HomeController : Controller
     }
 
 
->>>>>>> 5f4c0b1a8e9867626a1c3a5422f0ad4e6e9ef053
     public IActionResult Privacy()
     {
         return View();
