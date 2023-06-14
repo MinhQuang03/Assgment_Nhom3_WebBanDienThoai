@@ -1,6 +1,7 @@
 ﻿using Assgment_Nhom3_WebBanDienThoai.IServices;
 using Assgment_Nhom3_WebBanDienThoai.Models;
 using Assgment_Nhom3_WebBanDienThoai.Services;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -16,7 +17,12 @@ namespace Assgment_Nhom3_WebBanDienThoai.Controllers
         private readonly IGioHangServices _cartServices;
         private readonly IGioHangChiTietServices _cartDetailService;
         private readonly IPhanQuyenServices _roleServices;
-
+        private ApiService _apiService = new();
+        string domain = "https://localhost:7151/";
+        HttpClient client = new HttpClient();
+        ShoppingDbContext _context;
+        ShoppingDbContext ShoppingDbContext;
+        IGioHangServices GioHangServices;
 
         public LoginController(ILogger<GioHangController> logger)
         {
@@ -26,6 +32,9 @@ namespace Assgment_Nhom3_WebBanDienThoai.Controllers
             _cartServices = new GioHangServices();
             _cartDetailService = new GioHangChiTietServices();
             _roleServices = new PhanQuyenServices();
+            GioHangServices = new GioHangServices();
+
+
         }
         public ActionResult Index()
         {
@@ -40,50 +49,105 @@ namespace Assgment_Nhom3_WebBanDienThoai.Controllers
         }
 
         // GET: LoginController/Detail
-        public ActionResult Detail(Guid id)
+        public IActionResult Detail(Guid id)
         {
             var User = shopingBDContext.TaiKhoans.Find(id);
             return View(User);
         }
-        // GET: LoginController/Create
-        //public ActionResult Login()
-        //      {
-        //          return View();
-        //      }
-        //[HttpPost]
-        public ActionResult Login(string username, string password)
-        {
-            var products = SessionServices.GetObjFromSession(HttpContext.Session, "Index");
-            if (ModelState.IsValid)
-            {
-                var data = shopingBDContext.TaiKhoans.Include("Roles").FirstOrDefault(p => p.TenDN.Equals(username) && p.MatKhau.Equals(password));
-                if (data != null)
-                {
-                    //add Session
-                    HttpContext.Session.SetString("acc", data.TenDN);
-                    HttpContext.Session.SetString("role", data.PhanQuyens.TenQuyen);
-                    var acc = HttpContext.Session.GetString("acc");
-                    var x = _tkServices.GetAll().FirstOrDefault(x => x.TenDN == username);
-                    var lstCart = _cartServices.GetAll();
-                    var cartDetails = _cartDetailService.GetAll().Where(c => c.IdTaiKhoan == x.Id).ToList();
-                    HttpContext.Session.SetString("CartDetailsUser", cartDetails.Count().ToString());
-                    if (lstCart.FirstOrDefault(c => c.IdTaiKhoan == x.Id) == null)
-                    {
-                        GioHang cart = new GioHang()
-                        {
-                            IdTaiKhoan = x.Id,
-                            Mota = null,
-                        };
-                        _cartServices.Create(cart);
-                    }
-                    HttpContext.Session.Remove("Cart");
-                    return RedirectToAction("Index", "Home");
 
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(TaiKhoan tk)
+        {
+            var data = shopingBDContext.TaiKhoans.Where(a => a.TenDN == tk.TenDN && a.MatKhau == tk.MatKhau).ToList();
+            var products = SessionCartcs.GetObjFromSession(HttpContext.Session, "Cart");
+
+            if (data.Count > 0)
+            {
+                #region Lấy thông tin người dùng khi login lưu vào session
+
+                var nguoiDung = shopingBDContext.TaiKhoans.FirstOrDefault(a => a.TenDN == tk.TenDN && a.MatKhau == tk.MatKhau);
+                if (nguoiDung != null)
+                {
+                    SessionServices.SetobjTojson(HttpContext.Session, nguoiDung, "nguoiDung");
                 }
+
+                #endregion
+
+                var user = shopingBDContext.TaiKhoans.Where(a => a.TenDN == tk.TenDN && a.MatKhau == tk.MatKhau).ToList();
+
+                SessionServices.SetobjTojson(HttpContext.Session, user, "username");
+                var usernames = SessionServices.GetObjFromSession(HttpContext.Session, "username");
+                var idus = usernames.FirstOrDefault().Id;
+                if (products.Count > 0)
+                {
+
+                    var idcartss = GioHangServices.GetCartById(idus);
+                    if (idcartss == null)
+                    {
+                        GioHang cart = new GioHang();
+                        cart.IdTaiKhoan = idus;
+                        cart.Mota = "1";
+                        GioHangServices.Create(cart);
+
+                        foreach (var item in products)
+                        {
+
+                            var iddetail = _cartDetailService.GetAll().FirstOrDefault(a => a.IdChiTietSp == item.ctsp.Id && a.IdTaiKhoan == idus);
+                            if (iddetail.IdChiTietSp == item.ctsp.Id)
+                            {
+                                iddetail.SoLuong += item.quantity;
+                                _cartDetailService.Update(iddetail);
+                            }
+                            else
+                            {
+                                GioHangChiTiet cartDetail = new GioHangChiTiet();
+                                cartDetail.Id = new Guid();
+                                cartDetail.IdTaiKhoan = idus;
+                                cartDetail.IdChiTietSp = item.ctsp.Id;
+                                cartDetail.SoLuong = item.quantity;
+                                _cartDetailService.Create(cartDetail);
+                            }
+
+                        }
+
+                    }
+                    else
+                    {
+                        foreach (var item in products)
+                        {
+
+                            var iddetail = _cartDetailService.GetAll().FirstOrDefault(a => a.IdChiTietSp == item.ctsp.Id && a.IdTaiKhoan == idus);
+
+                            if (iddetail != null)
+                            {
+                                iddetail.SoLuong += item.quantity;
+                                _cartDetailService.Update(iddetail);
+                            }
+                            else
+                            {
+                                GioHangChiTiet cartDetail = new GioHangChiTiet();
+                                cartDetail.Id = new Guid();
+                                cartDetail.IdTaiKhoan = idus;
+                                cartDetail.IdChiTietSp = item.ctsp.Id;
+                                cartDetail.SoLuong = item.quantity;
+                                _cartDetailService.Create(cartDetail);
+                            }
+
+                        }
+                    }
+
+                    HttpContext.Session.Remove("Cart");
+                }
+                return RedirectToAction("Index", "Home");
             }
             return View();
         }
-        public ActionResult Create(int id)
+        public IActionResult Create()
         {
             ViewBag.Role = new SelectList(_roleServices.GetAllQuyens(), "Id", "RoleName");
             return View();
@@ -91,25 +155,26 @@ namespace Assgment_Nhom3_WebBanDienThoai.Controllers
         // POST: LoginController/Create
         [HttpPost]
         //[ValidateAntiForgeryToken]
-        public ActionResult Create(TaiKhoan User, IFormFile imageFile)
+        public async Task<IActionResult> Create(TaiKhoan User)
         {
-            
-            if (_tkServices.CreateTaiKhoan(User))
+            User.IdCv = Guid.Parse("CB564DDE-2B08-49EA-9AFA-27DCB8D26CCB");
+            User.TrangThai = 1;
+            User.LinkAnh = "Null";
+            if (ModelState.IsValid)
             {
-                GioHang cart = new GioHang()
+                string requestUrl = "https://localhost:7151/api/TaiKhoan/create-taikhoan";
+                bool response = await _apiService.ApiPostService(User, requestUrl);
+                if (response)
                 {
-                    IdTaiKhoan = User.Id,
-                    Mota = "Than Thiet"
-                };
-                _cartServices.Create(cart);
-                return RedirectToAction("Login");
+                    return RedirectToAction("Login");
+                }
             }
-            else return BadRequest();
+            return View();
         }
         [HttpGet]
 
         // GET: LoginController/Edit/5
-        public ActionResult Edit(Guid id)
+        public IActionResult Edit(Guid id)
         {
             ViewBag.Role = new SelectList(_roleServices.GetAllQuyens(), "Id", "RoleName");
             TaiKhoan User = _tkServices.GetSanPhamById(id);
@@ -119,7 +184,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Controllers
         // POST: LoginController/Edit/5
         //[HttpPost]
         //[ValidateAntiForgeryToken]
-        public ActionResult Edit(TaiKhoan user)
+        public IActionResult Edit(TaiKhoan user)
         {
             ViewBag.Role = new SelectList(_roleServices.GetAllQuyens(), "Id", "RoleName");
             if (_tkServices.UpdateTaiKhoan(user))
@@ -135,7 +200,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Controllers
         // POST: LoginController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public IActionResult Delete(int id, IFormCollection collection)
         {
             try
             {

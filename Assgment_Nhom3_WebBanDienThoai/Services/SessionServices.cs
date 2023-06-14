@@ -12,23 +12,23 @@ namespace Assgment_Nhom3_WebBanDienThoai.Services
             var jsonString = JsonConvert.SerializeObject(value);
             session.SetString(key, jsonString);
         }
-        public static List<QuantityModel> GetObjFromSession(ISession session, string key)
+        public static List<TaiKhoan> GetObjFromSession(ISession session, string key)
         {
             var data = session.GetString(key); // doc du lieu tu ss
             if (data != null)
             {
-                var listobj = JsonConvert.DeserializeObject<List<QuantityModel>>(data);
+                var listobj = JsonConvert.DeserializeObject<List<TaiKhoan>>(data);
                 return listobj;
             }
             else
             {
-                return new List<QuantityModel>();
+                return new List<TaiKhoan>();
             }
         }
 
-        public static bool CheckProductIncart(Guid Id, List<QuantityModel> cartpd)
+        public static bool CheckProductInTK(Guid Id, List<TaiKhoan> cartpd)
         {
-            return cartpd.Any(p => p.ctsp.Id == Id);
+            return cartpd.Any(p => p.Id == Id);
         }
     }
 }

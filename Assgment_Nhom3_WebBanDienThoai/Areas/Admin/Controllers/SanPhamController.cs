@@ -15,7 +15,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
         HttpClient client = new HttpClient();
         public SanPhamController()
         {
-            
+
         }
         public async Task<IActionResult> Index()
         {
@@ -46,7 +46,7 @@ namespace Assgment_Nhom3_WebBanDienThoai.Areas.Admin.Controllers
                     file.CopyTo(stream);
                 }
 
-                sp.Anh = "/img/" + fileName;
+                sp.Anh = "~/img/" + fileName;
             }
             var requestUrl = $"https://localhost:7151/api/SanPham/create-SanPhams";
             var jsonData = JsonConvert.SerializeObject(sp);

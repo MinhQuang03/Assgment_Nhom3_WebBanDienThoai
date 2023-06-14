@@ -16,6 +16,7 @@ public class TaiKhoanServices : ITaiKhoanServices
     {
         try
         {
+            tk.Id = Guid.NewGuid();
             _context.TaiKhoans.Add(tk);
             _context.SaveChanges();
             return true;

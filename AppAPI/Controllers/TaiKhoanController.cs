@@ -34,22 +34,8 @@ public class TaiKhoanController : ControllerBase
 
     // POST api/<TaiKhoanController>
     [HttpPost("create-taikhoan")]
-    public bool CreateTaiKhoan(string tendn, string matkhau, string hoten, string email, string sdt, string diachi,
-        string anh, int trangthai, Guid idcv)
+    public bool CreateTaiKhoan(TaiKhoan tk)
     {
-        var tk = new TaiKhoan()
-        {
-            Id = Guid.NewGuid(),
-            TenDN = tendn,
-            MatKhau = matkhau,
-            HoVaTen = hoten,
-            Email = email,
-            SDT = sdt,
-            DiaChi = diachi,
-            LinkAnh = anh,
-            TrangThai = trangthai,
-            IdCv = idcv
-        };
         return _taiKhoanServices.CreateTaiKhoan(tk);
     }
 

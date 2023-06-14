@@ -16,6 +16,7 @@ public class HoaDonServices : IHoaDonServices
     {
         try
         {
+            ms.Id = Guid.NewGuid();
             _context.HoaDons.Add(ms);
             _context.SaveChanges();
             return true;

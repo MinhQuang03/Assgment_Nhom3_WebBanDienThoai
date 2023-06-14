@@ -50,4 +50,9 @@ public class GioHangServices : IGioHangServices
     {
         throw new NotImplementedException();
     }
+
+    public GioHang GetCartById(Guid id)
+    {
+        return _context.GioHangs.FirstOrDefault(p => p.IdTaiKhoan == id);
+    }
 }
