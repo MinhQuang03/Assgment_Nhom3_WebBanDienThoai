@@ -69,8 +69,13 @@ public class ShoppingDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
+<<<<<<< Updated upstream
         optionsBuilder.UseSqlServer(
             @"Data Source=MSI;Initial Catalog=BanDienThoai_Nhom2;User ID=thanhnxph20424;Password=05012003;TrustServerCertificate=True");
+=======
+        
+        optionsBuilder.UseSqlServer(@"Data Source=MSI;Initial Catalog=BanDienThoai_Nhom2_C5;TrustServerCertificate=True; Integrated Security=True");
+>>>>>>> Stashed changes
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
